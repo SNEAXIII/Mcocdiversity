@@ -4,15 +4,17 @@ class Joueur:
         self.defs = []
         self.group = group
 
-    def __add__(self, personnage):
+    def addListe(self, personnage):
         self.persos.append(personnage)
+
+
 
 
 class Personnage:
     def __init__(self, nom: str):
         self.nom = nom
         self.possede= [] # rank,sig,owners
-        self.
+        self.dispo = True
 
 
 class Possede:
