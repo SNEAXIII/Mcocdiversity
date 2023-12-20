@@ -1,3 +1,9 @@
+
+class Group:
+    def __init__(self,id):
+        self.id = id
+
+
 class Joueur:
     def __init__(self, group):
         self.persos = []
@@ -6,6 +12,7 @@ class Joueur:
 
     def addListe(self, personnage):
         self.persos.append(personnage)
+
 
 
 
