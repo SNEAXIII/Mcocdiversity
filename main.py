@@ -1,35 +1,54 @@
+from random import choice
+
+
 class Player:
     def __init__(self, name: str):
         self.name = name
         self.defs = []
+        self.pScore = 0
+
+    def dump(self):
+        stringReturn = self.name + "\n" + f"Puissance théorique : {self.pScore}" + "\n"
+        for _def in self.defs:
+            stringReturn += "-->" + _def + "\n"
+        return stringReturn + "\n"
 
 
 class Group:
     def __init__(self):
+        self.gScore = 0
         self.allDefs = {}
         self.selectedDefs = []
         self.allPlayer = {}
         self.allRanks = \
             {
-                "7r3": 8,
-                "7r2": 7,
-                "7r1": 6,
-                "6r6": 7,
-                "6r5": 5,
-                "6r4": 4,
-                "6r3": 3,
-                "6r2": 2,
-                "6r1": 1
+                "7r3": 326,
+                "6r6": 265,
+                "7r2": 264,
+                "6r5": 217,
+                "7r1": 210,
+                "6r4": 188,
+                "6r3": 164,
+                "6r2": 138,
+                "6r1": 100
             }
+
         self.rangeRank = max(self.allRanks.values()), min(self.allRanks.values()) - 1, -1
 
-    def __str__(self):
+    def dump(self):
         stringReturn = ""
         for defName in self.allDefs:
             stringReturn += defName + "\n"
             for intRank in self.allDefs[defName]:
                 stringReturn += f"{self.convertRankIntToStr(intRank)}-->{self.allDefs[defName][intRank]}" + "\n"
             stringReturn += "\n"
+        return stringReturn
+
+    def __str__(self):
+        stringReturn = f"Puissance théorique du groupe : {self.gScore}\n\n"
+        for player in self.allPlayer.values():
+            stringReturn += player.dump()
+            pass
         return stringReturn
 
     def addPlayer(self, player: Player):
@@ -57,41 +76,28 @@ class Group:
                 return strRank
         raise Exception(f"Aucun rang correspond trouvée pour la valeur : {value}")
 
-    def countTheRankForDef(self, defName: str, rank: int):
+    def findThePlayerForRankForDef(self, defName: str, rank: int):
+        if defName not in self.allDefs:
+            return False
         dictDefRank = self.allDefs[defName][rank]
         if len(dictDefRank):
             maxSig = max(dictDefRank.keys())
-            dictPlayerForASig = dictDefRank[maxSig]
-            if len(dictPlayerForASig) == 1:
-                return next(iter(dictPlayerForASig))
-            else:
-                print(f"il y a plusieurs candidats pour {defName} au rang {rank}")
+            return choice(list(dictDefRank[maxSig]))
         return False
-
-    def findThePlayerForRankForDef(self, defName: str, rank: int):
-        print(len(self.allDefs[defName][rank]))
 
     @staticmethod
     def isDefRankEmpty(dictionary: dict):
         return all(not bool(s) for s in dictionary.values())
 
-    def findTheBestDefs(self, force: bool = False):
-        # implétementer le force
+    def findTheBestDefs(self):
         for rank in self.allRanks.values():
-            doublon = False
-            # todo mettre une while tant qu'il y a des persos a supprimer
             for defName in list(self.allDefs):
-                nameOrFalse = self.countTheRankForDef(defName, rank)
-                if nameOrFalse:
-                    self.addDefInPlayer(nameOrFalse, defName)
-                    continue
-                    # todo décrementer un indice si ya rien a suppr
-                print(defName, rank)
+                playerOrFalseOrDoublon = self.findThePlayerForRankForDef(defName, rank)
+                if playerOrFalseOrDoublon:
+                    self.addDefInPlayer(playerOrFalseOrDoublon, defName, rank)
 
-            # todo addmultidelete here
-
-    def addDefInPlayer(self, player: str, defName: str):
-        self.allPlayer[player].defs.append(defName)
+    def addDefInPlayer(self, player: str, defName: str, rank: int):
+        self.allPlayer[player].defs.append(f"{defName} {self.convertRankIntToStr(rank)}")
         if not defName in self.selectedDefs:
             self.selectedDefs.append(defName)
         else:
@@ -102,6 +108,8 @@ class Group:
             selectedDef = defName
         self.deleteOneDefDict(defName)
         self.deleteOnePlayerInDefsDict(player, selectedDef)
+        self.gScore += rank
+        self.allPlayer[player].pScore += rank
 
     def deleteOneDefDict(self, defName: str):
         del self.allDefs[defName]
@@ -149,7 +157,7 @@ class Groups:
 
 groups = Groups()
 
-with open("data2", encoding="utf-8") as f:
+with open("data", encoding="utf-8") as f:
     data = [line.replace("\n", "") for line in f.readlines()]
 playerName = None
 group = None
@@ -167,19 +175,13 @@ for line in data:
         elif group is not None:
             raise Exception("Le groupe ne peux être saisi 2 fois")
         group = int(line.lstrip("-"))
-        print(playerName, group)
         groups.addPlayerToAGroup(group, playerName)
     else:
         # todo erreur potancielle ici
         # defName,rank,sig = line.split(" ")
         groups.addDefToOneGroup(group, playerName, *line.split(" "))
 
-group1 = groups.groups[1]
 
-print(group1.countTheRankForDef("Shuri", 8))
-group1.addDefInPlayer("Mrbal'", "Shuri")
-print(group1.allDefs)
-group1.addDefInPlayer("Mrbal'", "Idoom")
-print(group1.isEmptyDef())
+groups.groups[1].findTheBestDefs()
 groups.dump()
 a = "test"
