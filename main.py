@@ -100,13 +100,13 @@ class Group:
             selectedDef = None
         else:
             selectedDef = defName
-        self.deleteADefsDict(defName)
-        self.deleteAPlayerInDefsDict(player, selectedDef)
+        self.deleteOneDefDict(defName)
+        self.deleteOnePlayerInDefsDict(player, selectedDef)
 
-    def deleteADefsDict(self, defName: str):
+    def deleteOneDefDict(self, defName: str):
         del self.allDefs[defName]
 
-    def deleteAPlayerInDefsDict(self, player: str, defToUpdate: str = None):
+    def deleteOnePlayerInDefsDict(self, player: str, defToUpdate: str = None):
         for _def, ranks in list(self.allDefs.items()):
             if defToUpdate:
                 if defToUpdate != _def:
@@ -118,14 +118,14 @@ class Group:
                         if not names:
                             del allSig[sig]
                         if self.isDefRankEmpty(allSig):
-                            self.deleteADefsDict(_def)
+                            self.deleteOneDefDict(_def)
                     except KeyError:
                         pass
 
-    def isEmptyDefs(self):
+    def isEmptyDef(self):
         return not bool(self.allDefs)
 
-    def isFullOfDefs(self):
+    def isFullOfDef(self):
         return len(self.selectedDefs) == 50
 
 
@@ -139,7 +139,7 @@ class Groups:
             return
         raise Exception(f"Il ne peux pas y avoir plus de 10 joueurs dans le groupe {idGroup}!!!")
 
-    def addDefToAGroup(self, idGroup: int, playerName: str, defName: str, rank: str, sig: int):
+    def addDefToOneGroup(self, idGroup: int, playerName: str, defName: str, rank: str, sig: int):
         self.groups[idGroup].addNewDef(playerName, defName.capitalize(), rank, sig)
 
     def dump(self):
@@ -172,7 +172,7 @@ for line in data:
     else:
         # todo erreur potancielle ici
         # defName,rank,sig = line.split(" ")
-        groups.addDefToAGroup(group, playerName, *line.split(" "))
+        groups.addDefToOneGroup(group, playerName, *line.split(" "))
 
 group1 = groups.groups[1]
 
@@ -180,6 +180,6 @@ print(group1.countTheRankForDef("Shuri", 8))
 group1.addDefInPlayer("Mrbal'", "Shuri")
 print(group1.allDefs)
 group1.addDefInPlayer("Mrbal'", "Idoom")
-print(group1.isEmptyDefs())
+print(group1.isEmptyDef())
 groups.dump()
 a = "test"
