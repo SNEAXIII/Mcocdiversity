@@ -97,9 +97,12 @@ class Group:
             self.selectDefs.append(defName)
         else:
             raise Exception(f"Le défenseur {defName} à été enregistré 2 fois")
+        # Si la personne a 5 defs on la retire des choix de defenseur
         if len(self.allPlayer[player].defs) == 5:
-            self.deleteAPlayerInDefsDict(player)
-    # todo ajouter un def a un player si il en pas pas 5
+            selectedDef = None
+        else:
+            selectedDef = defName
+        self.deleteAPlayerInDefsDict(player,selectedDef)
 
     def deleteADefsDict(self, defName: str):
         del self.allDefs[defName]
@@ -109,8 +112,11 @@ class Group:
         for defName in listDefName:
             self.deleteADefsDict(defName)
 
-    def deleteAPlayerInDefsDict(self, player: str,defToUpdate : str,all=False):
+    def deleteAPlayerInDefsDict(self, player: str,defToUpdate : str = None):
         for _def, ranks in list(self.allDefs.items()):
+            if defToUpdate:
+                if defToUpdate != _def:
+                    continue
             for rank, allSig in list(ranks.items()):
                 for sig, names in list(allSig.items()):
                     try:
@@ -186,5 +192,6 @@ for line in data:
 
 print(groups.groups[1].countTheRankForDef("Shuri", 8))
 groups.groups[1].addDefInPlayer("Mrbal'","Shuri")
+groups.groups[1].addDefInPlayer("Mrbal'","IDoom")
 groups.dump()
 a = "test"
