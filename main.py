@@ -7,7 +7,7 @@ class Player:
 class Group:
     def __init__(self):
         self.allDefs = {}
-        self.selectDefs = {}
+        self.selectDefs = []
         self.allPlayer = {}
         self.allRanks = \
             {
@@ -35,12 +35,16 @@ class Group:
     def addPlayer(self, player: Player):
         self.allPlayer[player.name] = player
 
-    def addNewDef(self, owner: str, defName: str, rank: str, sig: int):
+    def addNewDef(self, owner: str, defName: str, rank: str, strSig: str):
+        sig = int(strSig)
         if defName not in self.allDefs:
             self.allDefs[defName] = {}
-            for x in range(*self.rangeRank):
-                self.allDefs[defName][x] = {}
-        self.allDefs[defName][self.convertRankStrToInt(rank)][owner] = sig
+            for idRank in range(*self.rangeRank):
+                self.allDefs[defName][idRank] = {}
+        defNameDefRank = self.allDefs[defName][self.convertRankStrToInt(rank)]
+        if not sig in defNameDefRank:
+            defNameDefRank[sig] = set()
+        defNameDefRank[sig].add(owner)
 
     def convertRankStrToInt(self, rank: str):
         if not rank in self.allRanks:
@@ -56,51 +60,68 @@ class Group:
     def countTheRankForDef(self, defName: str, rank: int):
         dictDefRank = self.allDefs[defName][rank]
         if len(dictDefRank):
-            if list(dictDefRank.values()).count(max(dictDefRank.values())) == 1:
-                return 1
+            maxSig = max(dictDefRank.keys())
+            dictPlayerForASig = dictDefRank[maxSig]
+            if len(dictPlayerForASig) == 1:
+                return next(iter(dictPlayerForASig))
             else:
                 print(f"il y a plusieurs candidats pour {defName} au rang {rank}")
-                return 0
-        else:
-            return 0
+        return False
 
     def findThePlayerForRankForDef(self, defName: str, rank: int):
         print(len(self.allDefs[defName][rank]))
 
+    @staticmethod
+    def isDefRankEmpty(dictionary: dict):
+        return all(not bool(s) for s in dictionary.values())
+
     def findTheBestDefs(self, force: bool = False):
         # implétementer le force
         for rank in self.allRanks.values():
-            toDelete = []
+            doublon = False
+            # todo gerer les doublons
             # todo mettre une while tant qu'il y a des persos a supprimer
             for defName in self.allDefs:
-                count = self.countTheRankForDef(defName, rank)
-                if count == 1:
-                    if self.addDefInPlayer():
-                        toDelete.append()
-                    else:
-                        # todo verifier si c'est valide
-                        continue
+                nameOrFalse = self.countTheRankForDef(defName, rank)
+                if nameOrFalse:
+                    self.addDefInPlayer(nameOrFalse,defName)
+                    continue
                     # todo décrementer un indice si ya rien a suppr
                 print(defName, rank)
 
             # todo addmultidelete here
-    def addDefInPlayer
+
+    def addDefInPlayer(self,player:str,defName:str):
+        self.allPlayer[player].defs.append(defName)
+        if not defName in self.selectDefs:
+            self.selectDefs.append(defName)
+        else:
+            raise Exception(f"Le défenseur {defName} à été enregistré 2 fois")
+        if len(self.allPlayer[player].defs) == 5:
+            self.deleteAPlayerInDefsDict(player)
     # todo ajouter un def a un player si il en pas pas 5
 
     def deleteADefsDict(self, defName: str):
         del self.allDefs[defName]
 
     def deleteMultiDefsDict(self, listDefName: list):
+        # todo probablement useless
         for defName in listDefName:
             self.deleteADefsDict(defName)
 
-    def deleteAPlayerInDefsDict(self, player: str):
-        for _def in self.allDefs:
-            for rank in self.allDefs[_def]:
-                try:
-                    del self.allDefs[_def][rank][player]
-                except KeyError:
-                    pass
+    def deleteAPlayerInDefsDict(self, player: str,defToUpdate : str,all=False):
+        for _def, ranks in list(self.allDefs.items()):
+            for rank, allSig in list(ranks.items()):
+                for sig, names in list(allSig.items()):
+                    try:
+                        # todo faire en sorte de supprimer soit le nom sur un seul persos soit sur tous
+                        names.discard(player)
+                        if not names:
+                            del allSig[sig]
+                        if self.isDefRankEmpty(allSig):
+                            del self.allDefs[_def]
+                    except KeyError:
+                        pass
 
     # todo lors de la suppression d'un player dans les defenseurs, vérifier si il en reste un et l'ajouter a ses defs
     # todo verifier qu'il y a un seul et unique def par groupe
@@ -132,7 +153,7 @@ groups = Groups()
 # groups.addDefToAGroup(1,"Mrbal'","Absman","6r6",200)
 # groups.addDefToAGroup(1,"Legacy'","Shuri","7r3",0)
 
-with open("data", encoding="utf-8") as f:
+with open("data2", encoding="utf-8") as f:
     data = [line.replace("\n", "") for line in f.readlines()]
 playerName = None
 group = None
@@ -163,6 +184,7 @@ for line in data:
 
 # groups.groups[1].findTheBestDefs()
 
+print(groups.groups[1].countTheRankForDef("Shuri", 8))
+groups.groups[1].addDefInPlayer("Mrbal'","Shuri")
 groups.dump()
-print(groups.groups[1].countTheRankForDef("Absman",6))
 a = "test"
