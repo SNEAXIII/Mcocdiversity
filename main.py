@@ -7,8 +7,11 @@ class Player:
         self.defs = []
         self.pScore = 0
 
+    def getScore(self):
+        return int(self.pScore / 20)
+
     def dump(self):
-        stringReturn = self.name + "\n" + f"Puissance théorique : {self.pScore}" + "\n"
+        stringReturn = self.name + "\n" + f"Puissance théorique : {self.getScore()}" + "\n"
         for _def in self.defs:
             stringReturn += "-->" + _def + "\n"
         return stringReturn + "\n"
@@ -18,7 +21,8 @@ class Group:
     def __init__(self):
         self.gScore = 0
         self.allDefs = {}
-        self.selectedDefs = []
+        self.selectedDefs = set()
+        self.unselectedDefs = set()
         self.allPlayer = {}
         self.allRanks = \
             {
@@ -35,6 +39,9 @@ class Group:
 
         self.rangeRank = max(self.allRanks.values()), min(self.allRanks.values()) - 1, -1
 
+    def getScore(self):
+        return int(self.gScore / 50)
+
     def dump(self):
         stringReturn = ""
         for defName in self.allDefs:
@@ -45,11 +52,14 @@ class Group:
         return stringReturn
 
     def __str__(self):
-        stringReturn = f"Puissance théorique du groupe : {self.gScore}\n\n"
+        stringReturn = f"Puissance théorique du groupe : {self.getScore()}\n\n"
         for player in self.allPlayer.values():
             stringReturn += player.dump()
             pass
         return stringReturn
+
+    def strAllDefUnSelected(self):
+        return ", ".join(list(self.allDefs.keys()))
 
     def addPlayer(self, player: Player):
         self.allPlayer[player.name] = player
@@ -99,7 +109,7 @@ class Group:
     def addDefInPlayer(self, player: str, defName: str, rank: int):
         self.allPlayer[player].defs.append(f"{defName} {self.convertRankIntToStr(rank)}")
         if not defName in self.selectedDefs:
-            self.selectedDefs.append(defName)
+            self.selectedDefs.add(defName)
         else:
             raise Exception(f"Le défenseur {defName} à été enregistré 2 fois")
         if len(self.allPlayer[player].defs) == 5:
@@ -116,20 +126,17 @@ class Group:
 
     def deleteOnePlayerInDefsDict(self, player: str, defToUpdate: str = None):
         for _def, ranks in list(self.allDefs.items()):
-            if defToUpdate:
-                if defToUpdate != _def:
-                    continue
+            if defToUpdate and defToUpdate != _def:
+                continue
             for rank, allSig in list(ranks.items()):
                 for sig, names in list(allSig.items()):
-                    try:
+                    if player in names:
                         names.discard(player)
                         if not names:
                             del allSig[sig]
                         if self.isDefRankEmpty(allSig):
+                            self.unselectedDefs.add(_def)
                             self.deleteOneDefDict(_def)
-                    except KeyError:
-                        pass
-
     def isEmptyDef(self):
         return not bool(self.allDefs)
 
@@ -177,11 +184,10 @@ for line in data:
         group = int(line.lstrip("-"))
         groups.addPlayerToAGroup(group, playerName)
     else:
-        # todo erreur potancielle ici
-        # defName,rank,sig = line.split(" ")
+        # todo erreur potancielle ici --> defName,rank,sig = line.split(" ")
         groups.addDefToOneGroup(group, playerName, *line.split(" "))
-
-
-groups.groups[1].findTheBestDefs()
+group1 = groups.groups[1]
+group1.findTheBestDefs()
 groups.dump()
+print(group1.strAllDefUnSelected())
 a = "test"
