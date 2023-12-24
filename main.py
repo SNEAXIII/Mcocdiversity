@@ -54,11 +54,11 @@ class Group:
         return stringReturn
 
     def __str__(self):
-        stringReturn = f"Puissance théorique du groupe : {self.getScore()}\n\n"
+        stringReturn = f"Puissance théorique du groupe : {self.getScore()}\n"
         for player in self.allPlayer.values():
             stringReturn += player.dump()
         return stringReturn + (f"Les défenseurs choisis sont : {self.strAllDefSelected()}\n"
-                               f"Les défenseurs non choisis sont : {self.strAllDefUnSelected()}\n\n")
+                               f"Les défenseurs non choisis sont : {self.strAllDefUnSelected()}\n")
 
     def strAllDefSelected(self):
         sortedSelectedDef = sorted(self.selectedDefs, key=lambda x: (-x[1], x[0]))
