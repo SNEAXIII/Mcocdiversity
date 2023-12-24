@@ -1,5 +1,7 @@
 from random import choice
 
+LINE = "=" * 35 + "\n"
+
 
 class Player:
     def __init__(self, name: str):
@@ -11,10 +13,10 @@ class Player:
         return int(self.pScore / 20)
 
     def dump(self):
-        stringReturn = self.name + "\n" + f"Puissance théorique : {self.getScore()}" + "\n"
+        stringReturn = f"{LINE}Joueur : {self.name}\nPuissance théorique du joueur: {self.getScore()}\n"
         for _def in self.defs:
-            stringReturn += "-->" + _def + "\n"
-        return stringReturn + "\n"
+            stringReturn += f"  → {_def}\n"
+        return stringReturn + LINE
 
 
 class Group:
@@ -45,9 +47,9 @@ class Group:
     def dump(self):
         stringReturn = ""
         for defName in self.allDefs:
-            stringReturn += defName + "\n"
+            stringReturn += f"{defName}\n"
             for intRank in self.allDefs[defName]:
-                stringReturn += f"{self.convertRankIntToStr(intRank)}-->{self.allDefs[defName][intRank]}" + "\n"
+                stringReturn += f"{self.convertRankIntToStr(intRank)}-->{self.allDefs[defName][intRank]}\n"
             stringReturn += "\n"
         return stringReturn
 
@@ -55,11 +57,17 @@ class Group:
         stringReturn = f"Puissance théorique du groupe : {self.getScore()}\n\n"
         for player in self.allPlayer.values():
             stringReturn += player.dump()
-            pass
-        return stringReturn
+        return stringReturn + (f"Les défenseurs choisis sont : {self.strAllDefSelected()}\n"
+                               f"Les défenseurs non choisis sont : {self.strAllDefUnSelected()}\n\n")
+
+    def strAllDefSelected(self):
+        sortedSelectedDef = sorted(self.selectedDefs, key=lambda x: (-x[1], x[0]))
+        sortedSelectedDefFormat = [f"{_def[0]} {self.convertRankIntToStr(_def[1])}" for _def in sortedSelectedDef]
+
+        return ", ".join(sortedSelectedDefFormat)
 
     def strAllDefUnSelected(self):
-        return ", ".join(list(self.allDefs.keys()))
+        return ", ".join(sorted(list(self.unselectedDefs)))
 
     def addPlayer(self, player: Player):
         self.allPlayer[player.name] = player
@@ -109,7 +117,7 @@ class Group:
     def addDefInPlayer(self, player: str, defName: str, rank: int):
         self.allPlayer[player].defs.append(f"{defName} {self.convertRankIntToStr(rank)}")
         if not defName in self.selectedDefs:
-            self.selectedDefs.add(defName)
+            self.selectedDefs.add((defName,rank))
         else:
             raise Exception(f"Le défenseur {defName} à été enregistré 2 fois")
         if len(self.allPlayer[player].defs) == 5:
@@ -137,6 +145,7 @@ class Group:
                         if self.isDefRankEmpty(allSig):
                             self.unselectedDefs.add(_def)
                             self.deleteOneDefDict(_def)
+
     def isEmptyDef(self):
         return not bool(self.allDefs)
 
@@ -190,4 +199,5 @@ group1 = groups.groups[1]
 group1.findTheBestDefs()
 groups.dump()
 print(group1.strAllDefUnSelected())
+print(group1.getScore())
 a = "test"
