@@ -117,7 +117,7 @@ class Group:
     def addDefInPlayer(self, player: str, defName: str, rank: int):
         self.allPlayer[player].defs.append(f"{defName} {self.convertRankIntToStr(rank)}")
         if not defName in self.selectedDefs:
-            self.selectedDefs.add((defName,rank))
+            self.selectedDefs.add((defName, rank))
         else:
             raise Exception(f"Le défenseur {defName} à été enregistré 2 fois")
         if len(self.allPlayer[player].defs) == 5:
@@ -170,34 +170,41 @@ class Groups:
         for id, group in self.groups.items():
             print(f"Groupe numéro {id}\n{group}")
 
-
-groups = Groups()
-
-with open("data", encoding="utf-8") as f:
-    data = [line.replace("\n", "") for line in f.readlines()]
-playerName = None
-group = None
-for line in data:
-    if line == "#":
+    def loadData(self, fileToOpen: str = "data.txt"):
+        with open(fileToOpen, encoding="utf-8") as f:
+            data = [line.replace("\n", "") for line in f.readlines()]
         playerName = None
         group = None
-    elif line.startswith("+"):
-        if playerName is not None:
-            raise Exception("Le joueur ne peux être saisi 2 fois")
-        playerName = line.lstrip("+")
-    elif line.startswith("-"):
-        if playerName is None:
-            raise Exception("Le joueur doit être saisi avant son groupe")
-        elif group is not None:
-            raise Exception("Le groupe ne peux être saisi 2 fois")
-        group = int(line.lstrip("-"))
-        groups.addPlayerToAGroup(group, playerName)
-    else:
-        # todo erreur potancielle ici --> defName,rank,sig = line.split(" ")
-        groups.addDefToOneGroup(group, playerName, *line.split(" "))
+        resetIdentifier = "#"
+        playerIdentifier = ">"
+        groupIdentifier = "Groupe "
+        for line in data:
+            if line == resetIdentifier:
+                playerName = None
+                group = None
+            elif line.startswith(playerIdentifier):
+                if playerName is not None:
+                    raise Exception("Le joueur ne peux être saisi 2 fois")
+                playerName = line.lstrip(playerIdentifier)
+            elif line.startswith(groupIdentifier):
+                if playerName is None:
+                    raise Exception("Le joueur doit être saisi avant son groupe")
+                elif group is not None:
+                    raise Exception("Le groupe ne peux être saisi 2 fois")
+                group = int(line.lstrip(groupIdentifier))
+                self.addPlayerToAGroup(group, playerName)
+            else:
+                # todo erreur potentielle ici --> defName,rank,sig = line.split(" ")
+                self.addDefToOneGroup(group, playerName, *line.split(" "))
+
+
+groups = Groups()
+groups.loadData()
 group1 = groups.groups[1]
 group1.findTheBestDefs()
 groups.dump()
-print(group1.strAllDefUnSelected())
-print(group1.getScore())
 a = "test"
+
+# todo ajouter un check si il y a bien 10 membres par groupe
+# todo ajouter un check si il y a bien 5 defenseurs par personne
+# todo faire une méthode pour process tout les groupes

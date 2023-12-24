@@ -1,6 +1,5 @@
-#
-+LEGACY LEGION
--1
+>LEGACY LEGION
+Groupe 1
 Doom 6r4 200
 iDoom 6r4 200
 SpiderMist 6r4 200
@@ -11,31 +10,26 @@ IMIW 7r1 0
 IM 6r4 43
 Ebony 7r1 0
 DragonMan 7r1 0
-Angela 6r4 200
 RedMag 6r4 46
 #
-+Mrbal'
--1
+>Mrbal'
+Groupe 1
+titania 7r3 0
 Kitty 6r6 200
 Absman 6r6 200
 Chose 6r4 200
 Spot 6r4 200
-QuickS 6r4 20
+QuickS 6r4 40
 Bishop 7r2 20
 Wong 7r1 20
-Viv 6r4 80
 #
-+Elminautor
--1
+>Elminautor
+Groupe 1
 Doom 6r6 200
 QuickS 6r6 200
 Shuri 7r2 0
-Spidey99 6r4 180
 Idoom 6r4 200
 Kitty 6r5 14
-Namor 6r4 200
-Valkyrie 6r4 200
-Angela 6r4 200
 Nimrod 6r4 200
 Ebony 6r4 112
 Hercule 6r4 117
