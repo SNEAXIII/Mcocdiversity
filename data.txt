@@ -11,18 +11,18 @@ IM 6r4 43
 Ebony 7r1 0
 DragonMan 7r1 0
 RedMag 6r4 46
-#
+//
 >Mrbal'
 Groupe 1
+!Maestro 7r1 0
 titania 7r3 0
-Kitty 6r6 200
 Absman 6r6 200
 Chose 6r4 200
 Spot 6r4 200
 QuickS 6r4 40
 Bishop 7r2 20
 Wong 7r1 20
-#
+//
 >Elminautor
 Groupe 1
 Doom 6r6 200
@@ -34,3 +34,38 @@ Nimrod 6r4 200
 Ebony 6r4 112
 Hercule 6r4 117
 Colossus 6r4 180
+//
+>Tug88
+Groupe 2
+Doom 6r5 200
+Idoom 6r6 50
+Overseer 7r1 20
+Imiw 7r2 20
+Warlock 6r4 40
+Absman 6r4 40
+Gladiateur 7r1
+Morbius 7r1
+Odin 7r1
+Wilson 7r1
+//
+>gaz73
+Groupe 2
+Doom 6r6 200
+Hercule 6r6 200
+Ebony 7r1 0
+Elsa 7r2 0
+Wong 7r1 20
+Overseer 7r1 20
+Mysterio 7r1 0
+Shocker 7r1 0
+Attuma 7r1 0
+Sasquach 7r1 0
+//
+>noebis
+Groupe 3
+Fury 6r4 200
+Hercule 6r4 200
+CGR 6r4 200
+Warlock 6r4 200
+Sunspot 7r1 0
+Mysterio 7r1 0

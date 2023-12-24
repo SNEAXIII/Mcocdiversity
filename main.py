@@ -39,7 +39,7 @@ class Group:
                 "6r1": 100
             }
 
-        self.rangeRank = max(self.allRanks.values()), min(self.allRanks.values()) - 1, -1
+        self.rangeRank = self.allRanks.values()
 
     def getScore(self):
         return int(self.gScore / 50)
@@ -72,11 +72,11 @@ class Group:
     def addPlayer(self, player: Player):
         self.allPlayer[player.name] = player
 
-    def addNewDef(self, owner: str, defName: str, rank: str, strSig: str):
-        sig = int(strSig)
+    def addNewDef(self, owner: str, defName: str, rank: str, sig: int):
+
         if defName not in self.allDefs:
             self.allDefs[defName] = {}
-            for idRank in range(*self.rangeRank):
+            for idRank in self.rangeRank:
                 self.allDefs[defName][idRank] = {}
         defNameDefRank = self.allDefs[defName][self.convertRankStrToInt(rank)]
         if not sig in defNameDefRank:
@@ -110,27 +110,30 @@ class Group:
     def findTheBestDefs(self):
         for rank in self.allRanks.values():
             for defName in list(self.allDefs):
-                playerOrFalseOrDoublon = self.findThePlayerForRankForDef(defName, rank)
-                if playerOrFalseOrDoublon:
-                    self.addDefInPlayer(playerOrFalseOrDoublon, defName, rank)
+                playerOrFalse = self.findThePlayerForRankForDef(defName, rank)
+                if playerOrFalse:
+                    self.addDefInPlayer(playerOrFalse, defName, rank)
 
     def addDefInPlayer(self, player: str, defName: str, rank: int):
-        self.allPlayer[player].defs.append(f"{defName} {self.convertRankIntToStr(rank)}")
         if not defName in self.selectedDefs:
             self.selectedDefs.add((defName, rank))
         else:
             raise Exception(f"Le défenseur {defName} à été enregistré 2 fois")
+
         if len(self.allPlayer[player].defs) == 5:
             selectedDef = None
         else:
             selectedDef = defName
-        self.deleteOneDefDict(defName)
-        self.deleteOnePlayerInDefsDict(player, selectedDef)
+        self.allPlayer[player].defs.append(f"{defName} {self.convertRankIntToStr(rank)}")
         self.gScore += rank
         self.allPlayer[player].pScore += rank
+        self.deleteOneDefDict(defName)
+        self.deleteOnePlayerInDefsDict(player, selectedDef)
+
 
     def deleteOneDefDict(self, defName: str):
-        del self.allDefs[defName]
+        if defName in self.allDefs:
+            del self.allDefs[defName]
 
     def deleteOnePlayerInDefsDict(self, player: str, defToUpdate: str = None):
         for _def, ranks in list(self.allDefs.items()):
@@ -163,8 +166,8 @@ class Groups:
             return
         raise Exception(f"Il ne peux pas y avoir plus de 10 joueurs dans le groupe {idGroup}!!!")
 
-    def addDefToOneGroup(self, idGroup: int, playerName: str, defName: str, rank: str, sig: int):
-        self.groups[idGroup].addNewDef(playerName, defName.capitalize(), rank, sig)
+    def addDefToOneGroup(self, idGroup: int, playerName: str, defName: str, rank: str, sig: int = 0):
+        self.groups[idGroup].addNewDef(playerName, defName, rank, int(sig))
 
     def dump(self):
         for id, group in self.groups.items():
@@ -175,9 +178,10 @@ class Groups:
             data = [line.replace("\n", "") for line in f.readlines()]
         playerName = None
         group = None
-        resetIdentifier = "#"
+        resetIdentifier = "//"
         playerIdentifier = ">"
         groupIdentifier = "Groupe "
+        forceIdentifier = "!"
         for line in data:
             if line == resetIdentifier:
                 playerName = None
@@ -193,16 +197,26 @@ class Groups:
                     raise Exception("Le groupe ne peux être saisi 2 fois")
                 group = int(line.lstrip(groupIdentifier))
                 self.addPlayerToAGroup(group, playerName)
+            elif line.startswith(forceIdentifier):
+                selectedGroup = self.groups[group]
+                lineWhithoutIdentifier = line.lstrip(forceIdentifier)
+                defName, strRank, strSig = lineWhithoutIdentifier.split(" ")
+                selectedGroup.addDefInPlayer(playerName, defName.capitalize(), selectedGroup.convertRankStrToInt(strRank))
             else:
-                # todo erreur potentielle ici --> defName,rank,sig = line.split(" ")
-                self.addDefToOneGroup(group, playerName, *line.split(" "))
+                defName, strRank, strSig = line.split(" ")
+                selectedGroup = self.groups[group]
+                self.addDefToOneGroup(group, playerName, defName.capitalize(), strRank,int(strSig))
 
 
 groups = Groups()
-groups.loadData()
+groups.loadData("data2.txt")
 group1 = groups.groups[1]
+group2 = groups.groups[2]
 group1.findTheBestDefs()
-groups.dump()
+# group2.findTheBestDefs()
+# groups.dump()
+print(group1)
+# print(group1.allPlayer["Mrbal'"].dump())
 a = "test"
 
 # todo ajouter un check si il y a bien 10 membres par groupe
