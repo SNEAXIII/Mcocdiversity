@@ -15,13 +15,18 @@ RedMag 6r4 46
 >Mrbal'
 Groupe 1
 !Maestro 7r1 0
-titania 7r3 0
+Titania 7r3 0
 Absman 6r6 200
 Chose 6r4 200
 Spot 6r4 200
-QuickS 6r4 40
+QuickS 6r4 20
 Bishop 7r2 20
 Wong 7r1 20
+elsa 7r1 0
+Aarkus 7r1 0
+Jabari 7r1 0
+Mangog 7r1 0
+Hulkling 6r4 20
 //
 >Elminautor
 Groupe 1
@@ -43,10 +48,10 @@ Overseer 7r1 20
 Imiw 7r2 20
 Warlock 6r4 40
 Absman 6r4 40
-Gladiateur 7r1
-Morbius 7r1
-Odin 7r1
-Wilson 7r1
+Gladiateur 7r1 0
+Morbius 7r1 0
+Odin 7r1 0
+Wilson 7r1 0
 //
 >gaz73
 Groupe 2

@@ -73,8 +73,9 @@ class Group:
         self.allPlayer[player.name] = player
 
     def addNewDef(self, owner: str, defName: str, rank: str, sig: int):
-
         if defName not in self.allDefs:
+            if any(tupleDef[0] == defName for tupleDef in self.selectedDefs):
+                return
             self.allDefs[defName] = {}
             for idRank in self.rangeRank:
                 self.allDefs[defName][idRank] = {}
@@ -115,7 +116,7 @@ class Group:
                     self.addDefInPlayer(playerOrFalse, defName, rank)
 
     def addDefInPlayer(self, player: str, defName: str, rank: int):
-        if not defName in self.selectedDefs:
+        if not any(tupleDef[0] == defName for tupleDef in self.selectedDefs):
             self.selectedDefs.add((defName, rank))
         else:
             raise Exception(f"Le défenseur {defName} à été enregistré 2 fois")
@@ -129,7 +130,6 @@ class Group:
         self.allPlayer[player].pScore += rank
         self.deleteOneDefDict(defName)
         self.deleteOnePlayerInDefsDict(player, selectedDef)
-
 
     def deleteOneDefDict(self, defName: str):
         if defName in self.allDefs:
@@ -201,15 +201,15 @@ class Groups:
                 selectedGroup = self.groups[group]
                 lineWhithoutIdentifier = line.lstrip(forceIdentifier)
                 defName, strRank, strSig = lineWhithoutIdentifier.split(" ")
-                selectedGroup.addDefInPlayer(playerName, defName.capitalize(), selectedGroup.convertRankStrToInt(strRank))
+                selectedGroup.addDefInPlayer(playerName, defName.capitalize(),
+                                             selectedGroup.convertRankStrToInt(strRank))
             else:
                 defName, strRank, strSig = line.split(" ")
-                selectedGroup = self.groups[group]
-                self.addDefToOneGroup(group, playerName, defName.capitalize(), strRank,int(strSig))
+                self.addDefToOneGroup(group, playerName, defName.capitalize(), strRank, int(strSig))
 
 
 groups = Groups()
-groups.loadData("data2.txt")
+groups.loadData("data.txt")
 group1 = groups.groups[1]
 group2 = groups.groups[2]
 group1.findTheBestDefs()
