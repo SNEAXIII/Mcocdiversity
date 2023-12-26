@@ -16,7 +16,7 @@ RedMag 6r4 46
 Groupe 1
 !Maestro 7r1 0
 Titania 7r3 0
-Absman 6r6 200
+Absman 6r6 2000
 Chose 6r4 200
 Spot 6r4 200
 QuickS 6r4 20
