@@ -121,7 +121,7 @@ class Group:
         else:
             raise Exception(f"Le défenseur {defName} à été enregistré 2 fois")
 
-        if len(self.allPlayer[player].defs) == 5:
+        if len(self.allPlayer[player].defs) == 4:
             selectedDef = None
         else:
             selectedDef = defName
