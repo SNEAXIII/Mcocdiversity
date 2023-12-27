@@ -215,16 +215,16 @@ class Groups:
                 checkDefName(playerName, defName.capitalize())
                 self.addDefToOneGroup(group, playerName, defName.capitalize(), strRank, int(strSig))
 
+    def execute(self):
+        self.groups[1].findTheBestDefs()
+        self.groups[2].findTheBestDefs()
+        self.groups[3].findTheBestDefs()
+
 
 groups = Groups()
-groups.loadData("data.txt")
-group1 = groups.groups[1]
-group2 = groups.groups[2]
-group1.findTheBestDefs()
-# group2.findTheBestDefs()
-# groups.dump()
-print(group1)
-# print(group1.allPlayer["Mrbal'"].dump())
+groups.loadData()
+groups.execute()
+groups.dump()
 a = "test"
 
 # todo ajouter un check si il y a bien 10 membres par groupe
