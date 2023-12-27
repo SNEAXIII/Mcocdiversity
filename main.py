@@ -1,6 +1,12 @@
 from random import choice
+from listCara import allCara
 
 LINE = "=" * 35 + "\n"
+
+
+def checkDefName(playerName: str, defName: str):
+    if defName not in allCara:
+        raise Exception(f"Le défenseur {defName} du joueur {playerName} n'existe pas")
 
 
 class Player:
@@ -201,10 +207,12 @@ class Groups:
                 selectedGroup = self.groups[group]
                 lineWhithoutIdentifier = line.lstrip(forceIdentifier)
                 defName, strRank, strSig = lineWhithoutIdentifier.split(" ")
+                checkDefName(playerName, defName.capitalize())
                 selectedGroup.addDefInPlayer(playerName, defName.capitalize(),
                                              selectedGroup.convertRankStrToInt(strRank))
             else:
                 defName, strRank, strSig = line.split(" ")
+                checkDefName(playerName, defName.capitalize())
                 self.addDefToOneGroup(group, playerName, defName.capitalize(), strRank, int(strSig))
 
 
