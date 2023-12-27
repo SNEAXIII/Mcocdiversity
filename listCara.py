@@ -14,12 +14,12 @@ allCara = [
     "Drax",  # Drax
     "Galan",  # Galan
     "Gamora",  # Gamora
-    "Gladiator",  # Gladiator
+    "Gladiateur",  # Gladiator
     "Gorr",  # Gorr
     "Groot",  # Groot
     "Heimdall",  # Heimdall
     "Hela",  # Hela
-    "Hercules",  # Hercules
+    "Hercule",  # Hercules
     "Hulkling",  # Hulkling
     "Hyperion",  # Hyperion
     "Ikaris",  # Ikaris
@@ -100,7 +100,7 @@ allCara = [
     "Strange",  # Doctor Strange
     "Voodoo",  # Doctor Voodoo
     "Dormammu",  # Dormammu
-    "Dm",  # Dragon Man
+    "Dragonman",  # Dragon Man
     "Ebony",  # Ebony Maw
     "GR",  # Ghost Rider
     "Guigui",  # Guillotine
@@ -119,7 +119,7 @@ allCara = [
     "Morningstar",  # Morningstar
     "Purgatory",  # Purgatory
     "Rintrah",  # Rintrah
-    "Sassy",  # Sasquatch
+    "Sasquatch",  # Sasquatch
     "SW",  # Scarlet Witch
     "SWC",  # Scarlet Witch (Classic)
     "Sorcersup",  # Sorcerer Supreme
@@ -171,7 +171,7 @@ allCara = [
     "Spider99",  # Spider-Man 2099
     "Spot",  # Spot
     "Overseer",  # The Overseer
-    "Thing",  # Thing
+    "Chose",  # Thing
     "Titania",  # Titania
     "Void",  # Void
     "Wasp",  # Wasp
@@ -207,7 +207,7 @@ allCara = [
     "Taupe",  # Mole Man
     "Moonknight",  # Moon Knight
     "Moondragon",  # Moondragon
-    "Nick",  # Nick Fury
+    "Fury",  # Nick Fury
     "Thrasher",  # Night Thrasher
     "Punisher",  # Punisher
     "Ronin",  # Ronin
@@ -219,7 +219,7 @@ allCara = [
     "Valkyrie",  # Valkyrie
     # Tech
     "Antmanf",  # Ant-Man (Future)
-    "Sam",  # Captain America (Sam Wilson)
+    "Wilson",  # Captain America (Sam Wilson)
     "Cw",  # Civil Warrior
     "Darkhawk",  # Darkhawk
     "Octopus",  # Doctor Octopus
