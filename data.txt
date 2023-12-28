@@ -2,9 +2,9 @@
 Groupe 1
 Doom 6r4 200
 iDoom 6r4 200
-SpiderMist 6r4 200
+Spidersup 6r4 200
 QuickS 6r4 200
-Apoc 6r4 200
+apo 6r4 200
 Surfer 6r4 200
 IMIW 7r1 0
 IM 6r4 43
@@ -64,7 +64,7 @@ Overseer 7r1 20
 Mysterio 7r1 0
 Shocker 7r1 0
 Attuma 7r1 0
-Sasquach 7r1 0
+Sasquatch 7r1 0
 //
 >noebis
 Groupe 3
