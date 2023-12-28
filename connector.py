@@ -17,6 +17,5 @@ def updateGroups(groups):
 
 
 def updateOneGroup(group, id):
-    print(id, group)
-    getSheets()[id-1].update_col(10, f"{group}".split("\n"))
+    getSheets()[id-1].update_col(1, f"{group}".split("\n"))
 
