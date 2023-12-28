@@ -1,7 +1,7 @@
 from random import choice
 from listCara import allCara
 
-LINE = "=" * 35 + "\n"
+LINE = "\n"
 
 
 def checkDefName(playerName: str, defName: str):
