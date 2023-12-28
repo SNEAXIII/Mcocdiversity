@@ -220,12 +220,17 @@ class Groups:
         self.groups[2].findTheBestDefs()
         self.groups[3].findTheBestDefs()
 
+    def doEverything(self):
+        self.loadData()
+        self.execute()
+        # todo self.check()
 
-groups = Groups()
-groups.loadData()
-groups.execute()
-groups.dump()
-a = "test"
+
+if __name__ == "__main__":
+    groups = Groups()
+    groups.doEverything()
+    groups.dump()
+    a = "test"
 
 # todo ajouter un check si il y a bien 10 membres par groupe
 # todo ajouter un check si il y a bien 5 defenseurs par personne
