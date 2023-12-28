@@ -66,11 +66,45 @@ Shocker 7r1 0
 Attuma 7r1 0
 Sasquatch 7r1 0
 //
+>Niels et Jojo
+Groupe 2
+Fury 6r5 200
+Bishop 6r5 200
+Scorpion 6r5 200
+ham 6r4 300
+Gorr 6r4 200
+Storm 7r2 0
+GuiGui99 7r1 0
+Falcon 7r1 0
+Elsa 7r1 0
+Adam 7r1 0
+Overseer 7r1 0
+Profx 7r1 0
+Knull 7r1 0
+Sandman 7r1 0
+//
+>gaz73
+Groupe 2
+Doom 6r6 200
+Hercule 6r6 200
+Ebony 7r1 0
+Elsa 7r2 0
+Wong 7r1 20
+Overseer 7r1 20
+Mysterio 7r1 0
+Shocker 7r1 0
+Attuma 7r1 0
+Sasquatch 7r1 0
+//
 >noebis
 Groupe 3
-Fury 6r4 200
+fury 6r4 200
 Hercule 6r4 200
 CGR 6r4 200
-Warlock 6r4 200
-Sunspot 7r1 0
+Shocker 7r1 20
+Ultron 6r4 200
 Mysterio 7r1 0
+Rocket 7r1 0
+Nimrod 6r4 91
+Quicks 6r3 70
+Dani 6r3 84
