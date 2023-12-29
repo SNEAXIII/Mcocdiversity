@@ -53,19 +53,6 @@ Morbius 7r1 0
 Odin 7r1 0
 Wilson 7r1 0
 //
->gaz73
-Groupe 2
-Doom 6r6 200
-Hercule 6r6 200
-Ebony 7r1 0
-Elsa 7r2 0
-Wong 7r1 20
-Overseer 7r1 20
-Mysterio 7r1 0
-Shocker 7r1 0
-Attuma 7r1 0
-Sasquatch 7r1 0
-//
 >Niels et Jojo
 Groupe 2
 Fury 6r5 200
@@ -82,6 +69,24 @@ Overseer 7r1 0
 Profx 7r1 0
 Knull 7r1 0
 Sandman 7r1 0
+//
+>jojocorp
+Groupe 2
+Doom 6r6 109
+Idoom 6r5 179
+Bishop 6r4 153
+Killmonger 6r4 200
+Mysterio 7r1 0
+Pyramidx 7r1 0
+Chavez 7r1 0
+Ham 6r4 40
+Hercule 6r4 33
+Stryfe 7r1 0
+Wilson 7r1 0
+Antman 7r1 0
+Morbius 7r1 0
+Kitty 6r4 3
+Im 6r4 25
 //
 >gaz73
 Groupe 2
@@ -108,3 +113,22 @@ Rocket 7r1 0
 Nimrod 6r4 91
 Quicks 6r3 70
 Dani 6r3 84
+//
+>lool68
+Groupe 3
+Doom 6r5 140
+Gambit 7r1 0
+Angela 6r4 200
+Kitty 6r4 83
+Elsa 7r1 0
+Wiccan 7r1 0
+BP 7r1 0
+Sauron 7r1 0
+Galan 6r4 80
+imiw 7r1 0
+ablo 7r1 0
+Apo 6r4 32
+Idoom 6r4 1
+Overseer 7r1 0
+Hulkling 6r4 5
+Mantis 7r1 0

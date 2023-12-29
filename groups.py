@@ -6,7 +6,7 @@ LINE = "\n"
 
 def checkDefName(playerName: str, defName: str):
     if defName not in allCara:
-        raise Exception(f"Le défenseur {defName} du joueur {playerName} n'existe pas")
+        raise Exception(f"{defName} du joueur {playerName} n'est pas un défenseur valide !!!")
 
 
 class Player:
@@ -24,6 +24,11 @@ class Player:
             stringReturn += f"  → {_def}\n"
         return stringReturn + LINE
 
+    def __str__(self):
+        stringReturn = f"{self.name}\n{self.getScore()}\n"
+        for _def in self.defs:
+            stringReturn += f"{_def}\n"
+        return f"{stringReturn}\n"
 
 class Group:
     def __init__(self):
@@ -211,7 +216,10 @@ class Groups:
                 selectedGroup.addDefInPlayer(playerName, defName.capitalize(),
                                              selectedGroup.convertRankStrToInt(strRank))
             else:
-                defName, strRank, strSig = line.split(" ")
+                rawData = line.split(" ")
+                if len(rawData) !=3:
+                    raise Exception(f"La ligne {rawData} est mal écrite")
+                defName, strRank, strSig = rawData
                 checkDefName(playerName, defName.capitalize())
                 self.addDefToOneGroup(group, playerName, defName.capitalize(), strRank, int(strSig))
 
@@ -229,7 +237,8 @@ class Groups:
 if __name__ == "__main__":
     groups = Groups()
     groups.doEverything()
-    groups.dump()
+    # groups.dump()
+    print(groups.groups[1].allPlayer["Mrbal'"])
     a = "test"
 
 # todo ajouter un check si il y a bien 10 membres par groupe
