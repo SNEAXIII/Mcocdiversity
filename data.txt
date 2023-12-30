@@ -45,7 +45,7 @@ Groupe 2
 Doom 6r5 200
 Idoom 6r6 50
 Overseer 7r1 20
-Imiw 7r2 20
+Imiw 7r1 20
 Warlock 6r4 40
 Absman 6r4 40
 Gladiateur 7r1 0
@@ -58,7 +58,7 @@ Groupe 2
 Fury 6r5 200
 Bishop 6r5 200
 Scorpion 6r5 200
-ham 6r4 300
+ham 6r4 200
 Gorr 6r4 200
 Storm 7r2 0
 GuiGui99 7r1 0
@@ -68,7 +68,7 @@ Adam 7r1 0
 Overseer 7r1 0
 Profx 7r1 0
 Knull 7r1 0
-Sandman 7r1 0
+Sandman 7r2 20
 //
 >jojocorp
 Groupe 2
@@ -101,6 +101,24 @@ Shocker 7r1 0
 Attuma 7r1 0
 Sasquatch 7r1 0
 //
+>Dylli Neither
+Groupe 2
+Galan 6r6 200
+Photon 6r6 200
+Zemo 6r5 200
+Kitty 6r5 200
+Absman 6r5 200
+Kindred 6r4 200
+Antmanf 6r4 180
+Spot 6r4 120
+Mysterio 7r1 20
+Chavez 7r1 20
+Emma 7r1 20
+Diablo 7r1 20
+Sandman 7r1 20
+Terrax 7r1 20
+Sasquatch 7r1 20
+//
 >noebis
 Groupe 3
 fury 6r4 200
@@ -132,3 +150,54 @@ Idoom 6r4 1
 Overseer 7r1 0
 Hulkling 6r4 5
 Mantis 7r1 0
+//
+>degeneration x
+Groupe 3
+Fury 6r4 0
+Hercule 6r4 200
+Weaponx 6r4 200
+Wong 7r1 0
+Sersi 6r3 0
+Spidersup 6r3 0
+Nimrod 6r4 200
+Viv 6r3 0
+pyramidx 6r3 0
+Kingpin 6r4 0
+Doom 6r4 0
+Kitty 6r4 200
+Omega 6r4 0
+ImIw 7r1 0
+Gorr 6r3 0
+Havok 6r3 0
+Sauron 6r3 0
+//
+>flashman
+Groupe 3
+Monkey 6r3 142
+Wiccan 7r1 0
+Hulkling 6r4 52
+Shocker 7r1 0
+Colossus 7r1 0
+Capiw 6r3 21
+Nova 6r3 62
+Idoom 6r3 37
+Omega 6r3 25
+Apo 6r3 49
+Zemo 6r3 20
+Morningstar 6r3 22
+Titania 6r3 21
+Spiderstealth 6r3 0
+Wong 6r3 30
+Sasquatch 6r3 32
+Hercule 6r3 8
+Overseer 6r3 21
+Absman 6r3 4
+Redhulk 6r3 22
+Sorcersup 6r3 0
+Gamora 6r3 20
+Havok 6r3 0
+Torch 6r3 0
+Kingpin 6r3 0
+Gr 6r3 0
+Toad 6r3 0
+HB 6r3 0
