@@ -45,10 +45,12 @@ class Connection:
 
         cell_b21 = worksheet.cell("b21")
         cell_b21.value = f"Les défenseurs choisis sont : {group.strAllDefSelected()}"
+        cell_b21.wrap_strategy = "WRAP"
         cell_b21.update()
 
         cell_b22 = worksheet.cell("b22")
         cell_b22.value = f"Les défenseurs non choisis sont : {group.strAllDefUnSelected()}"
+        cell_b22.wrap_strategy = "WRAP"
         cell_b22.update()
 
         print(f"Groupe numéro {id} finis")
