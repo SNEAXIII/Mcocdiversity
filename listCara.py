@@ -102,7 +102,7 @@ allCara = [
     "Dormammu",  # Dormammu
     "Dragonman",  # Dragon Man
     "Ebony",  # Ebony Maw
-    "GR",  # Ghost Rider
+    "Gr",  # Ghost Rider
     "Guigui",  # Guillotine
     "Fist",  # Iron Fist
     "Juggs",  # Juggernaut
