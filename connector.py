@@ -14,7 +14,7 @@ class Connection:
 
     def getSheets(self):
         connection = authorize(service_file='private/client_secret.json')
-        return connection.open('Test Mcoc Diversity')
+        return connection.open('Gold Mcoc Diversity')
 
     def updateGroups(self, groups):
         for id, group in groups.groups.items():
@@ -51,3 +51,4 @@ class Connection:
         cell_b22.value = f"Les défenseurs non choisis sont : {group.strAllDefUnSelected()}"
         cell_b22.update()
 
+        print(f"Groupe numéro {id} finis")
