@@ -201,3 +201,18 @@ Kingpin 6r3 0
 Gr 6r3 0
 Toad 6r3 0
 HB 6r3 0
+//
+>Neologisme
+Groupe 3
+Mysterio 7r1 0
+Moondragon 7r1 0
+Omega 6r4 26
+Sabretooth 6r3 81
+Spiderstealth 6r3 58
+Nova 6r3 73
+Sorcersup 6r3 47
+Ragnathor 6r3 54
+Guardian 6r3 47
+Redgob 6r3 20
+Weaponx 6r4 17
+Jubilee 6r3 1
