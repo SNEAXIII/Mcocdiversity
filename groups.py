@@ -193,10 +193,13 @@ class Groups:
         playerIdentifier = ">"
         groupIdentifier = "Groupe "
         forceIdentifier = "!"
+        commentaryIdentifier = "*"
         for line in data:
             if line == resetIdentifier:
                 playerName = None
                 group = None
+            elif line.startswith(commentaryIdentifier):
+                pass
             elif line.startswith(playerIdentifier):
                 if playerName is not None:
                     raise Exception("Le joueur ne peux être saisi 2 fois")
