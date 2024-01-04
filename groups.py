@@ -114,6 +114,10 @@ class Group:
         dictDefRank = self.allDefs[defName][rank]
         if len(dictDefRank):
             maxSig = max(dictDefRank.keys())
+            # todo print(debug)
+            if len(dictDefRank[maxSig]) > 1:
+                printListePlayer = ", ".join(dictDefRank[maxSig])
+                print(f"Le défenseur {defName} au rang {self.convertRankIntToStr(rank)} est possédé par {printListePlayer}")
             return choice(list(dictDefRank[maxSig]))
         return False
 
@@ -229,9 +233,10 @@ class Groups:
                 self.addDefToOneGroup(group, playerName, defName.capitalize(), strRank, int(strSig))
 
     def execute(self):
-        self.groups[1].findTheBestDefs()
-        self.groups[2].findTheBestDefs()
-        self.groups[3].findTheBestDefs()
+        for numGroup in range(1,4):
+            # todo print(debug)
+            print(f"____________________\nTraitement groupe {numGroup}")
+            self.groups[numGroup].findTheBestDefs()
 
     def doEverything(self):
         self.loadData()
