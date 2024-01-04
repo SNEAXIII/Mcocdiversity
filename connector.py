@@ -21,7 +21,7 @@ class Connection:
             self.updateOneGroup(group, id)
 
     def updateOneGroup(self, group, id):
-        worksheet = self.sheets[id-1]
+        worksheet = self.sheets[id - 1]
         allplayer = list(group.allPlayer.values())
         offsety = 3
         offsetx = 2
@@ -53,4 +53,4 @@ class Connection:
         cell_b22.wrap_strategy = "WRAP"
         cell_b22.update()
 
-        print(f"Groupe numéro {id} finis")
+        print(f"____________________\nGroupe numéro {id} finis")
