@@ -30,6 +30,7 @@ class Player:
             stringReturn += f"{_def}\n"
         return f"{stringReturn}\n"
 
+
 class Group:
     def __init__(self):
         self.gScore = 0
@@ -96,9 +97,10 @@ class Group:
         defNameDefRank[sig].add(owner)
 
     def convertRankStrToInt(self, rank: str):
-        if not rank in self.allRanks:
+        lowerRank = rank.lower()
+        if not lowerRank in self.allRanks:
             raise Exception(f"Le rang est mal saisi : {rank}")
-        return self.allRanks[rank]
+        return self.allRanks[lowerRank]
 
     def convertRankIntToStr(self, value: int):
         for strRank, intRank in self.allRanks.items():
@@ -220,7 +222,7 @@ class Groups:
                                              selectedGroup.convertRankStrToInt(strRank))
             else:
                 rawData = line.split(" ")
-                if len(rawData) !=3:
+                if len(rawData) != 3:
                     raise Exception(f"La ligne {rawData} est mal écrite")
                 defName, strRank, strSig = rawData
                 checkDefName(playerName, defName.capitalize())

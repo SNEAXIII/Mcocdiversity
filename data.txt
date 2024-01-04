@@ -16,17 +16,43 @@ RedMag 6r4 46
 Groupe 1
 !Maestro 7r1 0
 Titania 7r3 0
-Absman 6r6 2000
+Absman 6r6 200
 Chose 6r4 200
 Spot 6r4 200
-QuickS 6r4 20
+Quicks 6r4 20
 Bishop 7r2 20
 Wong 7r1 20
-elsa 7r1 0
+Elsa 7r1 0
 Aarkus 7r1 0
 Jabari 7r1 0
 Mangog 7r1 0
 Hulkling 6r4 20
+//
+>Tetane
+Groupe 1
+Absman 6r5 200
+Doom 6r6 200
+Kingpin 6r5 200
+Nimrod 6r5 200
+Scorpion 6r5 200
+Kitty 6r5 200
+Fury 6r4 90
+Idoom 6r4 102
+Galan 6r4 100
+Spider99 6r4 200
+Apo 6r4 21
+Warmachine 7r1 20
+Sorcersup 7r1 0
+Korg 7r1 0
+Sandman 7r1 0
+Mysterio 7r1 0
+Mangog 7r1 0
+Pyramidx 7r1 0
+surfer 7r1 0
+Wiccan 7r1 0
+Morbius 7r1 0
+Bishop 7r1 0
+Guigui99 7r1 0
 //
 >Elminautor
 Groupe 1
@@ -118,6 +144,32 @@ Diablo 7r1 20
 Sandman 7r1 20
 Terrax 7r1 20
 Sasquatch 7r1 20
+//
+>Simobou
+Groupe 2
+Gambit 7r1 0
+monkey 6r4 50
+WereWolf 6r4 50
+Torch 6r4 50
+Ebony 7r1 0
+weaponx 6r4 50
+Wiccan 7r1 0
+Shocker 7r1 0
+Knull 7r1 0
+Korg 7r1 0
+CGR 6R4 50
+Doom 6r3 50
+Sandman 7r1 0
+MoonDragon 7r1 0
+Warlock 6r3 50
+Gorr 6r3 50
+Immoabo 6r3 50
+Purgatory 6r3 50
+Quicks 6r3 50
+Lady 6r3 50
+Spidersup 6r3 0
+Antmanf 6r3 0
+HULKLING 6r3 0
 //
 >noebis
 Groupe 3
