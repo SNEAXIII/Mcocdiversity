@@ -1,6 +1,4 @@
 from pygsheets import authorize
-import groups
-import pandas as pd
 
 
 # wks.set_dataframe(df, (1, 1))
@@ -10,17 +8,24 @@ import pandas as pd
 class Connection:
     def __init__(self):
         sheets = self.getSheets()
+        self.url = sheets.url
         self.sheets = [sheets[0], sheets[1], sheets[2]]
 
     def getSheets(self):
         connection = authorize(service_file='private/client_secret.json')
         return connection.open('Gold Mcoc Diversity')
 
+    def printSheetsUrl(self):
+        print(f"Lien vers les sheets:\n{self.url}")
+    def printOneSheetUrl(self,worksheet):
+        print(f"Lien vers le sheet:\n{worksheet.spreadsheet.url}")
+
     def updateGroups(self, groups):
         for id, group in groups.groups.items():
-            self.updateOneGroup(group, id)
+            self.updateOneGroup(group, id, False)
+        self.printSheetsUrl()
 
-    def updateOneGroup(self, group, id):
+    def updateOneGroup(self, group, id, printUrl=True):
         worksheet = self.sheets[id - 1]
         allplayer = list(group.allPlayer.values())
         offsety = 3
@@ -54,3 +59,5 @@ class Connection:
         cell_b22.update()
 
         print(f"____________________\nGroupe numéro {id} finis")
+        if printUrl:
+            self.printOneSheetUrl(worksheet)

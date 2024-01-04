@@ -1,4 +1,4 @@
-from groups import *
+from src.groups import *
 from connector import *
 from time import time
 debut = time()

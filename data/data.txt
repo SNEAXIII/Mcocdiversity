@@ -54,6 +54,21 @@ Morbius 7r1 0
 Bishop 7r1 0
 Guigui99 7r1 0
 //
+>brunog71
+Groupe 1
+Quicks 6r4 200
+Kitty 6r4 200
+Hulkling 6r4 200
+Mantis 7r1 0
+Aarkus 7r1 0
+Omega 6r3 200
+Wong 7r1 0
+Knull 7r1 0
+Korg 7r1 0
+Overseer 7r1 0
+Absman 6r3 105
+Peni 6r3 74
+//
 >Elminautor
 Groupe 1
 Doom 6r6 200
