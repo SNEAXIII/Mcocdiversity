@@ -76,7 +76,7 @@ allCara = [
     "Namor",  # Namor
     "Diablo",  # Nightcrawler
     "Logan",  # Old Man Logan
-    "Omega",  # Omega Red
+    "Omegared",  # Omega Red
     "Platpool",  # Platinumpool
     "Profx",  # Professor X
     "Psylocke",  # Psylocke
