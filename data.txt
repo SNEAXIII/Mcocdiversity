@@ -218,6 +218,7 @@ Kingpin 6r4 0
 Doom 6r4 0
 Kitty 6r4 200
 Omega 6r4 0
+omegared 6r3 40
 ImIw 7r1 0
 Gorr 6r3 0
 Havok 6r3 0
