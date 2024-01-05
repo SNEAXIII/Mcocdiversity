@@ -236,9 +236,9 @@ Void 6r5 66
 Wiccan 7r1 0
 Attuma 7r1 0
 Knull 6r3 33
-ProfX 6r3 00
-Shuri 6r3 00
-Omega 6r2 00
+ProfX 6r3 0
+Shuri 6r3 0
+Omega 6r2 0
 //
 >noebis
 Groupe 3
