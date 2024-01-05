@@ -120,8 +120,8 @@ allCara = [
     "Purgatory",  # Purgatory
     "Rintrah",  # Rintrah
     "Sasquatch",  # Sasquatch
-    "SW",  # Scarlet Witch
-    "SWC",  # Scarlet Witch (Classic)
+    "Sw",  # Scarlet Witch
+    "Swc",  # Scarlet Witch (Classic)
     "Sorcersup",  # Sorcerer Supreme
     "Spidersup",  # Spider-Man (Supreme)
     "SymSup",  # Symbiote Supreme
