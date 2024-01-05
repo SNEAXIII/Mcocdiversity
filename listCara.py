@@ -51,7 +51,7 @@ allCara = [
     "Vox",  # Vox
     # Mutant
     "Apo",  # Apocalypse
-    "AA",  # Archangel
+    "Aa",  # Archangel
     "Beast",  # Beast
     "Bishop",  # Bishop
     "Cable",  # Cable
