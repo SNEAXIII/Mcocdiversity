@@ -88,8 +88,10 @@ class Group:
             maxSig = max(dictDefRank.keys())
             # todo print(debug)
             if len(dictDefRank[maxSig]) > 1:
-                printListePlayer = ", ".join(dictDefRank[maxSig])
-                print(f"Le défenseur {defName} au rang {self.convertRankIntToStr(rank)} est possédé par {printListePlayer}")
+                listePlayer = dictDefRank[maxSig]
+                printListePlayer = ", ".join(listePlayer)
+                lenListePlayer = len(listePlayer)
+                print(f"{lenListePlayer} players --> {defName} --> {self.convertRankIntToStr(rank)} --> {printListePlayer}")
             return choice(list(dictDefRank[maxSig]))
         return False
 
