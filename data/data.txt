@@ -69,6 +69,49 @@ Overseer 7r1 0
 Absman 6r3 105
 Peni 6r3 74
 //
+>corben d
+Groupe 1
+hulk 7r2 0
+wiccan 7r1 0
+elsa 7r1 0
+Pyramidx 7r1 0
+gorr 7r1 0
+mangog 7r1 0
+sauron 7r1 0
+morbius 7r1 0
+terrax 7r1 0
+gamora 7r1 0
+titania 7r1 0
+fixit 7r1 0
+Sandman 7r1 0
+Moondragon 7r1 0
+imiw 7r1 0
+doom 6r6 200
+fury 6r6 200
+hercule 6r6 200
+idoom 6r5 200
+kitty 6r4 200
+Immoabo 6r4 200
+negative 6r4 200
+domino 6r4 200
+angela 6r4 200
+nimrod 6r4 200
+void 6r4 200
+warlock 6r4 100
+bwcv 6r4 60
+omega 6r4 60
+Shang 6r4 60
+killmonger 6r4 140
+apo 6r4 40
+Overseer 6r4 120
+rintrah 6r4 100
+hulkling 6r4 40
+hood 6r4 20
+antivenom 6r4 20
+*magneto 6r4 40
+Redhulk 6r4 40
+Sw 6r4 60
+//
 >Elminautor
 Groupe 1
 Doom 6r6 200
@@ -186,6 +229,17 @@ Spidersup 6r3 0
 Antmanf 6r3 0
 HULKLING 6r3 0
 //
+>Vulcain1978
+Groupe 2
+Quicks 6r5 41
+Void 6r5 66
+Wiccan 7r1 0
+Attuma 7r1 0
+Knull 6r3 33
+ProfX 6r3 00
+Shuri 6r3 00
+Omega 6r2 00
+//
 >noebis
 Groupe 3
 fury 6r4 200
@@ -284,3 +338,17 @@ Guardian 6r3 47
 Redgob 6r3 20
 Weaponx 6r4 17
 Jubilee 6r3 1
+//
+>Angel
+Groupe 3
+Hercule 6R6 154
+Doom 6R5 69
+Fixit 7R2 0
+Torch 6R5 97
+Viv 6R4 102
+Falcon 7R1 0
+Ebony 7R1 0
+Sasquatch 7R1 20
+Venom 6R4 133
+Apo 6R4 67
+Chavez 7R1 0
