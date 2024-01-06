@@ -56,16 +56,19 @@ class Groups:
             else:
                 rawData = line.split(" ")
                 if len(rawData) != 3:
-                    raise Exception(f"La ligne {rawData} est mal écrite")
+                    raise Exception(f"La ligne {rawData} du joueur {playerName} est mal écrite")
                 defName, strRank, strSig = rawData
                 checkDefName(playerName, defName.capitalize())
                 self.addDefToOneGroup(group, playerName, defName.capitalize(), strRank, int(strSig))
+
 
     def execute(self):
         for numGroup in range(1,4):
             # todo print(debug)
             print(f"____________________\nTraitement groupe {numGroup}")
-            self.groups[numGroup].findTheBestDefs()
+            group = self.groups[numGroup]
+            group.checkdoublons()
+            group.findTheBestDefs()
 
     def doEverything(self):
         self.loadData()

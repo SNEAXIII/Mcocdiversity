@@ -72,7 +72,7 @@ Overseer 7r1 0
 Absman 6r3 105
 Peni 6r3 74
 //
->corben d
+>Corben d
 Groupe 1
 hulk 7r2 0
 wiccan 7r1 0
@@ -167,10 +167,33 @@ Angela 6r3 44
 Cgr 6r3 0
 Hulkling 6r3 0
 //
+>Francis
+Groupe 2
+centurion 6r5 200
+torch 6r5 100
+gambit 7r1 0
+bwcv 6r4 130
+shuri 7r1 0
+chose 6r4 65
+warlock 7r1 0
+doom 6r4 140
+skrull 6r3 100
+Thor 6r3 100
+iceman 6r3 85
+Redguard 6r3 40
+Fury 6r3 40
+quicks 6r3 25
+guardian 6r3 30
+jabari 6r3 30
+Kitty 6r3 1
+sorcersup 6r3 20
+annihilus 6r3 30
+korg 6r3 0
+//
 >Tug88
 Groupe 2
 Doom 6r5 200
-Idoom 6r6 50
+Idoom 6r6 75
 Overseer 7r1 20
 Imiw 7r1 20
 Warlock 6r4 40
@@ -179,6 +202,14 @@ Gladiateur 7r1 0
 Morbius 7r1 0
 Odin 7r1 0
 Wilson 7r1 0
+Fixit 7r1 0
+Titania 7r1 0
+Moondragon 7r1 0
+Sorcersup 7r1 0
+Colossus 6r4 40
+Fury 6r4 40
+Surfer 6r3 100
+Kgroot 6r3 100
 //
 >Niels et Jojo
 Groupe 2
@@ -282,6 +313,7 @@ Knull 6r3 33
 ProfX 6r3 0
 Shuri 6r3 0
 Omega 6r2 0
+Dani 6r3 0
 //
 >noebis
 Groupe 3
@@ -395,3 +427,23 @@ Sasquatch 7R1 20
 Venom 6R4 133
 Apo 6R4 67
 Chavez 7R1 0
+//
+>booshi boosh
+Groupe 3
+Gorr 7r2 20
+Photon 7r2 0
+Guigui99 7r2 20
+Killmonger 7r2 20
+Maestro 6r6 200
+//
+>Nim's
+Groupe 3
+Zemo 6r5 200
+Antmanf 6r5 200
+Domino 7r2 20
+Sauron 6r5 200
+Jessica 6r5 200
+Chose 6r5 200
+Weaponx 6r4 200
+Attuma 6r4 124
+Spidersup 6r5 200

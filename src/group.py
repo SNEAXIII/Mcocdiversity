@@ -26,7 +26,7 @@ class Group:
         self.rangeRank = self.allRanks.values()
 
     def getScore(self):
-        return int(self.gScore / 50)
+        return int(self.gScore / 30)
 
     def dump(self):
         stringReturn = ""
@@ -86,12 +86,6 @@ class Group:
         dictDefRank = self.allDefs[defName][rank]
         if len(dictDefRank):
             maxSig = max(dictDefRank.keys())
-            # todo print(debug)
-            if len(dictDefRank[maxSig]) > 1:
-                listePlayer = dictDefRank[maxSig]
-                printListePlayer = ", ".join(listePlayer)
-                lenListePlayer = len(listePlayer)
-                print(f"{lenListePlayer} players --> {defName} --> {self.convertRankIntToStr(rank)} --> {printListePlayer}")
             return choice(list(dictDefRank[maxSig]))
         return False
 
@@ -105,6 +99,39 @@ class Group:
                 playerOrFalse = self.findThePlayerForRankForDef(defName, rank)
                 if playerOrFalse:
                     self.addDefInPlayer(playerOrFalse, defName, rank)
+
+    def checkdoublons(self):
+        for tupleDef in self.allDefs.items():
+            if tupleDef[0] == "Absman":
+                pass
+            count = 0
+            printName = True
+            stringToPrint = ""
+            for tupleRank in tupleDef[1].items():
+                countForRank = 0
+                setPlayerForRank = set()
+                for tupleSig in tupleRank[1].items():
+                    setPlayer = tupleSig[1]
+                    countForSig = len(setPlayer)
+                    if countForSig:
+                        countForRank += countForSig
+                        setPlayerForRank = setPlayerForRank | setPlayer
+                count+=countForRank
+                if countForRank > 0:
+                    lineToPrint = "| " + " | ".join(setPlayerForRank) + " |"
+                    stringToPrint += f"  --> {self.convertRankIntToStr(tupleRank[0])} --> {lineToPrint}\n"
+            if count > 1:
+                if printName:
+                    print(tupleDef[0])
+                printName = False
+                print(stringToPrint)
+
+                # print(dictRank[])
+                # if len(dictDefRank[maxSig]) > 1:
+                #     listePlayer = dictDefRank[maxSig]
+                #     printListePlayer = ", ".join(listePlayer)
+                #     lenListePlayer = len(listePlayer)
+                #     print(f"{lenListePlayer} players --> {defName} --> {self.convertRankIntToStr(rank)} --> {printListePlayer}")
 
     def addDefInPlayer(self, player: str, defName: str, rank: int):
         if not any(tupleDef[0] == defName for tupleDef in self.selectedDefs):

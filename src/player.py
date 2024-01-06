@@ -5,7 +5,7 @@ class Player:
         self.pScore = 0
 
     def getScore(self):
-        return int(self.pScore / 20)
+        return int(self.pScore / 15)
 
     def dump(self):
         stringReturn = f"\nJoueur : {self.name}\nPuissance théorique du joueur: {self.getScore()}\n"
