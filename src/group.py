@@ -4,7 +4,8 @@ from src.player import Player
 
 
 class Group:
-    def __init__(self):
+    def __init__(self,id:int):
+        self.id = id
         self.gScore = 0
         self.allDefs = {}
         self.selectedDefs = set()
@@ -123,7 +124,7 @@ class Group:
             if count > 1:
                 if printName:
                     print(tupleDef[0])
-                printName = False
+                    printName = False
                 print(stringToPrint)
 
                 # print(dictRank[])

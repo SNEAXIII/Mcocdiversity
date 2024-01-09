@@ -2,9 +2,10 @@ from src.group import Group
 from src.player import Player
 from src.utils import checkDefName
 
+
 class Groups:
     def __init__(self):
-        self.groups = {1: Group(), 2: Group(), 3: Group()}
+        self.groups = {1: Group(1), 2: Group(2), 3: Group(3)}
 
     def addPlayerToAGroup(self, idGroup: int, playerName: str):
         if len(self.groups[idGroup].allPlayer) != 10:
@@ -61,18 +62,24 @@ class Groups:
                 checkDefName(playerName, defName.capitalize())
                 self.addDefToOneGroup(group, playerName, defName.capitalize(), strRank, int(strSig))
 
-
-    def execute(self):
-        for numGroup in range(1,4):
+    def executeAllGroups(self):
+        for numGroup in range(1, 4):
             # todo print(debug)
-            print(f"____________________\nTraitement groupe {numGroup}")
-            group = self.groups[numGroup]
-            group.checkdoublons()
-            group.findTheBestDefs()
+            self.executeOneGroup(numGroup)
+
+
+    def executeOneGroup(self, numGroup: int,load :bool= False):
+        if load:
+            # todo voir pour load un seul groupe
+            self.loadData()
+        group = self.groups[numGroup]
+        print(f"____________________\nTraitement groupe {group.id}")
+        group.checkdoublons()
+        group.findTheBestDefs()
 
     def doEverything(self):
         self.loadData()
-        self.execute()
+        self.executeAllGroups()
         # todo self.check()
 
 # todo ajouter un check si il y a bien 10 membres par groupe
