@@ -319,14 +319,14 @@ Dani 6r3 0
 Groupe 3
 fury 6r4 200
 Hercule 6r4 200
-CGR 6r4 200
+!CGR 6r4 200
 Shocker 7r1 20
-Ultron 6r4 200
+!Ultron 6r4 200
 Mysterio 7r1 0
-Rocket 7r1 0
-Nimrod 6r4 91
+!Rocket 7r1 0
+!Nimrod 6r4 91
 Quicks 6r3 70
-Dani 6r3 84
+!Dani 6r4 120
 //
 >lool68
 Groupe 3
@@ -352,18 +352,18 @@ Groupe 3
 Fury 6r4 0
 Hercule 6r4 200
 Weaponx 6r4 200
-Wong 7r1 0
-Sersi 6r3 0
+!Wong 7r1 0
+!Sersi 6r3 0
 Spidersup 6r3 0
 Nimrod 6r4 200
 Viv 6r3 0
 pyramidx 6r3 0
-Kingpin 6r4 0
+!Kingpin 6r4 0
 Doom 6r4 0
-Kitty 6r4 200
+!Kitty 6r4 200
 Omega 6r4 0
 omegared 6r3 40
-ImIw 7r1 0
+!ImIw 7r1 0
 Gorr 6r3 0
 Havok 6r3 0
 Sauron 6r3 0
@@ -371,9 +371,9 @@ Sauron 6r3 0
 >flashman
 Groupe 3
 Monkey 6r3 142
-Wiccan 7r1 0
+!Wiccan 7r1 0
 Hulkling 6r4 52
-Shocker 7r1 0
+!Shocker 7r1 0
 Colossus 7r1 0
 Capiw 6r3 21
 Nova 6r3 62
@@ -401,7 +401,7 @@ HB 6r3 0
 //
 >Neologisme
 Groupe 3
-Mysterio 7r1 0
+!Mysterio 7r1 0
 Moondragon 7r1 0
 Omega 6r4 26
 Sabretooth 6r3 81
@@ -411,7 +411,7 @@ Sorcersup 6r3 47
 Ragnathor 6r3 54
 Guardian 6r3 47
 Redgob 6r3 20
-Weaponx 6r4 17
+!Weaponx 6r4 17
 Jubilee 6r3 1
 //
 >Angel
@@ -436,7 +436,48 @@ Guigui99 7r2 20
 Killmonger 7r2 20
 Maestro 6r6 200
 //
->Nim's
+>Nims
+Groupe 1
+Void 7r1 0
+Fixit 7r1 0
+SW 6r4 183
+Adam 6r4 20
+Wilson 7r1 20
+Aarkus 7r1 0
+Chavez 7r1 20
+Wong 7r1 0
+Korg 7r1 0
+Mysterio 7r1 0
+//
+>dede04180
+Groupe 3
+Doom 6r4 200
+!Fury 6r4 166
+Knull 6r4 80
+Gorr 7r1 0
+Domino 7r1 0
+Hulk 7r1 0
+Absman 6r4 19
+Mordo 6r3 40
+Korg 6r3 109
+Chose 6r3 48
+Scorpion 6r3 20
+Negative 6r3 1
+Peni 6r3 1
+Attuma 6r3 20
+Galan 6r3 21
+Idoom 6r3 1
+Odin 6r3 21
+//
+>gigicapi3
+Groupe 3
+!Viv 6r4 63
+Hyperion 6r5 200
+Emma 7r1 20
+Morbius 7r1 0
+Terrax 7r1 40
+//
+>Ytietha
 Groupe 3
 Zemo 6r5 200
 Antmanf 6r5 200
@@ -447,3 +488,15 @@ Chose 6r5 200
 Weaponx 6r4 200
 Attuma 6r4 124
 Spidersup 6r5 200
+//
+>P4ul
+Groupe 2
+//
+>Sidd
+Groupe 2
+//
+>Madarcher
+Groupe 1
+//
+>Valclaw
+Groupe 1
