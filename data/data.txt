@@ -330,17 +330,17 @@ Quicks 6r3 70
 //
 >lool68
 Groupe 3
-Doom 6r5 140
-Gambit 7r1 0
+!Doom 6r5 140
+!Gambit 7r1 0
 Angela 6r4 200
 Kitty 6r4 83
-Elsa 7r1 0
+!Elsa 7r1 0
 Wiccan 7r1 0
-BP 7r1 0
+!BP 7r1 0
 Sauron 7r1 0
 Galan 6r4 80
 imiw 7r1 0
-ablo 7r1 0
+!ablo 7r1 0
 Apo 6r4 32
 Idoom 6r4 1
 Overseer 7r1 0
@@ -372,9 +372,9 @@ Sauron 6r3 0
 Groupe 3
 Monkey 6r3 142
 !Wiccan 7r1 0
-Hulkling 6r4 52
+!Hulkling 6r4 52
 !Shocker 7r1 0
-Colossus 7r1 0
+!Colossus 7r1 0
 Capiw 6r3 21
 Nova 6r3 62
 Idoom 6r3 37
@@ -392,7 +392,7 @@ Absman 6r3 4
 Redhulk 6r3 22
 Sorcersup 6r3 0
 Gamora 6r3 20
-Havok 6r3 0
+!Havok 6r3 0
 Torch 6r3 0
 Kingpin 6r3 0
 Gr 6r3 0
@@ -402,11 +402,11 @@ HB 6r3 0
 >Neologisme
 Groupe 3
 !Mysterio 7r1 0
-Moondragon 7r1 0
-Omega 6r4 26
+!Moondragon 7r1 0
+!Omega 6r4 26
 Sabretooth 6r3 81
 Spiderstealth 6r3 58
-Nova 6r3 73
+!Nova 6r3 73
 Sorcersup 6r3 47
 Ragnathor 6r3 54
 Guardian 6r3 47
@@ -416,25 +416,25 @@ Jubilee 6r3 1
 //
 >Angel
 Groupe 3
-Hercule 6R6 154
+!Hercule 6R6 154
 Doom 6R5 69
-Fixit 7R2 0
-Torch 6R5 97
+!Fixit 7R2 0
+!Torch 6R5 97
 Viv 6R4 102
-Falcon 7R1 0
+!Falcon 7R1 0
 Ebony 7R1 0
-Sasquatch 7R1 20
+!Sasquatch 7R1 20
 Venom 6R4 133
 Apo 6R4 67
 Chavez 7R1 0
 //
 >booshi boosh
 Groupe 3
-Gorr 7r2 20
-Photon 7r2 0
-Guigui99 7r2 20
-Killmonger 7r2 20
-Maestro 6r6 200
+!Gorr 7r2 20
+!Photon 7r2 0
+!Guigui99 7r2 20
+!Killmonger 7r2 20
+!Maestro 6r6 200
 //
 >Nims
 Groupe 1
@@ -453,12 +453,12 @@ Mysterio 7r1 0
 Groupe 3
 Doom 6r4 200
 !Fury 6r4 166
-Knull 6r4 80
+!Knull 6r4 80
 Gorr 7r1 0
 Domino 7r1 0
-Hulk 7r1 0
-Absman 6r4 19
-Mordo 6r3 40
+!Hulk 7r1 0
+!Absman 6r4 19
+!Mordo 6r3 40
 Korg 6r3 109
 Chose 6r3 48
 Scorpion 6r3 20
@@ -472,10 +472,10 @@ Odin 6r3 21
 >gigicapi3
 Groupe 3
 !Viv 6r4 63
-Hyperion 6r5 200
-Emma 7r1 20
-Morbius 7r1 0
-Terrax 7r1 40
+!Hyperion 6r5 200
+!Emma 7r1 20
+!Morbius 7r1 0
+!Terrax 7r1 40
 //
 >Ytietha
 Groupe 3
