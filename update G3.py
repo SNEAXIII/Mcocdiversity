@@ -4,7 +4,7 @@ from time import time
 debut = time()
 
 groups = Groups()
-groups.doEverything()
+groups.executeOneGroup(3,True)
 
 connector = Connection()
 connector.updateOneGroup(groups.groups[3],3)
