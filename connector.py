@@ -30,13 +30,16 @@ class Connection:
         allplayer = list(group.allPlayer.values())
         offsety = 3
         offsetx = 2
+        eol = "\n"
         for x in range(5):
             try:
-                player1 = f"{allplayer[x * 2]}".split("\n")
+                defP1 = allplayer[x * 2]
+                player1 = f"{defP1}{(5 - len(defP1.defs)) * eol}".split(eol)
             except:
                 player1 = ["vide"] * 7 + [""] * 2
             try:
-                player2 = f"{allplayer[x * 2 + 1]}".split("\n")
+                defP2 = allplayer[x * 2 + 1]
+                player2 = f"{defP2}{(5 - len(defP2.defs)) * eol}".split(eol)
             except:
                 player2 = ["vide"] * 7 + [""] * 2
             toPrint = player1 + player2
