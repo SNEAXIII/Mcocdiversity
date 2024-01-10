@@ -4,7 +4,7 @@ from src.player import Player
 
 
 class Group:
-    def __init__(self,id:int):
+    def __init__(self, id: int):
         self.id = id
         self.gScore = 0
         self.allDefs = {}
@@ -59,7 +59,7 @@ class Group:
 
     def addNewDef(self, owner: str, defName: str, rank: str, sig: int):
         if defName not in self.allDefs:
-            if any(tupleDef[0] == defName for tupleDef in self.selectedDefs):
+            if any(tupleDef[0] == defName for tupleDef in self.selectedDefs) or len(self.allPlayer[owner].defs) == 5:
                 return
             self.allDefs[defName] = {}
             for idRank in self.rangeRank:
@@ -117,7 +117,7 @@ class Group:
                     if countForSig:
                         countForRank += countForSig
                         setPlayerForRank = setPlayerForRank | setPlayer
-                count+=countForRank
+                count += countForRank
                 if countForRank > 0:
                     lineToPrint = "| " + " | ".join(setPlayerForRank) + " |"
                     stringToPrint += f"  --> {self.convertRankIntToStr(tupleRank[0])} --> {lineToPrint}\n"
