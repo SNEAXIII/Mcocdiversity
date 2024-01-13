@@ -119,7 +119,7 @@ class Group:
                         setPlayerForRank = setPlayerForRank | setPlayer
                 count += countForRank
                 if countForRank > 0:
-                    lineToPrint = "| " + " | ".join(setPlayerForRank) + " |"
+                    lineToPrint = ", ".join(setPlayerForRank)
                     stringToPrint += f"  --> {self.convertRankIntToStr(tupleRank[0])} --> {lineToPrint}\n"
             if count > 1:
                 if printName:
