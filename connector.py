@@ -1,4 +1,4 @@
-from pygsheets import authorize
+from pygsheets import authorize, HorizontalAlignment
 
 
 # wks.set_dataframe(df, (1, 1))
@@ -6,18 +6,19 @@ from pygsheets import authorize
 # print (wks.get_as_df())
 
 class Connection:
-    def __init__(self):
-        sheets = self.getSheets()
+    def __init__(self,sheetToOpen:str):
+        sheets = self.getSheets(sheetToOpen)
         self.url = sheets.url
         self.sheets = [sheets[0], sheets[1], sheets[2]]
 
-    def getSheets(self):
+    def getSheets(self,sheetToOpen:str):
         connection = authorize(service_file='private/client_secret.json')
-        return connection.open('Gold Mcoc Diversity')
+        return connection.open(sheetToOpen)
 
     def printSheetsUrl(self):
         print(f"Lien vers les sheets:\n{self.url}")
-    def printOneSheetUrl(self,worksheet):
+
+    def printOneSheetUrl(self, worksheet):
         print(f"Lien vers le sheet:\n{worksheet.spreadsheet.url}")
 
     def updateGroups(self, groups):
@@ -49,6 +50,7 @@ class Connection:
 
         cell_b2 = worksheet.cell("b2")
         cell_b2.value = f"Groupe {id} → puissance de groupe estimée : {group.getScore()}"
+        cell_b2.set_horizontal_alignment(HorizontalAlignment.CENTER)
         cell_b2.update()
 
         cell_b21 = worksheet.cell("b21")
