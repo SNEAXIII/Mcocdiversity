@@ -82,49 +82,6 @@ Overseer 7r1 0
 Absman 6r3 105
 Peni 6r3 74
 //
->Corben d
-Groupe 1
-hulk 7r2 0
-wiccan 7r1 0
-elsa 7r1 0
-Pyramidx 7r1 0
-gorr 7r1 0
-mangog 7r1 0
-sauron 7r1 0
-morbius 7r1 0
-terrax 7r1 0
-gamora 7r1 0
-titania 7r1 0
-fixit 7r1 0
-Sandman 7r1 0
-Moondragon 7r1 0
-imiw 7r1 0
-doom 6r6 200
-fury 6r6 200
-hercule 6r6 200
-idoom 6r5 200
-kitty 6r4 200
-Immoabo 6r4 200
-negative 6r4 200
-domino 6r4 200
-angela 6r4 200
-nimrod 6r4 200
-void 6r4 200
-warlock 6r4 100
-bwcv 6r4 60
-omega 6r4 60
-Shang 6r4 60
-killmonger 6r4 140
-apo 6r4 40
-Overseer 6r4 120
-rintrah 6r4 100
-hulkling 6r4 40
-hood 6r4 20
-antivenom 6r4 20
-*magneto 6r4 40
-Redhulk 6r4 40
-Sw 6r4 60
-//
 >Elminautor
 Groupe 1
 Doom 6r6 200
@@ -159,24 +116,6 @@ Gwen 7r1 0
 Bwdo 6r3 20
 ProfX 6r3 40
 //
->Christ
-Groupe 1
-Wiccan 7r1 0
-Wong 7r1 0
-Gambit 7r1 0
-Adam 7r1 0
-Ablo 7r1 0
-Ham 6r4 37
-Aa 6r4 67
-Hood 6r3 83
-Dragonman 6r3 78
-Sauron 6r3 66
-Valkyrie 6r3 0
-Fixit 6r3 46
-Angela 6r3 44
-Cgr 6r3 0
-Hulkling 6r3 0
-//
 >Francis
 Groupe 2
 centurion 6r5 200
@@ -203,13 +142,13 @@ korg 6r3 0
 >P4UL
 Groupe 2
 Domino 7r3 0
-Photon 6r6 166
-Maestro 6r6 45
+Photon 6r6 200
+Maestro 6r6 100
 Scorpion 6r6 200
 Absman 6r6 200
 Zemo 6r5 200
 Kitty 6r5 200
-Hulkling 6r5 200
+Hulkling 6r6 200
 Killmonger 7r1 0
 Sauron 7r1 20
 Korg 7r1 0
@@ -279,21 +218,22 @@ Im 6r4 25
 Groupe 2
 Doom 6r6 200
 Hercule 6r6 200
-Ebony 7r1 0
+Ebony 7r1 20
 Elsa 7r2 0
 Wong 7r1 20
-Overseer 7r1 20
+Overseer 7r2 20
 Mysterio 7r1 0
 Shocker 7r1 0
 Attuma 7r1 0
 Sasquatch 7r1 0
+Mantis 7r1 0
 //
 >Dylli Neither
 Groupe 2
 Galan 6r6 200
 Photon 6r6 200
 Zemo 6r5 200
-Kitty 6r5 200
+Kitty 6r6 200
 Absman 6r6 200
 Kindred 6r4 200
 Antmanf 6r4 180
@@ -305,6 +245,7 @@ Diablo 7r1 20
 Sandman 7r1 20
 Terrax 7r1 20
 Sasquatch 7r1 20
+Wong 7r2 0
 //
 >Simobou
 Groupe 2
@@ -445,7 +386,6 @@ Jubilee 6r3 1
 //
 >Angel
 Groupe 3
-!Hercule 6R6 154
 Doom 6R5 69
 !Fixit 7R2 0
 Torch 6R5 97
@@ -477,6 +417,37 @@ Chavez 7r1 20
 Wong 7r1 0
 Korg 7r1 0
 Mysterio 7r1 0
+//
+>Valclaw
+Groupe 1
+Scorpion 6r6 200
+Spot 7r1 0
+Silk 6r4 40
+Morbius 7r1 0
+Overseer 7r1 0
+Sandman 7r1 0
+Mantis 7r2 20
+Monkey 6r4 80
+Fury 6r4 20
+Attuma 7r1 0
+Apo 6r5 200
+Bishop 7r1 0
+Pyramidx 7r1 0
+Adam 6r4 200
+Galan 6r4 40
+Shuri 7r2 0
+Nimrod 6r5 200
+Idoom 6r4 200
+Mysterio 7r1 0
+Warlock 7r1 0
+Ebony 7r3 0
+Doom 6r5 200
+Tigra 6r4 200
+Sasquatch 7r1 40
+Mordo 7r1 0
+Wiccan 6r4 20
+DragonMan 7r1 0
+Rintrah 6r4 20
 //
 >dede04180
 Groupe 3
@@ -526,8 +497,65 @@ Weaponx 6r4 200
 Attuma 6r4 124
 Spidersup 6r5 200
 //
->Sidd
-Groupe 2
-//
->Valclaw
+>Toshiro
 Groupe 1
+Pyramidx 6r5 98
+Domino 7r2 0
+Idoom 6r4 120
+Shuri 6r4 23
+ProfX 6r3 170
+Bishop 7r1 0
+Wiccan 6r3 114
+Gambit 6r3 0
+ABLO 6r3 75
+CGR 6r3 0
+Overseer 7r1 0
+ImIW 7r1 0
+torch 6r3 51
+guigui 6r3 20
+Kingpin 6r4 0
+Corvus 6r3 0
+Warlock 6r3 0
+Wasp 6r2 20
+Punisher99 6r2 40
+//
+>amuso
+Groupe 1
+Shocker 7r1 0
+Mordo 7r1 0
+Knull 7r1 0
+Guigui99 7r1 0
+surfer 7r1 0
+Kitty 6r4 1
+OmegaRed 6r3 125
+kingpin 6r3 20
+Guardian 6r3 142
+Kgroot 6r3 40
+Apo 6r3 0
+RedMag 6r3 140
+//
+>NINØ83
+Groupe 2
+Gorr 7r2 20
+Doom 6r6 200
+Idoom 6r5 200
+Absman 6r4 200
+Zemo 6r6 200
+Galan 6r6 200
+Kitty 6r4 200
+Adam 6r4 200
+Dani 6r4 112
+Ghost 6r4 200
+Scorpion 6r4 200
+Spot 6r4 126
+Quicks 6r4 71
+Nimrod 6r4 106
+Fury 6r4 38
+Hulk 6r4 112
+Apo 6r4 75
+Silk 6r4 20
+juggs 6r4 60
+Sauron 7r1 20
+Bishop 7r1 0
+Terrax 7r1 20
+Pyramidx 7r1 20

@@ -4,7 +4,7 @@ from time import time
 debut = time()
 
 groups = Groups()
-groups.executeOneGroup(1,True)
+groups.executeOneGroup(1,False)
 
 connector = Connection("Gold Mcoc Planning Sheet")
 connector.updateOneGroup(groups.groups[1],1)

@@ -67,15 +67,17 @@ class Groups:
             # todo print(debug)
             self.executeOneGroup(numGroup)
 
-
-    def executeOneGroup(self, numGroup: int,load :bool= False):
-        if load:
-            # todo voir pour load un seul groupe
+    def executeOneGroup(self, numGroup: int, loaded: bool = True, ignoreError: bool = True):
+        if not loaded:
             self.loadData()
         group = self.groups[numGroup]
         print(f"____________________\nTraitement groupe {group.id}")
         group.checkdoublons()
         group.findTheBestDefs()
+        if not ignoreError:
+            # group.checkSi10Joueurs()
+            # group.checkSi5DefParPersonne
+            pass
 
     def doEverything(self):
         self.loadData()
