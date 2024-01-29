@@ -1,7 +1,7 @@
 from src.group import Group
 from src.player import Player
 from src.utils import checkDefName
-
+LINE = "____________________"
 
 class Groups:
     def __init__(self):
@@ -61,6 +61,13 @@ class Groups:
                 defName, strRank, strSig = rawData
                 checkDefName(playerName, defName.capitalize())
                 self.addDefToOneGroup(group, playerName, defName.capitalize(), strRank, int(strSig))
+        print(LINE)
+        for x in range(3):
+            numGroup = x+1
+            selectedGroup = self.groups[numGroup].allPlayer
+            nombreMembre = len(selectedGroup)
+            stringGroup = ", ".join(selectedGroup)
+            print(f"Le groupe {numGroup} contient {nombreMembre} joueurs :\n{stringGroup}\n")
 
     def executeAllGroups(self):
         for numGroup in range(1, 4):
@@ -71,7 +78,7 @@ class Groups:
         if not loaded:
             self.loadData()
         group = self.groups[numGroup]
-        print(f"____________________\nTraitement groupe {group.id}")
+        print(f"{LINE}\nTraitement groupe {group.id}")
         group.checkdoublons()
         group.findTheBestDefs()
         if not ignoreError:
