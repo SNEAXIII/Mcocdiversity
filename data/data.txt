@@ -287,25 +287,25 @@ Dani 6r3 0
 //
 >noebis
 Groupe 3
-!fury 6r4 200
+fury 6r4 200
 Hercule 6r4 200
-!CGR 6r4 200
+CGR 6r4 200
 Shocker 7r1 20
-!Ultron 6r4 200
+Ultron 6r4 200
 Mysterio 7r1 0
-!Rocket 7r1 0
+Rocket 7r1 0
 Nimrod 6r4 91
 Quicks 6r3 70
-!Dani 6r4 120
+Dani 6r4 120
 //
 >lool68
 Groupe 3
-!Doom 6r5 140
+Doom 6r5 140
 *Gambit 7r1 0
 *Angela 6r4 200
 Kitty 6r4 83
 Elsa 7r1 0
-!Wiccan 7r1 0
+Wiccan 7r1 0
 *BP 7r1 0
 Sauron 7r1 0
 Galan 6r4 80
@@ -313,67 +313,64 @@ imiw 7r1 0
 *ablo 7r1 0
 Apo 6r4 32
 Idoom 6r4 1
-!Overseer 7r1 0
+Overseer 7r1 0
 Hulkling 6r4 5
-!Mantis 7r1 0
+Mantis 7r1 0
 //
->degeneration x
+>Hameçon Crochet
 Groupe 3
-Fury 6r4 0
-Hercule 6r4 200
-!Weaponx 6r4 200
-Wong 7r1 0
-Sersi 6r3 0
-Spidersup 6r3 0
-Nimrod 6r4 200
-Viv 6r3 0
-pyramidx 6r3 0
-Kingpin 6r4 0
-Doom 6r4 0
-Kitty 6r4 200
-Omega 6r4 0
-omegared 6r3 40
-!ImIw 7r1 0
-Gorr 6r3 0
-Havok 6r3 0
-Sauron 6r3 0
+Titania 7r3 20
+Kingpin 6r6 0
+torch 6r6 0
+Kindred 7r2 20
+Bishop 7r2 20
+Apo 6r5 200
+Terrax 7r2 20
+Absman 6r5 200
+Shuri 7r2 0
+Dragonman 7r2 0
+weaponx 6r4 200
+Chose 6r4 105
+Sauron 7r1 40
+Im 7r1 40
+Shocker 7r2 40
 //
->flashman
+>welwel Welid sfeyhi
 Groupe 3
-Monkey 6r3 142
-Wiccan 7r1 0
-Hulkling 6r4 52
-!Shocker 7r1 0
-Colossus 7r1 0
-Capiw 6r3 21
-Nova 6r3 62
-Idoom 6r3 37
-Omega 6r3 25
-Apo 6r3 49
-Zemo 6r3 20
-Morningstar 6r3 22
-Titania 6r3 21
-Spiderstealth 6r3 0
-Wong 6r3 30
-Sasquatch 6r3 32
-Hercule 6r3 8
-Overseer 6r3 21
-Absman 6r3 4
-Redhulk 6r3 22
-Sorcersup 6r3 0
-Gamora 6r3 20
-Havok 6r3 0
-Torch 6r3 0
-Kingpin 6r3 0
-Gr 6r3 0
-Toad 6r3 0
-HB 6r3 0
+Terrax 7r1 20
+Titania 6r4 20
+Jabari 7r1 0
+Emma 7r1 0
+Ebony 7r1 0
+Sasquatch 7r1 20
+Aarkus 7r1 0
+Overseer 7r1 20
+Korg 7r1 0
+wilson 7r1 0
+chavez 7r1 0
+Killmonger 7r1 0
+Profx 7r1 0
+Crossbones 7r1 0
+Warmachine 7r1 0
+Gorr 7r1 0
+Sandman 7r1 0
+Attuma 6r4 20
+Rintrah 6r4 20
+Juggs 6r4 20
+kingpin 6r4 20
+Apo 6r4 20
+Valkyrie 6r4 80
+Fury 6r5 20
+Void 6r5 200
+Idoom 6r4 20
+Omegared 6r4 20
+Hulkling 6r4 40
 //
 >Neologisme
 Groupe 3
-!Mysterio 7r1 0
+Mysterio 7r1 0
 Moondragon 7r1 0
-!Omega 6r4 26
+Omega 6r4 26
 Sabretooth 6r3 81
 Spiderstealth 6r3 58
 Nova 6r3 73
@@ -387,15 +384,15 @@ Jubilee 6r3 1
 >Angel
 Groupe 3
 Doom 6R5 69
-!Fixit 7R2 0
+Fixit 7R2 0
 Torch 6R5 97
 Viv 6R4 102
 Falcon 7R1 0
-!Ebony 7R1 0
-!Sasquatch 7R1 20
+Ebony 7R1 0
+Sasquatch 7R1 20
 Venom 6R4 133
 Apo 6R4 67
-!Chavez 7R1 0
+Chavez 7R1 0
 //
 >booshi boosh
 Groupe 3
@@ -475,10 +472,10 @@ Dragonman 7r2 0
 Domino 7r2 0
 Bishop 7r2 0
 Adam 7r1 20
-!Elsa 7r1 20
+Elsa 7r1 20
 Terrax 7r1 40
 Emma 7r1 20
-!Wong 7r1 20
+Wong 7r1 20
 Profx 7r1 0
 Photon 7r1 0
 Morbius 7r1 0
@@ -489,8 +486,8 @@ Sasquatch 7r1 0
 Groupe 3
 Zemo 6r5 200
 Antmanf 6r5 200
-!Domino 7r2 20
-!Sauron 6r5 200
+Domino 7r2 20
+Sauron 6r5 200
 Jessica 6r5 200
 Chose 6r5 200
 Weaponx 6r4 200
