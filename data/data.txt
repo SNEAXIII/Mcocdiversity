@@ -1,7 +1,7 @@
 >LEGACY LEGION
 Groupe 1
-!Doom 6r4 200
-iDoom 6r4 200
+Doom 6r4 200
+!iDoom 6r4 200
 !Spidersup 6r4 200
 QuickS 6r4 200
 apo 6r4 200
