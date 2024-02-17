@@ -10,7 +10,7 @@ IMIW 7r1 0
 !IM 6r4 43
 Ebony 7r1 0
 !DragonMan 7r1 0
-RedMag 6r4 46
+!RedMag 6r4 46
 //
 >Mrbal'
 Groupe 1
@@ -93,7 +93,7 @@ Nimrod 6r4 200
 Ebony 7r1 0
 Hercule 6r4 117
 Colossus 6r4 180
-Mantis 7r1 20
+Mantis 7r2 20
 !Elsa 7r1 0
 !Negative 7r1 0
 Hulkling 6r4 81
@@ -287,16 +287,25 @@ Dani 6r3 0
 //
 >noebis
 Groupe 3
+Warlock 6r5 200
 fury 6r4 200
 Hercule 6r4 200
 CGR 6r4 200
+Sunspot 7r1
+Doom 6r4 58
+Nimrod 6r4 180
+Dani 6r4 128
 Shocker 7r1 20
-Ultron 6r4 200
 Mysterio 7r1 0
+Ultron 6r4 200
+Bp 7r1
 Rocket 7r1 0
-Nimrod 6r4 91
-Quicks 6r3 70
-Dani 6r4 120
+Hyperion 6r4 179
+Aegon 6r3 200
+Quicks 6r3 91
+chose 6r4 1
+Peni 6r3 40
+Rintrah 6r3 86
 //
 >lool68
 Groupe 3
