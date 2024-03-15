@@ -248,30 +248,31 @@ Sasquatch 7r1 20
 Wong 7r2 0
 //
 >Simobou
-Groupe 2
-*Gambit 7r1 0
-monkey 6r4 50
-WereWolf 6r4 50
-*Torch 6r4 50
+Groupe 3
+Hercule 6r5 200
+monkey 6r5 200
+Longshot 6r4 200
+Nimrod 6r4 200
+weaponx 6r4 200
+Gambit 7r1 0
+Werewolf 6r4 0
+Bw 6r4 0
+torch 6r4 0
+Sunspot 6r4 0
 Ebony 7r1 0
-weaponx 6r4 50
-Wiccan 7r1 0
-Shocker 7r1 0
 Knull 7r1 0
+Capiw 6r4 0
+Gorr 6r4 0
+Negative 7r1 0
+Wiccan 7r1 0
+CGR 6r4 0
+Wilson 7r1 0
+Im 7r1 0
+Htd 7r1 0
+Shocker 7r1 0
 Korg 7r1 0
-CGR 6R4 50
-Doom 6r3 50
 Sandman 7r1 0
-MoonDragon 7r1 0
-Warlock 6r3 50
-Gorr 6r3 50
-Immoabo 6r3 50
-Purgatory 6r3 50
-Quicks 6r3 50
-Lady 6r3 50
-Spidersup 6r3 0
-Antmanf 6r3 0
-HULKLING 6r3 0
+Moondragon 7r1 0
 //
 >Vulcain1978
 Groupe 2
@@ -289,16 +290,16 @@ Dani 6r3 0
 Groupe 3
 Warlock 6r5 200
 fury 6r4 200
-Hercule 6r4 200
-CGR 6r4 200
-Sunspot 7r1
+Hercule 6r6 200
+CGR 6r5 200
+Sunspot 7r1 0
 Doom 6r4 58
 Nimrod 6r4 180
 Dani 6r4 128
 Shocker 7r1 20
 Mysterio 7r1 0
 Ultron 6r4 200
-Bp 7r1
+Bp 7r1 0
 Rocket 7r1 0
 Hyperion 6r4 179
 Aegon 6r3 200
@@ -326,26 +327,8 @@ Overseer 7r1 0
 Hulkling 6r4 5
 Mantis 7r1 0
 //
->Hameçon Crochet
-Groupe 3
-Titania 7r3 20
-Kingpin 6r6 0
-torch 6r6 0
-Kindred 7r2 20
-Bishop 7r2 20
-Apo 6r5 200
-Terrax 7r2 20
-Absman 6r5 200
-Shuri 7r2 0
-Dragonman 7r2 0
-weaponx 6r4 200
-Chose 6r4 105
-Sauron 7r1 40
-Im 7r1 40
-Shocker 7r2 40
-//
 >welwel Welid sfeyhi
-Groupe 3
+Groupe 1
 Terrax 7r1 20
 Titania 6r4 20
 Jabari 7r1 0
@@ -432,21 +415,21 @@ Silk 6r4 40
 Morbius 7r1 0
 Overseer 7r1 0
 Sandman 7r1 0
-!Mantis 7r2 20
+Mantis 7r2 20
 Monkey 6r4 80
 Fury 6r4 20
 Attuma 7r1 0
-!Apo 6r5 200
+Apo 6r5 200
 Bishop 7r1 0
 Pyramidx 7r1 0
 Adam 6r4 200
 Galan 6r4 40
-!Shuri 7r2 0
+Shuri 7r2 0
 Nimrod 6r5 200
 Idoom 6r4 200
 Mysterio 7r1 0
 Warlock 7r1 0
-!Ebony 7r3 0
+Ebony 7r3 0
 Doom 6r5 200
 Tigra 6r4 200
 Sasquatch 7r1 40
@@ -525,20 +508,24 @@ Warlock 6r3 0
 Wasp 6r2 20
 Punisher99 6r2 40
 //
->amuso
-Groupe 1
-!Shocker 7r1 0
-!Mordo 7r1 0
-!Knull 7r1 0
-!Guigui99 7r1 0
-!surfer 7r1 0
-Kitty 6r4 1
-OmegaRed 6r3 125
-kingpin 6r3 20
-Guardian 6r3 142
-Kgroot 6r3 40
-Apo 6r3 0
-RedMag 6r3 140
+>Ghost
+Groupe 3
+Idoom 6r6 200
+Hercule 6r6 200
+Zemo 6r6 180
+Sandman 7r2 20
+Doom 6r4 200
+Mantis 7r1 40
+Diablo 7r1 40
+Angela 6r4 200
+Fury 6r4 170
+Gorr 6r4 180
+Absman 6r4 129
+VTD 7r1 20
+Aegon 6r4 170
+Weaponx 6r4 200
+Immoabo 6r4 131
+Shocker 7r1 20
 //
 >NINØ83
 Groupe 2
