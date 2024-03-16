@@ -81,10 +81,10 @@ class Groups:
                 selected_group.add_def_in_player(player_name, def_name.capitalize(),
                                                  selected_group.convert_rank_str_to_int(str_rank))
             else:
-                rawData = line.split(" ")
-                if len(rawData) != 3:
-                    raise Exception(f"La ligne {rawData} du joueur {player_name} est mal écrite")
-                def_name, str_rank, str_sig = rawData
+                raw_data = line.split(" ")
+                if len(raw_data) != 3:
+                    raise Exception(f"La ligne {raw_data} du joueur {player_name} est mal écrite")
+                def_name, str_rank, str_sig = raw_data
                 check_def_name(player_name, def_name.capitalize())
                 self.add_def_to_one_group(group, player_name, def_name.capitalize(), str_rank, int(str_sig))
         print(LINE)

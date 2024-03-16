@@ -4,19 +4,19 @@ class Player:
         self.defs = []
         self.p_score = 0
 
-    def getScore(self):
+    def get_score(self):
         return int(self.p_score / 15)
 
     def dump(self):
-        stringReturn = f"\nJoueur : {self.name}\nPuissance théorique du joueur: {self.getScore()}\n"
+        string_return = f"\nJoueur : {self.name}\nPuissance théorique du joueur: {self.get_score()}\n"
         for _def in self.defs:
-            stringReturn += f"  → {_def}\n"
-        return stringReturn
+            string_return += f"  → {_def}\n"
+        return string_return
 
     def __str__(self):
         if self.p_score ==0:
             return f"{self.name}\nVide\n\n"
-        stringReturn = f"{self.name}\n{self.getScore()}\n"
+        string_return = f"{self.name}\n{self.get_score()}\n"
         for _def in self.defs:
-            stringReturn += f"{_def}\n"
-        return f"{stringReturn}\n"
+            string_return += f"{_def}\n"
+        return f"{string_return}\n"
