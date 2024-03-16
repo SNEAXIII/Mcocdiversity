@@ -1,6 +1,7 @@
 from src.group import Group
 from src.player import Player
-from src.utils import checkDefName
+from src.utils import checkDefName,checkIsGoodDefs
+
 LINE = "____________________"
 resetIdentifier = "//"
 playerIdentifier = ">"
@@ -8,9 +9,12 @@ groupIdentifier = "Groupe "
 forceIdentifier = "!"
 commentaryIdentifier = "*"
 
+
 class Groups:
     def __init__(self):
-        self.groups = {1: Group(1), 2: Group(2), 3: Group(3)}
+        listMetaDefs = self.getMetaDef()
+        self.groups = {id:Group(id,listMetaDefs) for id in range(1,4)}
+
 
     def addPlayerToAGroup(self, idGroup: int, playerName: str):
         if len(self.groups[idGroup].allPlayer) != 10:
@@ -18,18 +22,30 @@ class Groups:
             return
         raise Exception(f"Il ne peux pas y avoir plus de 10 joueurs dans le groupe {idGroup}!!!")
 
-    def addDefToOneGroup(self, idGroup: int, playerName: str, defName: str, rank: str, sig: int = 0):
+    def addDefToOneGroup(self,
+                         idGroup: int,
+                         playerName: str,
+                         defName: str,
+                         rank: str,
+                         sig: int = 0
+                         ):
         self.groups[idGroup].addNewDef(playerName, defName, rank, int(sig))
 
     def dump(self):
         for id, group in self.groups.items():
             print(f"Groupe numéro {id}\n{group}")
 
-    def getPlayerGroup(self,player_name:str)->int:
+    def getPlayerGroup(self, player_name: str) -> int:
         for id in self.groups.keys():
             if player_name in self.groups[id].allPlayer:
                 return id
         raise ValueError(f"Le joueur {player_name} ne fais partie d'aucun groupe!!!")
+    def getMetaDef(self):
+        with open("data/metadefs.txt") as file:
+            toReturn = [line.strip('\n') for line in file.readlines()]
+        checkIsGoodDefs(toReturn)
+        return toReturn
+
     def addAllPlayerToGroups(self):
         with open("data/groups.txt") as file:
             lines = file.readlines()
@@ -38,7 +54,8 @@ class Groups:
             if line.startswith(groupIdentifier):
                 idGroup = int(line.lstrip(groupIdentifier))
             else:
-                self.addPlayerToAGroup(idGroup,line.strip('\n'))
+                self.addPlayerToAGroup(idGroup, line.strip('\n'))
+
     def loadData(self, fileToOpen: str = "./data/data.txt"):
         with open(fileToOpen, encoding="utf-8") as f:
             data = [line.replace("\n", "") for line in f.readlines()]
@@ -56,13 +73,6 @@ class Groups:
                     raise Exception("Le joueur ne peux être saisi 2 fois")
                 playerName = line.lstrip(playerIdentifier)
                 group = self.getPlayerGroup(playerName)
-            # elif line.startswith(groupIdentifier):
-            #     if playerName is None:
-            #         raise Exception("Le joueur doit être saisi avant son groupe")
-            #     elif group is not None:
-            #         raise Exception("Le groupe ne peux être saisi 2 fois")
-            #     group = int(line.lstrip(groupIdentifier))
-            #     self.addPlayerToAGroup(group, playerName)
             elif line.startswith(forceIdentifier):
                 selectedGroup = self.groups[group]
                 lineWhithoutIdentifier = line.lstrip(forceIdentifier)
@@ -79,7 +89,7 @@ class Groups:
                 self.addDefToOneGroup(group, playerName, defName.capitalize(), strRank, int(strSig))
         print(LINE)
         for x in range(3):
-            numGroup = x+1
+            numGroup = x + 1
             selectedGroup = self.groups[numGroup].allPlayer
             nombreMembre = len(selectedGroup)
             stringGroup = ", ".join(selectedGroup)

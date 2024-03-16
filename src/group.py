@@ -4,8 +4,9 @@ from src.player import Player
 
 
 class Group:
-    def __init__(self, id: int):
+    def __init__(self, id: int,listMetaDefs:list):
         self.id = id
+        self.listMetaDefs = listMetaDefs
         self.gScore = 0
         self.allDefs = {}
         self.selectedDefs = set()
@@ -96,9 +97,12 @@ class Group:
 
     def findTheBestDefs(self):
         for rank in self.allRanks.values():
+            for defName in self.listMetaDefs:
+                if playerOrFalse:= self.findThePlayerForRankForDef(defName, rank):
+                    self.addDefInPlayer(playerOrFalse, defName, rank)
+        for rank in self.allRanks.values():
             for defName in list(self.allDefs):
-                playerOrFalse = self.findThePlayerForRankForDef(defName, rank)
-                if playerOrFalse:
+                if playerOrFalse:= self.findThePlayerForRankForDef(defName, rank):
                     self.addDefInPlayer(playerOrFalse, defName, rank)
 
     def checkdoublons(self):
