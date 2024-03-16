@@ -5,7 +5,7 @@ from src.utils import checkDefName,checkIsGoodDefs
 LINE = "____________________"
 resetIdentifier = "//"
 playerIdentifier = ">"
-groupIdentifier = "Groupe "
+groupIdentifier = "->Groupe "
 forceIdentifier = "!"
 commentaryIdentifier = "*"
 
@@ -107,16 +107,8 @@ class Groups:
         print(f"{LINE}\nTraitement groupe {group.id}")
         group.checkdoublons()
         group.findTheBestDefs()
-        if not ignoreError:
-            # group.checkSi10Joueurs()
-            # group.checkSi5DefParPersonne
-            pass
 
     def doEverything(self):
         self.loadData()
         self.executeAllGroups()
         # todo self.check()
-
-# todo ajouter un check si il y a bien 10 membres par groupe
-# todo ajouter un check si il y a bien 5 defenseurs par personne
-# todo faire une méthode pour process tout les groupes
