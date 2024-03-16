@@ -2,6 +2,6 @@ from src.groups import Groups
 
 if __name__ == "__main__":
     groups = Groups()
-    groups.doEverything()
+    groups.do_everything()
     groups.dump()
-    # groups.addAllPlayerToGroups()
+    # groups.add_all_player_to_groups()

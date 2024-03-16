@@ -1,114 +1,112 @@
 from src.group import Group
 from src.player import Player
-from src.utils import checkDefName,checkIsGoodDefs
+from src.utils import check_def_name, check_is_good_defs
 
 LINE = "____________________"
-resetIdentifier = "//"
-playerIdentifier = ">"
-groupIdentifier = "->Groupe "
-forceIdentifier = "!"
-commentaryIdentifier = "*"
+RESET_IDENTIFIER = "//"
+PLAYER_IDENTIFIER = ">"
+GROUP_IDENTIFIER = "->Groupe "
+FORCE_IDENTIFIER = "!"
+COMMENTARY_IDENTIFIER = "*"
 
 
 class Groups:
     def __init__(self):
-        listMetaDefs = self.getMetaDef()
-        self.groups = {id:Group(id,listMetaDefs) for id in range(1,4)}
+        list_meta_defs = self.get_meta_def()
+        self.groups: dict[Group] = {id_group: Group(id_group, list_meta_defs) for id_group in range(1, 4)}
 
-
-    def addPlayerToAGroup(self, idGroup: int, playerName: str):
-        if len(self.groups[idGroup].allPlayer) != 10:
-            self.groups[idGroup].addPlayer(Player(playerName))
+    def add_player_to_a_group(self, id_group: int, player_name: str):
+        if len(self.groups[id_group].all_player) != 10:
+            self.groups[id_group].add_player(Player(player_name))
             return
-        raise Exception(f"Il ne peux pas y avoir plus de 10 joueurs dans le groupe {idGroup}!!!")
+        raise Exception(f"Il ne peux pas y avoir plus de 10 joueurs dans le groupe {id_group}!!!")
 
-    def addDefToOneGroup(self,
-                         idGroup: int,
-                         playerName: str,
-                         defName: str,
-                         rank: str,
-                         sig: int = 0
-                         ):
-        self.groups[idGroup].addNewDef(playerName, defName, rank, int(sig))
+    def add_def_to_one_group(self,
+                             id_group: int,
+                             player_name: str,
+                             def_name: str,
+                             rank: str,
+                             sig: int = 0
+                             ):
+        self.groups[id_group].add_new_def(player_name, def_name, rank, int(sig))
 
     def dump(self):
         for id, group in self.groups.items():
             print(f"Groupe numéro {id}\n{group}")
 
-    def getPlayerGroup(self, player_name: str) -> int:
+    def get_player_group(self, player_name: str) -> int:
         for id in self.groups.keys():
-            if player_name in self.groups[id].allPlayer:
+            if player_name in self.groups[id].all_player:
                 return id
         raise ValueError(f"Le joueur {player_name} ne fais partie d'aucun groupe!!!")
-    def getMetaDef(self):
-        with open("data/metadefs.txt") as file:
-            toReturn = [line.strip('\n') for line in file.readlines()]
-        checkIsGoodDefs(toReturn)
-        return toReturn
 
-    def addAllPlayerToGroups(self):
+    def get_meta_def(self):
+        with open("data/metadefs.txt") as file:
+            to_return = [line.strip('\n') for line in file.readlines()]
+        check_is_good_defs(to_return)
+        return to_return
+
+    def add_all_player_to_groups(self):
         with open("data/groups.txt") as file:
             lines = file.readlines()
-        idGroup = None
+        id_group = None
         for line in lines:
-            if line.startswith(groupIdentifier):
-                idGroup = int(line.lstrip(groupIdentifier))
+            if line.startswith(GROUP_IDENTIFIER):
+                id_group = int(line.lstrip(GROUP_IDENTIFIER))
             else:
-                self.addPlayerToAGroup(idGroup, line.strip('\n'))
+                self.add_player_to_a_group(id_group, line.strip('\n'))
 
-    def loadData(self, fileToOpen: str = "./data/data.txt"):
-        with open(fileToOpen, encoding="utf-8") as f:
+    def load_data(self, file_to_open: str = "./data/data.txt"):
+        with open(file_to_open, encoding="utf-8") as f:
             data = [line.replace("\n", "") for line in f.readlines()]
-        self.addAllPlayerToGroups()
-        playerName = None
+        self.add_all_player_to_groups()
+        player_name = None
         group = None
         for line in data:
-            if line == resetIdentifier:
-                playerName = None
+            if line == RESET_IDENTIFIER:
+                player_name = None
                 group = None
-            elif line.startswith(commentaryIdentifier):
+            elif line.startswith(COMMENTARY_IDENTIFIER):
                 pass
-            elif line.startswith(playerIdentifier):
-                if playerName is not None:
+            elif line.startswith(PLAYER_IDENTIFIER):
+                if player_name is not None:
                     raise Exception("Le joueur ne peux être saisi 2 fois")
-                playerName = line.lstrip(playerIdentifier)
-                group = self.getPlayerGroup(playerName)
-            elif line.startswith(forceIdentifier):
-                selectedGroup = self.groups[group]
-                lineWhithoutIdentifier = line.lstrip(forceIdentifier)
-                defName, strRank, strSig = lineWhithoutIdentifier.split(" ")
-                checkDefName(playerName, defName.capitalize())
-                selectedGroup.addDefInPlayer(playerName, defName.capitalize(),
-                                             selectedGroup.convertRankStrToInt(strRank))
+                player_name = line.lstrip(PLAYER_IDENTIFIER)
+                group = self.get_player_group(player_name)
+            elif line.startswith(FORCE_IDENTIFIER):
+                selected_group = self.groups[group]
+                line_whithout_identifier = line.lstrip(FORCE_IDENTIFIER)
+                def_name, str_rank, str_sig = line_whithout_identifier.split(" ")
+                check_def_name(player_name, def_name.capitalize())
+                selected_group.add_def_in_player(player_name, def_name.capitalize(),
+                                                 selected_group.convert_rank_str_to_int(str_rank))
             else:
                 rawData = line.split(" ")
                 if len(rawData) != 3:
-                    raise Exception(f"La ligne {rawData} du joueur {playerName} est mal écrite")
-                defName, strRank, strSig = rawData
-                checkDefName(playerName, defName.capitalize())
-                self.addDefToOneGroup(group, playerName, defName.capitalize(), strRank, int(strSig))
+                    raise Exception(f"La ligne {rawData} du joueur {player_name} est mal écrite")
+                def_name, str_rank, str_sig = rawData
+                check_def_name(player_name, def_name.capitalize())
+                self.add_def_to_one_group(group, player_name, def_name.capitalize(), str_rank, int(str_sig))
         print(LINE)
         for x in range(3):
-            numGroup = x + 1
-            selectedGroup = self.groups[numGroup].allPlayer
-            nombreMembre = len(selectedGroup)
-            stringGroup = ", ".join(selectedGroup)
-            print(f"Le groupe {numGroup} contient {nombreMembre} joueurs :\n{stringGroup}\n")
+            num_group = x + 1
+            selected_group = self.groups[num_group].all_player
+            nombre_membre = len(selected_group)
+            string_group = ", ".join(selected_group)
+            print(f"Le groupe {num_group} contient {nombre_membre} joueurs :\n{string_group}\n")
 
-    def executeAllGroups(self):
-        for numGroup in range(1, 4):
-            # todo print(debug)
-            self.executeOneGroup(numGroup)
+    def execute_all_groups(self):
+        for num_group in range(1, 4):
+            self.execute_one_group(num_group)
 
-    def executeOneGroup(self, numGroup: int, loaded: bool = True, ignoreError: bool = True):
+    def execute_one_group(self, num_group: int, loaded: bool = True, ignore_error: bool = True):
         if not loaded:
-            self.loadData()
-        group = self.groups[numGroup]
+            self.load_data()
+        group = self.groups[num_group]
         print(f"{LINE}\nTraitement groupe {group.id}")
-        group.checkdoublons()
-        group.findTheBestDefs()
+        group.check_doublons()
+        group.find_the_best_defs()
 
-    def doEverything(self):
-        self.loadData()
-        self.executeAllGroups()
-        # todo self.check()
+    def do_everything(self):
+        self.load_data()
+        self.execute_all_groups()

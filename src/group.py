@@ -4,15 +4,15 @@ from src.player import Player
 
 
 class Group:
-    def __init__(self, id: int,listMetaDefs:list):
+    def __init__(self, id: int, list_meta_defs:list):
         self.id = id
-        self.listMetaDefs = listMetaDefs
-        self.gScore = 0
-        self.allDefs = {}
-        self.selectedDefs = set()
-        self.unselectedDefs = set()
-        self.allPlayer = {}
-        self.allRanks = \
+        self.list_meta_defs = list_meta_defs
+        self.g_score = 0
+        self.all_Defs = {}
+        self.selected_defs = set()
+        self.unselected_defs = set()
+        self.all_player:dict[Player] = {}
+        self.all_ranks = \
             {
                 "7r3": 326,
                 "6r6": 265,
@@ -25,155 +25,147 @@ class Group:
                 "6r1": 100
             }
 
-        self.rangeRank = self.allRanks.values()
+        self.range_rank = self.all_ranks.values()
 
-    def getScore(self):
-        return int(self.gScore / 30)
+    def get_score(self):
+        return int(self.g_score / 30)
 
     def dump(self):
-        stringReturn = ""
-        for defName in self.allDefs:
-            stringReturn += f"{defName}\n"
-            for intRank in self.allDefs[defName]:
-                stringReturn += f"{self.convertRankIntToStr(intRank)}-->{self.allDefs[defName][intRank]}\n"
-            stringReturn += "\n"
-        return stringReturn
+        string_return = ""
+        for def_name in self.all_Defs:
+            string_return += f"{def_name}\n"
+            for int_rank in self.all_Defs[def_name]:
+                string_return += f"{self.convert_rank_int_to_str(int_rank)}-->{self.all_Defs[def_name][int_rank]}\n"
+            string_return += "\n"
+        return string_return
 
     def __str__(self):
-        stringReturn = f"Puissance théorique du groupe : {self.getScore()}\n"
-        for player in self.allPlayer.values():
-            stringReturn += player.dump()
-        return stringReturn + (f"Les défenseurs choisis sont : {self.strAllDefSelected()}\n"
-                               f"Les défenseurs non choisis sont : {self.strAllDefUnSelected()}\n")
+        string_return = f"Puissance théorique du groupe : {self.get_score()}\n"
+        for player in self.all_player.values():
+            string_return += player.dump()
+        return string_return + (f"Les défenseurs choisis sont : {self.str_all_def_selected()}\n"
+                               f"Les défenseurs non choisis sont : {self.str_all_def_un_selected()}\n")
 
-    def strAllDefSelected(self):
-        sortedSelectedDef = sorted(self.selectedDefs, key=lambda x: (-x[1], x[0]))
-        sortedSelectedDefFormat = [f"{_def[0]} {self.convertRankIntToStr(_def[1])}" for _def in sortedSelectedDef]
+    def str_all_def_selected(self):
+        sorted_selected_def = sorted(self.selected_defs, key=lambda x: (-x[1], x[0]))
+        sorted_selected_def_format = [f"{_def[0]} {self.convert_rank_int_to_str(_def[1])}" for _def in sorted_selected_def]
 
-        return ", ".join(sortedSelectedDefFormat)
+        return ", ".join(sorted_selected_def_format)
 
-    def strAllDefUnSelected(self):
-        return ", ".join(sorted(list(self.unselectedDefs)))
+    def str_all_def_un_selected(self):
+        return ", ".join(sorted(list(self.unselected_defs)))
 
-    def addPlayer(self, player: Player):
-        self.allPlayer[player.name] = player
+    def add_player(self, player: Player):
+        self.all_player[player.name] = player
 
-    def addNewDef(self, owner: str, defName: str, rank: str, sig: int):
-        if defName not in self.allDefs:
-            if any(tupleDef[0] == defName for tupleDef in self.selectedDefs) or len(self.allPlayer[owner].defs) == 5:
+    def add_new_def(self, owner: str, def_name: str, rank: str, sig: int):
+        if def_name not in self.all_Defs:
+            if any(tuple_def[0] == def_name for tuple_def in self.selected_defs) or len(self.all_player[owner].defs) == 5:
                 return
-            self.allDefs[defName] = {}
-            for idRank in self.rangeRank:
-                self.allDefs[defName][idRank] = {}
-        defNameDefRank = self.allDefs[defName][self.convertRankStrToInt(rank)]
-        if not sig in defNameDefRank:
-            defNameDefRank[sig] = set()
-        defNameDefRank[sig].add(owner)
+            self.all_Defs[def_name] = {}
+            for id_rank in self.range_rank:
+                self.all_Defs[def_name][id_rank] = {}
+        def_name_def_rank = self.all_Defs[def_name][self.convert_rank_str_to_int(rank)]
+        if not sig in def_name_def_rank:
+            def_name_def_rank[sig] = set()
+        def_name_def_rank[sig].add(owner)
 
-    def convertRankStrToInt(self, rank: str):
-        lowerRank = rank.lower()
-        if not lowerRank in self.allRanks:
+    def convert_rank_str_to_int(self, rank: str):
+        lower_rank = rank.lower()
+        if not lower_rank in self.all_ranks:
             raise Exception(f"Le rang est mal saisi : {rank}")
-        return self.allRanks[lowerRank]
+        return self.all_ranks[lower_rank]
 
-    def convertRankIntToStr(self, value: int):
-        for strRank, intRank in self.allRanks.items():
-            if value == intRank:
-                return strRank
+    def convert_rank_int_to_str(self, value: int):
+        for str_rank, int_rank in self.all_ranks.items():
+            if value == int_rank:
+                return str_rank
         raise Exception(f"Aucun rang correspond trouvée pour la valeur : {value}")
 
-    def findThePlayerForRankForDef(self, defName: str, rank: int):
-        if defName not in self.allDefs:
+    def find_the_player_for_rank_for_def(self, def_name: str, rank: int):
+        if def_name not in self.all_Defs:
             return False
-        dictDefRank = self.allDefs[defName][rank]
-        if len(dictDefRank):
-            maxSig = max(dictDefRank.keys())
-            return choice(list(dictDefRank[maxSig]))
+        dict_def_rank = self.all_Defs[def_name][rank]
+        if len(dict_def_rank):
+            max_sig = max(dict_def_rank.keys())
+            return choice(list(dict_def_rank[max_sig]))
         return False
 
     @staticmethod
-    def isDefRankEmpty(dictionary: dict):
+    def is_def_rank_empty(dictionary: dict):
         return all(not bool(s) for s in dictionary.values())
 
-    def findTheBestDefs(self):
-        for rank in self.allRanks.values():
-            for defName in self.listMetaDefs:
-                if playerOrFalse:= self.findThePlayerForRankForDef(defName, rank):
-                    self.addDefInPlayer(playerOrFalse, defName, rank)
-        for rank in self.allRanks.values():
-            for defName in list(self.allDefs):
-                if playerOrFalse:= self.findThePlayerForRankForDef(defName, rank):
-                    self.addDefInPlayer(playerOrFalse, defName, rank)
+    def find_the_best_defs(self):
+        for rank in self.all_ranks.values():
+            for def_name in self.list_meta_defs:
+                if player_or_false:= self.find_the_player_for_rank_for_def(def_name, rank):
+                    self.add_def_in_player(player_or_false, def_name, rank)
+        for rank in self.all_ranks.values():
+            for def_name in list(self.all_Defs):
+                if player_or_false:= self.find_the_player_for_rank_for_def(def_name, rank):
+                    self.add_def_in_player(player_or_false, def_name, rank)
 
-    def checkdoublons(self):
-        for tupleDef in self.allDefs.items():
-            if tupleDef[0] == "Absman":
+    def check_doublons(self):
+        for tuple_def in self.all_Defs.items():
+            if tuple_def[0] == "Absman":
                 pass
             count = 0
-            printName = True
-            stringToPrint = ""
-            for tupleRank in tupleDef[1].items():
-                countForRank = 0
-                setPlayerForRank = set()
-                for tupleSig in tupleRank[1].items():
-                    setPlayer = tupleSig[1]
-                    countForSig = len(setPlayer)
-                    if countForSig:
-                        countForRank += countForSig
-                        setPlayerForRank = setPlayerForRank | setPlayer
-                count += countForRank
-                if countForRank > 0:
-                    lineToPrint = ", ".join(setPlayerForRank)
-                    stringToPrint += f"  --> {self.convertRankIntToStr(tupleRank[0])} --> {lineToPrint}\n"
+            print_name = True
+            string_to_print = ""
+            for tuple_rank in tuple_def[1].items():
+                count_for_rank = 0
+                set_player_for_rank = set()
+                for tuple_sig in tuple_rank[1].items():
+                    set_player = tuple_sig[1]
+                    count_for_sig = len(set_player)
+                    if count_for_sig:
+                        count_for_rank += count_for_sig
+                        set_player_for_rank = set_player_for_rank | set_player
+                count += count_for_rank
+                if count_for_rank > 0:
+                    line_to_print = ", ".join(set_player_for_rank)
+                    string_to_print += f"  --> {self.convert_rank_int_to_str(tuple_rank[0])} --> {line_to_print}\n"
             if count > 1:
-                if printName:
-                    print(tupleDef[0])
-                    printName = False
-                print(stringToPrint)
-
-                # print(dictRank[])
-                # if len(dictDefRank[maxSig]) > 1:
-                #     listePlayer = dictDefRank[maxSig]
-                #     printListePlayer = ", ".join(listePlayer)
-                #     lenListePlayer = len(listePlayer)
-                #     print(f"{lenListePlayer} players --> {defName} --> {self.convertRankIntToStr(rank)} --> {printListePlayer}")
-
-    def addDefInPlayer(self, player: str, defName: str, rank: int):
-        if not any(tupleDef[0] == defName for tupleDef in self.selectedDefs):
-            self.selectedDefs.add((defName, rank))
+                if print_name:
+                    print(tuple_def[0])
+                    print_name = False
+                print(string_to_print)
+    def add_def_in_player(self, player: str, def_name: str, rank: int):
+        if not any(tuple_def[0] == def_name for tuple_def in self.selected_defs):
+            self.selected_defs.add((def_name, rank))
         else:
-            raise Exception(f"Le défenseur {defName} à été enregistré 2 fois")
+            raise Exception(f"Le défenseur {def_name} à été enregistré 2 fois")
 
-        if len(self.allPlayer[player].defs) == 4:
-            selectedDef = None
+        if len(self.all_player[player].defs) == 4:
+            selected_def = None
         else:
-            selectedDef = defName
-        self.allPlayer[player].defs.append(f"{defName} {self.convertRankIntToStr(rank)}")
-        self.gScore += rank
-        self.allPlayer[player].pScore += rank
-        self.deleteOneDefDict(defName)
-        self.deleteOnePlayerInDefsDict(player, selectedDef)
+            selected_def = def_name
+        self.all_player[player].defs.append(f"{def_name} {self.convert_rank_int_to_str(rank)}")
+        self.g_score += rank
+        self.all_player[player].p_score += rank
+        self.delete_one_def_dict(def_name)
+        self.delete_one_player_in_defs_dict(player, selected_def)
 
-    def deleteOneDefDict(self, defName: str):
-        if defName in self.allDefs:
-            del self.allDefs[defName]
+    def delete_one_def_dict(self, def_name: str):
+        if def_name in self.all_Defs:
+            del self.all_Defs[def_name]
 
-    def deleteOnePlayerInDefsDict(self, player: str, defToUpdate: str = None):
-        for _def, ranks in list(self.allDefs.items()):
-            if defToUpdate and defToUpdate != _def:
+    def delete_one_player_in_defs_dict(self, player: str, def_to_update: str = None):
+        for _def, ranks in list(self.all_Defs.items()):
+            if def_to_update and def_to_update != _def:
                 continue
-            for rank, allSig in list(ranks.items()):
-                for sig, names in list(allSig.items()):
+            for rank, all_sig in list(ranks.items()):
+                for sig, names in list(all_sig.items()):
                     if player in names:
                         names.discard(player)
                         if not names:
-                            del allSig[sig]
-                        if self.isDefRankEmpty(allSig):
-                            self.unselectedDefs.add(_def)
-                            self.deleteOneDefDict(_def)
+                            del all_sig[sig]
+                        if self.is_def_rank_empty(all_sig):
+                            self.unselected_defs.add(_def)
+                            self.delete_one_def_dict(_def)
 
-    def isEmptyDef(self):
-        return not bool(self.allDefs)
+    def is_empty_def(self):
+        return not bool(self.all_Defs)
 
-    def isFullOfDef(self):
-        return len(self.selectedDefs) == 50
+    def is_full_of_def(self):
+        return len(self.selected_defs) == 50

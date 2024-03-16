@@ -4,8 +4,8 @@ from time import time
 debut = time()
 
 groups = Groups()
-groups.doEverything()
+groups.do_everything()
 
 connector = Connection("Gold Mcoc Planning Sheet")
-connector.updateGroups(groups)
+connector.update_groups(groups)
 print(f"Il a fallut {round(time() - debut)} secondes")

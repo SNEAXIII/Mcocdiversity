@@ -2,10 +2,10 @@ class Player:
     def __init__(self, name: str):
         self.name = name
         self.defs = []
-        self.pScore = 0
+        self.p_score = 0
 
     def getScore(self):
-        return int(self.pScore / 15)
+        return int(self.p_score / 15)
 
     def dump(self):
         stringReturn = f"\nJoueur : {self.name}\nPuissance théorique du joueur: {self.getScore()}\n"
@@ -14,7 +14,7 @@ class Player:
         return stringReturn
 
     def __str__(self):
-        if self.pScore ==0:
+        if self.p_score ==0:
             return f"{self.name}\nVide\n\n"
         stringReturn = f"{self.name}\n{self.getScore()}\n"
         for _def in self.defs:
