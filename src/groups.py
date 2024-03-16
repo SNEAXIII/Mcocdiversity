@@ -2,6 +2,11 @@ from src.group import Group
 from src.player import Player
 from src.utils import checkDefName
 LINE = "____________________"
+resetIdentifier = "//"
+playerIdentifier = ">"
+groupIdentifier = "Groupe "
+forceIdentifier = "!"
+commentaryIdentifier = "*"
 
 class Groups:
     def __init__(self):
@@ -20,16 +25,26 @@ class Groups:
         for id, group in self.groups.items():
             print(f"Groupe numéro {id}\n{group}")
 
+    def getPlayerGroup(self,player_name:str)->int:
+        for id in self.groups.keys():
+            if player_name in self.groups[id].allPlayer:
+                return id
+        raise ValueError(f"Le joueur {player_name} ne fais partie d'aucun groupe!!!")
+    def addAllPlayerToGroups(self):
+        with open("data/groups.txt") as file:
+            lines = file.readlines()
+        idGroup = None
+        for line in lines:
+            if line.startswith(groupIdentifier):
+                idGroup = int(line.lstrip(groupIdentifier))
+            else:
+                self.addPlayerToAGroup(idGroup,line.strip('\n'))
     def loadData(self, fileToOpen: str = "./data/data.txt"):
         with open(fileToOpen, encoding="utf-8") as f:
             data = [line.replace("\n", "") for line in f.readlines()]
+        self.addAllPlayerToGroups()
         playerName = None
         group = None
-        resetIdentifier = "//"
-        playerIdentifier = ">"
-        groupIdentifier = "Groupe "
-        forceIdentifier = "!"
-        commentaryIdentifier = "*"
         for line in data:
             if line == resetIdentifier:
                 playerName = None
@@ -40,13 +55,14 @@ class Groups:
                 if playerName is not None:
                     raise Exception("Le joueur ne peux être saisi 2 fois")
                 playerName = line.lstrip(playerIdentifier)
-            elif line.startswith(groupIdentifier):
-                if playerName is None:
-                    raise Exception("Le joueur doit être saisi avant son groupe")
-                elif group is not None:
-                    raise Exception("Le groupe ne peux être saisi 2 fois")
-                group = int(line.lstrip(groupIdentifier))
-                self.addPlayerToAGroup(group, playerName)
+                group = self.getPlayerGroup(playerName)
+            # elif line.startswith(groupIdentifier):
+            #     if playerName is None:
+            #         raise Exception("Le joueur doit être saisi avant son groupe")
+            #     elif group is not None:
+            #         raise Exception("Le groupe ne peux être saisi 2 fois")
+            #     group = int(line.lstrip(groupIdentifier))
+            #     self.addPlayerToAGroup(group, playerName)
             elif line.startswith(forceIdentifier):
                 selectedGroup = self.groups[group]
                 lineWhithoutIdentifier = line.lstrip(forceIdentifier)

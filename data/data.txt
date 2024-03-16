@@ -1,5 +1,4 @@
 >LEGACY LEGION
-Groupe 3
 Doom 6r4 200
 !iDoom 6r4 200
 !Spidersup 6r4 200
@@ -13,7 +12,6 @@ Ebony 7r1 0
 !RedMag 6r4 46
 //
 >Mrbal'
-Groupe 1
 Maestro 7r2 0
 *Shuri 7r3 0
 *Titania 7r3 0
@@ -32,7 +30,6 @@ Mangog 7r1 0
 Hulkling 6r4 20
 //
 >Tetane
-Groupe 1
 Absman 6r5 200
 Doom 6r6 200
 Kingpin 6r5 200
@@ -58,7 +55,6 @@ Bishop 7r1 0
 Guigui99 7r1 0
 //
 >Madarcher57
-Groupe 1
 Sauron 7r1 20
 Mojo 7r1 0
 Torch 6r6 16
@@ -68,7 +64,6 @@ werewolf 6r4 20
 Moondragon 7r1 0
 //
 >brunog71
-Groupe 1
 Quicks 6r4 200
 Kitty 6r4 200
 Hulkling 6r4 200
@@ -83,7 +78,6 @@ Absman 6r3 105
 Peni 6r3 74
 //
 >Elminautor
-Groupe 1
 Doom 6r6 200
 QuickS 6r6 200
 Shuri 7r2 0
@@ -117,7 +111,6 @@ Bwdo 6r3 20
 ProfX 6r3 40
 //
 >Francis tueur
-Groupe 2
 centurion 6r5 200
 torch 6r5 100
 gambit 7r1 0
@@ -140,7 +133,6 @@ annihilus 6r3 30
 korg 6r3 0
 //
 >Tug88
-Groupe 2
 Doom 6r5 200
 Idoom 6r6 75
 Overseer 7r1 20
@@ -161,7 +153,6 @@ Surfer 6r3 100
 Kgroot 6r3 100
 //
 >Niels et Jojo
-Groupe 2
 Fury 6r5 200
 Bishop 6r5 200
 Scorpion 6r5 200
@@ -177,8 +168,7 @@ Profx 7r1 0
 Knull 7r1 0
 Sandman 7r2 20
 //
->jojocorp
-Groupe 2
+>Jojocorp
 Doom 6r6 109
 Idoom 6r5 179
 Bishop 6r4 153
@@ -196,7 +186,6 @@ Kitty 6r4 3
 Im 6r4 25
 //
 >Gaz73
-Groupe 2
 Doom 6r6 200
 Hercule 6r6 200
 Ebony 7r1 20
@@ -210,7 +199,6 @@ Sasquatch 7r1 0
 Mantis 7r1 0
 //
 >Dilly Neither
-Groupe 2
 Galan 6r6 200
 Photon 6r6 200
 Zemo 6r5 200
@@ -229,7 +217,6 @@ Sasquatch 7r1 20
 Wong 7r2 0
 //
 >Simobou
-Groupe 3
 Hercule 6r5 200
 monkey 6r5 200
 Longshot 6r4 200
@@ -255,8 +242,7 @@ Korg 7r1 0
 Sandman 7r1 0
 Moondragon 7r1 0
 //
->noebis
-Groupe 3
+>Noebis
 Warlock 6r5 200
 fury 6r4 200
 Hercule 6r6 200
@@ -278,7 +264,6 @@ Peni 6r3 40
 Rintrah 6r3 86
 //
 >Lool 68
-Groupe 2
 Doom 6r5 140
 *Gambit 7r1 0
 *Angela 6r4 200
@@ -297,7 +282,6 @@ Hulkling 6r4 5
 Mantis 7r1 0
 //
 >welwel Welid sfeyhi
-Groupe 1
 Terrax 7r1 20
 Titania 6r4 20
 Jabari 7r1 0
@@ -328,7 +312,6 @@ Omegared 6r4 20
 Hulkling 6r4 40
 //
 >Neologisme
-Groupe 2
 Mysterio 7r1 0
 Moondragon 7r1 0
 Omega 6r4 26
@@ -343,7 +326,6 @@ Weaponx 6r4 17
 Jubilee 6r3 1
 //
 >Angel
-Groupe 3
 Doom 6R5 69
 Fixit 7R2 0
 Torch 6R5 97
@@ -356,7 +338,6 @@ Apo 6R4 67
 Chavez 7R1 0
 //
 >Booshi Boosh
-Groupe 3
 Gorr 7r2 20
 Photon 7r2 0
 Guigui99 7r2 20
@@ -364,7 +345,6 @@ Killmonger 7r2 20
 Maestro 6r6 200
 //
 >Nims
-Groupe 1
 Void 7r1 0
 Fixit 7r1 0
 SW 6r4 183
@@ -377,7 +357,6 @@ Korg 7r1 0
 Mysterio 7r1 0
 //
 >Valclaw
-Groupe 1
 Scorpion 6r6 200
 Spot 7r1 0
 Silk 6r4 40
@@ -408,7 +387,6 @@ DragonMan 7r1 0
 Rintrah 6r4 20
 //
 >dede04180
-Groupe 1
 Doom 6r4 200
 Fury 6r4 166
 Knull 6r4 80
@@ -427,8 +405,7 @@ Galan 6r3 21
 Idoom 6r3 1
 Odin 6r3 21
 //
->gigicapi3
-Groupe 3
+>Gigicapi3
 Dragonman 7r2 0
 Domino 7r2 0
 Bishop 7r2 0
@@ -444,7 +421,6 @@ Korg 7r1 0
 Sasquatch 7r1 0
 //
 >Ytietha
-Groupe 3
 Zemo 6r5 200
 Antmanf 6r5 200
 Domino 7r2 20
@@ -456,7 +432,6 @@ Attuma 6r4 124
 Spidersup 6r5 200
 //
 >Toshiro
-Groupe 1
 Pyramidx 6r5 98
 Domino 7r2 0
 Idoom 6r4 120
@@ -478,7 +453,6 @@ Wasp 6r2 20
 Punisher99 6r2 40
 //
 >jeromeGHOST
-Groupe 3
 Idoom 6r6 200
 Hercule 6r6 200
 Zemo 6r6 180
@@ -496,8 +470,7 @@ Weaponx 6r4 200
 Immoabo 6r4 131
 Shocker 7r1 20
 //
->NINØ83
-Groupe 2
+>Nino83
 Gorr 7r2 20
 Doom 6r6 200
 Idoom 6r5 200
@@ -522,11 +495,8 @@ Bishop 7r1 0
 Terrax 7r1 20
 Pyramidx 7r1 20
 //
->dégénérationX
-Groupe 2
+>Degenerationx
 //
 >Christ59
-Groupe 3
 //
 >VALLOKI
-Groupe 3
