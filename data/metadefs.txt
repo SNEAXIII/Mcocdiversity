@@ -1,7 +1,9 @@
+Bullseye
 Chose
+Aarkus
+Adam
 Kingpin
 Bwdo
-Bullseye
 Elsa
 Kate
 Zemo
@@ -10,8 +12,6 @@ Killmonger
 Jabari
 Monkey
 Sersi
-Adam
-Aarkus
 Skrull
 Nova
 Redgob

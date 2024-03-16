@@ -13,9 +13,10 @@ RedMag 6r4 46
 //
 >Mrbal'
 Maestro 7r2 0
-Shuri 7r3 0
-Titania 7r3 0
+*Shuri 7r3 0
+*Titania 7r3 0
 Kingpin 6r6 65
+Elsa 7r1 0
 Absman 6r6 200
 Antmanf 6r6 200
 Chose 6r4 200
@@ -28,6 +29,9 @@ Aarkus 7r1 0
 Jabari 7r1 0
 Mangog 7r1 0
 Hulkling 6r4 20
+*Kate 6r6 200
+Jabari 7r1 0
+Monkey 6r4 40
 //
 >Tetane
 Absman 6r5 200
