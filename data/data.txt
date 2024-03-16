@@ -1,20 +1,20 @@
 >LEGACY LEGION
 Doom 6r4 200
-!iDoom 6r4 200
-!Spidersup 6r4 200
+iDoom 6r4 200
+Spidersup 6r4 200
 QuickS 6r4 200
 apo 6r4 200
 Surfer 6r4 200
 IMIW 7r1 0
-!IM 6r4 43
+IM 6r4 43
 Ebony 7r1 0
-!DragonMan 7r1 0
-!RedMag 6r4 46
+DragonMan 7r1 0
+RedMag 6r4 46
 //
 >Mrbal'
 Maestro 7r2 0
-*Shuri 7r3 0
-*Titania 7r3 0
+Shuri 7r3 0
+Titania 7r3 0
 Kingpin 6r6 65
 Absman 6r6 200
 Antmanf 6r6 200
@@ -265,16 +265,16 @@ Rintrah 6r3 86
 //
 >Lool 68
 Doom 6r5 140
-*Gambit 7r1 0
-*Angela 6r4 200
+Gambit 7r1 0
+Angela 6r4 200
 Kitty 6r4 83
 Elsa 7r1 0
 Wiccan 7r1 0
-*BP 7r1 0
+BP 7r1 0
 Sauron 7r1 0
 Galan 6r4 80
 imiw 7r1 0
-*ablo 7r1 0
+ablo 7r1 0
 Apo 6r4 32
 Idoom 6r4 1
 Overseer 7r1 0
@@ -439,12 +439,12 @@ Shuri 6r4 23
 ProfX 6r3 170
 Bishop 7r1 0
 Wiccan 6r3 114
-*Gambit 6r3 0
-*ABLO 6r3 75
+Gambit 6r3 0
+ABLO 6r3 75
 CGR 6r3 0
 Overseer 7r1 0
 ImIW 7r1 0
-*torch 6r3 51
+torch 6r3 51
 guigui 6r3 20
 Kingpin 6r4 0
 Corvus 6r3 0
