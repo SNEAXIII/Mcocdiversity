@@ -95,7 +95,7 @@ allCara = [
     "Absman",  # Absorbing Man
     "Chavez",  # America Chavez
     "Bwcv",  # Black Widow (Claire Voyant)
-    "Ablo",  # Diablo
+    "Deablo",  # Diablo
     "Doom",  # Doctor Doom
     "Strange",  # Doctor Strange
     "Voodoo",  # Doctor Voodoo
@@ -104,8 +104,9 @@ allCara = [
     "Ebony",  # Ebony Maw
     "Gr",  # Ghost Rider
     "Guigui",  # Guillotine
+    "Dguigui",  # Guillotine (Deathless)
     "Fist",  # Iron Fist
-    "Juggs",  # Juggernaut
+    "Fleau",  # Juggernaut
     "Kindred",  # Kindred
     "Kushala",  # Kushala
     "Loki",  # Loki
@@ -130,6 +131,7 @@ allCara = [
     "Tigra",  # Tigra
     "Werewolf",  # Werewolf By Night
     "Wiccan",  # Wiccan
+    "Tiger",  # White Tiger
     "Wong",  # Wong
     # Science
     "Abo",  # Abomination
