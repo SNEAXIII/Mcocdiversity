@@ -32,7 +32,7 @@ class Groups:
 
     def dump(self):
         for id, group in self.groups.items():
-            print(f"Groupe numéro {id}\n{group}")
+            print(f"{LINE}\nGroupe numéro {id}\n{group}")
 
     def get_player_group(self, player_name: str) -> int:
         for id in self.groups.keys():
@@ -99,7 +99,7 @@ class Groups:
         for num_group in range(1, 4):
             self.execute_one_group(num_group)
 
-    def execute_one_group(self, num_group: int, loaded: bool = True, ignore_error: bool = True):
+    def execute_one_group(self, num_group: int, loaded: bool = True):
         if not loaded:
             self.load_data()
         group = self.groups[num_group]

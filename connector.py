@@ -2,11 +2,6 @@ from pygsheets import authorize, HorizontalAlignment
 
 from src.group import Group
 
-
-# wks.set_dataframe(df, (1, 1))
-
-# print (wks.get_as_df())
-
 class Connection:
     def __init__(self, sheet_to_open:str):
         sheets = self.get_sheets(sheet_to_open)

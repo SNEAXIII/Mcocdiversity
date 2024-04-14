@@ -6,6 +6,6 @@ debut = time()
 groups = Groups()
 groups.do_everything()
 
-connector = Connection("Gold Mcoc Planning Sheet")
+connector = Connection("DBZ Mcoc Planning Sheet")
 connector.update_groups(groups)
 print(f"Il a fallut {round(time() - debut)} secondes")

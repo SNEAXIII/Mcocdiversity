@@ -8,7 +8,8 @@ class Player:
         return int(self.p_score / 15)
 
     def dump(self):
-        string_return = f"\nJoueur : {self.name}\nPuissance théorique du joueur: {self.get_score()}\n"
+        string_return = f"\nJoueur : {self.name}\n"\
+                        f"Puissance théorique du joueur: {self.get_score()}\n"
         for _def in self.defs:
             string_return += f"  → {_def}\n"
         return string_return
