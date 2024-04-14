@@ -1,0 +1,506 @@
+>LEGACY LEGION
+Doom 6r4 200
+iDoom 6r4 200
+Spidersup 6r4 200
+QuickS 6r4 200
+apo 6r4 200
+Surfer 6r4 200
+IMIW 7r1 0
+IM 6r4 43
+Ebony 7r1 0
+DragonMan 7r1 0
+RedMag 6r4 46
+//
+>Mrbal'
+Maestro 7r2 0
+*Shuri 7r3 0
+*Titania 7r3 0
+Kingpin 6r6 65
+Elsa 7r1 0
+Absman 6r6 200
+Antmanf 6r6 200
+Chose 6r4 200
+Spot 6r4 200
+Quicks 6r4 20
+Bishop 7r2 20
+Wong 7r1 20
+Elsa 7r1 0
+Aarkus 7r1 0
+Jabari 7r1 0
+Mangog 7r1 0
+Hulkling 6r4 20
+*Kate 6r6 200
+Jabari 7r1 0
+Monkey 6r4 40
+//
+>Tetane
+Absman 6r5 200
+Doom 6r6 200
+Kingpin 6r5 200
+Nimrod 6r5 200
+Scorpion 6r5 200
+Kitty 6r5 200
+Fury 6r4 90
+Idoom 6r4 102
+Galan 6r4 100
+Spider99 6r4 200
+Apo 6r4 21
+Warmachine 7r1 20
+Sorcersup 7r1 0
+Korg 7r1 0
+Sandman 7r1 0
+Mysterio 7r1 0
+Mangog 7r1 0
+Pyramidx 7r1 0
+surfer 7r1 0
+Wiccan 7r1 0
+Morbius 7r1 0
+Bishop 7r1 0
+Guigui99 7r1 0
+//
+>Madarcher57
+Sauron 7r1 20
+Mojo 7r1 0
+Torch 6r6 16
+Silk 6r4 20
+Kindred 6r4 30
+werewolf 6r4 20
+Moondragon 7r1 0
+//
+>brunog71
+Quicks 6r4 200
+Kitty 6r4 200
+Hulkling 6r4 200
+Mantis 7r1 0
+Aarkus 7r1 0
+Omega 6r3 200
+Wong 7r1 0
+Knull 7r1 0
+Korg 7r1 0
+Overseer 7r1 0
+Absman 6r3 105
+Peni 6r3 74
+//
+>Elminautor
+Doom 6r6 200
+QuickS 6r6 200
+Shuri 7r2 0
+Idoom 6r4 200
+Kitty 6r5 14
+Nimrod 6r4 200
+Ebony 7r1 0
+Hercule 6r4 117
+Colossus 6r4 180
+Mantis 7r2 20
+Elsa 7r1 0
+Negative 7r1 0
+Hulkling 6r4 81
+Fury 6r4 20
+Ronin 7r1 0
+Titania 7r1 0
+Chavez 6r4 40
+Odin 7r1 0
+Mangog 6r4 40
+Bishop 6r4 43
+Dragonman 7r1 0
+Hulk 7r1 0
+antmanf 6r4 37
+Kingpin 6r4 41
+Sasquatch 7r1 0
+Overseer 7r1 0
+Attuma 6r4 27
+Venom 7r1 0
+Gwen 7r1 0
+Bwdo 6r3 20
+ProfX 6r3 40
+//
+>Francis tueur
+centurion 6r5 200
+torch 6r5 100
+gambit 7r1 0
+bwcv 6r4 130
+shuri 7r1 0
+chose 6r4 65
+warlock 7r1 0
+doom 6r4 140
+skrull 6r3 100
+Thor 6r3 100
+iceman 6r3 85
+Redguard 6r3 40
+Fury 6r3 40
+quicks 6r3 25
+guardian 6r3 30
+jabari 6r3 30
+Kitty 6r3 1
+sorcersup 6r3 20
+annihilus 6r3 30
+korg 6r3 0
+//
+>Tug88
+Doom 6r5 200
+Idoom 6r6 75
+Overseer 7r1 20
+Imiw 7r2 20
+Warlock 6r4 40
+Absman 6r4 40
+Gladiateur 7r1 0
+Morbius 7r1 0
+Odin 7r1 0
+Wilson 7r1 0
+Fixit 7r1 0
+Titania 7r1 0
+Moondragon 7r1 0
+Sorcersup 7r1 0
+Colossus 6r4 40
+Fury 6r4 40
+Surfer 6r3 100
+Kgroot 6r3 100
+//
+>Niels et Jojo
+Fury 6r5 200
+Bishop 6r5 200
+Scorpion 6r5 200
+ham 6r4 200
+Gorr 6r4 200
+Storm 7r2 0
+GuiGui99 7r1 0
+Falcon 7r1 0
+Elsa 7r1 0
+Adam 7r1 0
+Overseer 7r1 0
+Profx 7r1 0
+Knull 7r1 0
+Sandman 7r2 20
+//
+>Jojocorp
+Doom 6r6 109
+Idoom 6r5 179
+Bishop 6r4 153
+Killmonger 6r4 200
+Mysterio 7r1 0
+Pyramidx 7r1 0
+Chavez 7r1 0
+Ham 6r4 40
+Hercule 6r4 33
+Stryfe 7r1 0
+Wilson 7r1 0
+Antman 7r1 0
+Morbius 7r1 0
+Kitty 6r4 3
+Im 6r4 25
+//
+>Gaz73
+Doom 6r6 200
+Hercule 6r6 200
+Ebony 7r1 20
+Elsa 7r2 0
+Wong 7r1 20
+Overseer 7r2 20
+Mysterio 7r1 0
+Shocker 7r1 0
+Attuma 7r1 0
+Sasquatch 7r1 0
+Mantis 7r1 0
+//
+>Dilly Neither
+Galan 6r6 200
+Photon 6r6 200
+Zemo 6r5 200
+Kitty 6r6 200
+Absman 6r6 200
+Kindred 6r4 200
+Antmanf 6r4 180
+Spot 6r4 120
+Mysterio 7r1 20
+Chavez 7r1 20
+Emma 7r1 20
+Diablo 7r1 20
+Sandman 7r1 20
+Terrax 7r1 20
+Sasquatch 7r1 20
+Wong 7r2 0
+//
+>Simobou
+Hercule 6r5 200
+monkey 6r5 200
+Longshot 6r4 200
+Nimrod 6r4 200
+weaponx 6r4 200
+Gambit 7r1 0
+Werewolf 6r4 0
+Bw 6r4 0
+torch 6r4 0
+Sunspot 6r4 0
+Ebony 7r1 0
+Knull 7r1 0
+Capiw 6r4 0
+Gorr 6r4 0
+Negative 7r1 0
+Wiccan 7r1 0
+CGR 6r4 0
+Wilson 7r1 0
+Im 7r1 0
+Htd 7r1 0
+Shocker 7r1 0
+Korg 7r1 0
+Sandman 7r1 0
+Moondragon 7r1 0
+//
+>Noebis
+Warlock 6r5 200
+fury 6r4 200
+Hercule 6r6 200
+CGR 6r5 200
+Sunspot 7r1 0
+Doom 6r4 58
+Nimrod 6r4 180
+Dani 6r4 128
+Shocker 7r1 20
+Mysterio 7r1 0
+Ultron 6r4 200
+Bp 7r1 0
+Rocket 7r1 0
+Hyperion 6r4 179
+Aegon 6r3 200
+Quicks 6r3 91
+chose 6r4 1
+Peni 6r3 40
+Rintrah 6r3 86
+//
+>Lool 68
+Doom 6r5 140
+Gambit 7r1 0
+Angela 6r4 200
+Kitty 6r4 83
+Elsa 7r1 0
+Wiccan 7r1 0
+BP 7r1 0
+Sauron 7r1 0
+Galan 6r4 80
+imiw 7r1 0
+ablo 7r1 0
+Apo 6r4 32
+Idoom 6r4 1
+Overseer 7r1 0
+Hulkling 6r4 5
+Mantis 7r1 0
+//
+>welwel Welid sfeyhi
+Terrax 7r1 20
+Titania 6r4 20
+Jabari 7r1 0
+Emma 7r1 0
+Ebony 7r1 0
+Sasquatch 7r1 20
+Aarkus 7r1 0
+Overseer 7r1 20
+Korg 7r1 0
+wilson 7r1 0
+chavez 7r1 0
+Killmonger 7r1 0
+Profx 7r1 0
+Crossbones 7r1 0
+Warmachine 7r1 0
+Gorr 7r1 0
+Sandman 7r1 0
+Attuma 6r4 20
+Rintrah 6r4 20
+Juggs 6r4 20
+kingpin 6r4 20
+Apo 6r4 20
+Valkyrie 6r4 80
+Fury 6r5 20
+Void 6r5 200
+Idoom 6r4 20
+Omegared 6r4 20
+Hulkling 6r4 40
+//
+>Neologisme
+Mysterio 7r1 0
+Moondragon 7r1 0
+Omega 6r4 26
+Sabretooth 6r3 81
+Spiderstealth 6r3 58
+Nova 6r3 73
+Sorcersup 6r3 47
+Ragnathor 6r3 54
+Guardian 6r3 47
+Redgob 6r3 20
+Weaponx 6r4 17
+Jubilee 6r3 1
+//
+>Angel
+Doom 6R5 69
+Fixit 7R2 0
+Torch 6R5 97
+Viv 6R4 102
+Falcon 7R1 0
+Ebony 7R1 0
+Sasquatch 7R1 20
+Venom 6R4 133
+Apo 6R4 67
+Chavez 7R1 0
+//
+>Booshi Boosh
+Gorr 7r2 20
+Photon 7r2 0
+Guigui99 7r2 20
+Killmonger 7r2 20
+Maestro 6r6 200
+//
+>Nims
+Void 7r1 0
+Fixit 7r1 0
+SW 6r4 183
+Adam 6r4 20
+Wilson 7r1 20
+Aarkus 7r1 0
+Chavez 7r1 20
+Wong 7r1 0
+Korg 7r1 0
+Mysterio 7r1 0
+//
+>Valclaw
+Scorpion 6r6 200
+Spot 7r1 0
+Silk 6r4 40
+Morbius 7r1 0
+Overseer 7r1 0
+Sandman 7r1 0
+Mantis 7r2 20
+Monkey 6r4 80
+Fury 6r4 20
+Attuma 7r1 0
+Apo 6r5 200
+Bishop 7r1 0
+Pyramidx 7r1 0
+Adam 6r4 200
+Galan 6r4 40
+Shuri 7r2 0
+Nimrod 6r5 200
+Idoom 6r4 200
+Mysterio 7r1 0
+Warlock 7r1 0
+Ebony 7r3 0
+Doom 6r5 200
+Tigra 6r4 200
+Sasquatch 7r1 40
+Mordo 7r1 0
+Wiccan 6r4 20
+DragonMan 7r1 0
+Rintrah 6r4 20
+//
+>dede04180
+Doom 6r4 200
+Fury 6r4 166
+Knull 6r4 80
+Gorr 7r1 0
+Domino 7r1 0
+Hulk 7r1 0
+Absman 6r4 19
+Mordo 6r3 40
+Korg 6r3 109
+Chose 6r3 48
+Scorpion 6r3 20
+Negative 6r3 1
+Peni 6r3 1
+Attuma 6r3 20
+Galan 6r3 21
+Idoom 6r3 1
+Odin 6r3 21
+//
+>Gigicapi3
+Dragonman 7r2 0
+Domino 7r2 0
+Bishop 7r2 0
+Adam 7r1 20
+Elsa 7r1 20
+Terrax 7r1 40
+Emma 7r1 20
+Wong 7r1 20
+Profx 7r1 0
+Photon 7r1 0
+Morbius 7r1 0
+Korg 7r1 0
+Sasquatch 7r1 0
+//
+>Ytietha
+Zemo 6r5 200
+Antmanf 6r5 200
+Domino 7r2 20
+Sauron 6r5 200
+Jessica 6r5 200
+Chose 6r5 200
+Weaponx 6r4 200
+Attuma 6r4 124
+Spidersup 6r5 200
+//
+>Toshiro
+Pyramidx 6r5 98
+Domino 7r2 0
+Idoom 6r4 120
+Shuri 6r4 23
+ProfX 6r3 170
+Bishop 7r1 0
+Wiccan 6r3 114
+Gambit 6r3 0
+ABLO 6r3 75
+CGR 6r3 0
+Overseer 7r1 0
+ImIW 7r1 0
+torch 6r3 51
+guigui 6r3 20
+Kingpin 6r4 0
+Corvus 6r3 0
+Warlock 6r3 0
+Wasp 6r2 20
+Punisher99 6r2 40
+//
+>jeromeGHOST
+Idoom 6r6 200
+Hercule 6r6 200
+Zemo 6r6 180
+Sandman 7r2 20
+Doom 6r4 200
+Mantis 7r1 40
+Diablo 7r1 40
+Angela 6r4 200
+Fury 6r4 170
+Gorr 6r4 180
+Absman 6r4 129
+VTD 7r1 20
+Aegon 6r4 170
+Weaponx 6r4 200
+Immoabo 6r4 131
+Shocker 7r1 20
+//
+>Nino83
+Gorr 7r2 20
+Doom 6r6 200
+Idoom 6r5 200
+Absman 6r4 200
+Zemo 6r6 200
+Galan 6r6 200
+Kitty 6r4 200
+Adam 6r4 200
+Dani 6r4 112
+Ghost 6r4 200
+Scorpion 6r4 200
+Spot 6r4 126
+Quicks 6r4 71
+Nimrod 6r4 106
+Fury 6r4 38
+Hulk 6r4 112
+Apo 6r4 75
+Silk 6r4 20
+juggs 6r4 60
+Sauron 7r1 20
+Bishop 7r1 0
+Terrax 7r1 20
+Pyramidx 7r1 20
+//
+>Degenerationx
+//
+>Christ59
+//
+>VALLOKI
