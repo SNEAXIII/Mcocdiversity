@@ -50,6 +50,7 @@ allCara = [
     "Aarkus",  # Vision (Aarkus)
     "Vox",  # Vox
     # Mutant
+    "Onslaught",  # Onslaught
     "Apo",  # Apocalypse
     "Aa",  # Archangel
     "Beast",  # Beast
@@ -125,7 +126,7 @@ allCara = [
     "Swc",  # Scarlet Witch (Classic)
     "Sorcersup",  # Sorcerer Supreme
     "Spidersup",  # Spider-Man (Supreme)
-    "SymSup",  # Symbiote Supreme
+    "Symsup",  # Symbiote Supreme
     "Hood",  # The Hood
     "Jane",  # Thor (Jane Foster)
     "Tigra",  # Tigra

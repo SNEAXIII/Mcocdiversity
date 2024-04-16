@@ -18,25 +18,20 @@ Mangog 7r1 0
 Jabari 7r1 0
 //
 >Toshiro
-Pyramidx 6r5 98
 Domino 7r2 0
-Idoom 6r4 120
-Shuri 6r4 23
-ProfX 6r3 170
+Ebony 7r1 0
+Kindred 7r1 0
+Terrax 7r1 0
+Imiw 7r1 0
 Bishop 7r1 0
-Wiccan 6r3 114
-Gambit 6r3 0
-Deablo 6r3 75
-CGR 6r3 0
 Overseer 7r1 0
-ImIW 7r1 0
-torch 6r3 51
-guigui 6r3 20
-Kingpin 6r4 0
-Corvus 6r3 0
-Warlock 6r3 0
-Wasp 6r2 20
-Punisher99 6r2 40
+Shuri 6r5 200
+Photon 6r5 0
+Idoom 6r4 120
+Immohulk 6r5 20
+Wiccan 6r4 160
+ProfX 6r3 200
+Corvus 6r3 94
 //
 >Yoda
 Overseer 7r3 20
@@ -101,11 +96,9 @@ Guigui 6r4 20
 //
 >jeromeGHOST
 Idoom 6r6 200
-Hercule 6r6 200
 Zemo 6r6 180
 Absman 6r6 200
 Sandman 7r2 20
-Titania 7r2 0
 Kitty 6r5 200
 Doom 6r4 200
 Mantis 7r1 60
@@ -120,3 +113,89 @@ Immoabo 6r4 179
 Shocker 7r1 20
 Dani 7r1 0
 Kindred 7r1 0
+Warmachine 7r1 05
+Quicks 6r5 50
+//
+>Tug88
+Doom 6r6 200
+Idoom 6r6 130
+Overseer 7r1 20
+*Dani 7r2 0
+Imiw 7r2 40
+Warlock 6r4 40
+Absman 6r4 80
+Gladiateur 7r1 0
+Morbius 7r1 0
+Odin 7r2 0
+Wilson 7r1 0
+Fixit 7r1 20
+Titania 7r1 0
+Moondragon 7r1 0
+Sorcersup 7r1 0
+Colossus 6r4 40
+Fury 6r4 40
+Surfer 6r4 120
+Kgroot 6r3 100
+//
+>Dilly Neither
+Doom 6r6 200
+Kitty 6r6 200
+Photon 6r6 200
+Onslaught 6r6 200
+Absman 6r6 200
+Kate 6r6 200
+Bullseye 6r6 200
+Galan 6r6 200
+Adam 6r5 200
+Tigra 6r5 200
+Hulkling 6r5 112
+Kindred 6r4 200
+Antman 6r4 200
+Quicks 6r4 175
+Spot 6r4 120
+Mysterio 7r1 20
+Chavez 7r1 20
+Emma 7r1 20
+Diablo 7r1 20
+Sandman 7r1 20
+Terrax 7r1 20
+Sasquatch 7r1 20
+Wong 7r2 0
+//
+>Buzz
+Bishop 7r3 40
+Sunspot 7r2 20
+Warmachine 7r2 20
+Maestro 7r2 0
+Hercule 6r6 200
+Iceman 6r6 200
+Apo 6r6 200
+*Aegon 6r6 200
+Nimrod 6r5 200
+Havok 6r5 120
+Cgr 6r4 200
+Kitty 6r4 200
+Viv 6r4 200
+Spider99 6r4 200
+Zemo 6r4 200
+*Gal 6r4 200
+Knull 6r4 200
+Chose 6r4 200
+Angela 6r4 200
+Longshot 6r4 200
+Symsup 6r4 180
+Warlock 6r4 200
+Photon 6r4 120
+Deablo 6r4 180
+Spot 6r4 180
+Ultron 6r4 200
+Taupe 6r4 120
+Fleau 6r4 100
+Rintrah 6r4 80
+Attuma 6r4 40
+Antmanf 6r4 40
+Guigui99 7r1 20
+Mysterio 7r1 20
+Gamora 7r1 20
+Dguigui 7r1 20
+Imiw 7r1 20
