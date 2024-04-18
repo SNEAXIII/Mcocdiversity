@@ -4,11 +4,11 @@ from src.player import Player
 
 
 class Group:
-    def __init__(self, id: int, list_meta_defs: list):
-        self.id = id
+    def __init__(self, current_id: int, list_meta_defs: list):
+        self.id = current_id
         self.list_meta_defs = list_meta_defs
         self.g_score = 0
-        self.all_Defs = {}
+        self.all_defs = {}
         self.selected_defs = set()
         self.unselected_defs = set()
         self.all_player: dict[Player] = {}
@@ -32,10 +32,10 @@ class Group:
 
     def dump(self):
         string_return = ""
-        for def_name in self.all_Defs:
+        for def_name in self.all_defs:
             string_return += f"{def_name}\n"
-            for int_rank in self.all_Defs[def_name]:
-                string_return += f"{self.convert_rank_int_to_str(int_rank)}-->{self.all_Defs[def_name][int_rank]}\n"
+            for int_rank in self.all_defs[def_name]:
+                string_return += f"{self.convert_rank_int_to_str(int_rank)}-->{self.all_defs[def_name][int_rank]}\n"
             string_return += "\n"
         return string_return
 
@@ -60,17 +60,15 @@ class Group:
         self.all_player[player.name] = player
 
     def add_new_def(self, owner: str, def_name: str, rank: str, sig: int):
-        if def_name not in self.all_Defs:
+        if def_name not in self.all_defs:
             if (
                     any(tuple_def[0] == def_name for tuple_def in self.selected_defs) or
                     len(self.all_player[owner].defs) == 5
             ):
                 return
-            self.all_Defs[def_name] = {}
-            # for id_rank in self.range_rank:
-            #     self.all_Defs[def_name][id_rank] = {}
+            self.all_defs[def_name] = {}
         id_rank = self.convert_rank_str_to_int(rank)
-        one_def = self.all_Defs[def_name]
+        one_def = self.all_defs[def_name]
         if id_rank not in one_def:
             one_def[id_rank] = {}
         def_name_def_rank = one_def[id_rank]
@@ -91,9 +89,9 @@ class Group:
         raise IndexError(f"Aucun rang correspond trouvée pour la valeur : {value}")
 
     def find_the_player_for_rank_for_def(self, def_name: str, rank: int):
-        if def_name not in self.all_Defs:
+        if def_name not in self.all_defs:
             return False
-        dict_def_rank = self.all_Defs[def_name].get(rank, None)
+        dict_def_rank = self.all_defs[def_name].get(rank, None)
         if dict_def_rank:
             max_sig = max(dict_def_rank.keys())
             return choice(list(dict_def_rank[max_sig]))
@@ -104,17 +102,15 @@ class Group:
         return all(not bool(s) for s in dictionary.values())
 
     def find_the_best_defs(self):
-        list_all_defs = self.list_meta_defs + list(self.all_Defs)
+        list_all_defs = self.list_meta_defs + list(self.all_defs)
         for rank in self.all_ranks.values():
             for def_name in list_all_defs:
-                if def_name == "Hulk" and rank ==264 :
-                    print("wicoo")
                 if player_or_false := self.find_the_player_for_rank_for_def(def_name, rank):
                     self.add_def_in_player(player_or_false, def_name, rank)
 
     # todo refactor cette bouse avec des bools
     def check_doublons(self):
-        for tuple_def in self.all_Defs.items():
+        for tuple_def in self.all_defs.items():
             count = 0
             print_name = True
             string_to_print = ""
@@ -154,25 +150,31 @@ class Group:
         self.delete_one_player_in_defs_dict(player, selected_def)
 
     def delete_one_def_dict(self, def_name: str):
-        if def_name in self.all_Defs:
-            del self.all_Defs[def_name]
+        if def_name in self.all_defs:
+            del self.all_defs[def_name]
 
     def delete_one_player_in_defs_dict(self, player: str, def_to_update: str = None):
-        for def_name, ranks in list(self.all_Defs.items()):
-            if def_to_update and def_to_update != def_name:
-                continue
+        for def_name, ranks in list(self.all_defs.items()):
+
+            if def_to_update and def_to_update != def_name: continue
+
             for rank, all_sig in list(ranks.items()):
+
                 for sig, names in list(all_sig.items()):
+
                     if player in names:
                         names.discard(player)
                         if not names:
                             del all_sig[sig]
-                        if self.is_def_rank_empty(all_sig):
-                            self.unselected_defs.add(def_name)
-                            self.delete_one_def_dict(def_name)
+                        if not all_sig:
+                            del ranks[rank]
+
+            if not ranks:
+                self.unselected_defs.add(def_name)
+                self.delete_one_def_dict(def_name)
 
     def is_empty_def(self):
-        return not bool(self.all_Defs)
+        return not bool(self.all_defs)
 
     def is_full_of_def(self):
         return len(self.selected_defs) == 50

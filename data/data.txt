@@ -104,10 +104,10 @@ Kitty 6r5 200
 Doom 6r4 200
 Mantis 7r1 60
 Deablo 7r1 40
-Angela 6r4 200
+*Angela 6r4 200
 Fury 6r4 170
 Gorr 6r4 180
-VTD 7r1 20
+*VTD 7r1 20
 Aegon 6r5 200
 Weaponx 6r4 200
 Immoabo 6r4 179
@@ -182,7 +182,7 @@ Zemo 6r4 200
 *Gal 6r4 200
 Knull 6r4 200
 Chose 6r4 200
-Angela 6r4 200
+*Angela 6r4 200
 Longshot 6r4 200
 Symsup 6r4 180
 Warlock 6r4 200
