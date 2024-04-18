@@ -93,7 +93,7 @@ class Group:
     def find_the_player_for_rank_for_def(self, def_name: str, rank: int):
         if def_name not in self.all_Defs:
             return False
-        dict_def_rank = self.all_Defs[def_name].get(rank,None)
+        dict_def_rank = self.all_Defs[def_name].get(rank, None)
         if dict_def_rank:
             max_sig = max(dict_def_rank.keys())
             return choice(list(dict_def_rank[max_sig]))
@@ -107,6 +107,8 @@ class Group:
         list_all_defs = self.list_meta_defs + list(self.all_Defs)
         for rank in self.all_ranks.values():
             for def_name in list_all_defs:
+                if def_name == "Hulk" and rank ==264 :
+                    print("wicoo")
                 if player_or_false := self.find_the_player_for_rank_for_def(def_name, rank):
                     self.add_def_in_player(player_or_false, def_name, rank)
 
@@ -139,7 +141,7 @@ class Group:
         if not any(tuple_def[0] == def_name for tuple_def in self.selected_defs):
             self.selected_defs.add((def_name, rank))
         else:
-            raise Exception(f"Le défenseur {def_name} à été enregistré 2 fois")
+            raise IndexError(f"Le défenseur {def_name} à été enregistré 2 fois")
 
         if len(self.all_player[player].defs) == 4:
             selected_def = None
@@ -156,8 +158,8 @@ class Group:
             del self.all_Defs[def_name]
 
     def delete_one_player_in_defs_dict(self, player: str, def_to_update: str = None):
-        for _def, ranks in list(self.all_Defs.items()):
-            if def_to_update and def_to_update != _def:
+        for def_name, ranks in list(self.all_Defs.items()):
+            if def_to_update and def_to_update != def_name:
                 continue
             for rank, all_sig in list(ranks.items()):
                 for sig, names in list(all_sig.items()):
@@ -166,8 +168,8 @@ class Group:
                         if not names:
                             del all_sig[sig]
                         if self.is_def_rank_empty(all_sig):
-                            self.unselected_defs.add(_def)
-                            self.delete_one_def_dict(_def)
+                            self.unselected_defs.add(def_name)
+                            self.delete_one_def_dict(def_name)
 
     def is_empty_def(self):
         return not bool(self.all_Defs)
