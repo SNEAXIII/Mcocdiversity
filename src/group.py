@@ -98,12 +98,9 @@ class Group:
         return all(not bool(s) for s in dictionary.values())
 
     def find_the_best_defs(self):
+        list_all_defs = self.list_meta_defs + list(self.all_Defs)
         for rank in self.all_ranks.values():
-            for def_name in self.list_meta_defs:
-                if player_or_false := self.find_the_player_for_rank_for_def(def_name, rank):
-                    self.add_def_in_player(player_or_false, def_name, rank)
-        for rank in self.all_ranks.values():
-            for def_name in list(self.all_Defs):
+            for def_name in list_all_defs:
                 if player_or_false := self.find_the_player_for_rank_for_def(def_name, rank):
                     self.add_def_in_player(player_or_false, def_name, rank)
 
