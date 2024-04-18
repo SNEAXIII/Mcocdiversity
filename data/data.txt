@@ -48,7 +48,7 @@ Hulk 7r2 0
 Mordo 7r1 0
 Profx 7r1 0
 Wiccan 7r1 0
-Adam 7r1 0
+!Adam 7r1 0
 *Sorcersup 7r1 0
 Dragonman 7r1 0
 *Gamora 7r1 0
@@ -105,7 +105,7 @@ Doom 6r4 200
 Mantis 7r1 60
 *Deablo 7r1 40
 *Angela 6r4 200
-Fury 6r4 170
+!Fury 6r4 170
 Gorr 6r4 180
 *VTD 7r1 20
 *Aegon 6r5 200
@@ -121,33 +121,33 @@ Kindred 7r1 0
 Doom 6r6 200
 !Idoom 6r6 130
 Overseer 7r1 20
-*Dani 7r2 0
+!Dani 7r2 0
 !Imiw 7r2 40
 Warlock 6r4 40
 Absman 6r4 80
-Gladiateur 7r1 0
-Morbius 7r1 0
-Odin 7r2 0
-Wilson 7r1 0
+!Gladiateur 7r1 0
+*Morbius 7r1 0
+*Odin 7r2 0
+!Wilson 7r1 0
 Fixit 7r1 20
 Titania 7r1 0
 Moondragon 7r1 0
 Sorcersup 7r1 0
 Colossus 6r4 40
 Fury 6r4 40
-Surfer 6r4 120
-Kgroot 6r3 100
+*Surfer 6r4 120
+*Kgroot 6r3 100
 //
 >Dilly Neither
 Doom 6r6 200
 Kitty 6r6 200
 !Photon 6r6 200
-Onslaught 6r6 200
+!Onslaught 6r6 200
 Absman 6r6 200
 !Kate 6r6 200
-Bullseye 6r6 200
+!Bullseye 6r6 200
 Galan 6r6 200
-!Adam 6r5 200
+Adam 6r5 200
 *Tigra 6r5 200
 Hulkling 6r5 112
 Kindred 6r4 200
@@ -159,7 +159,7 @@ Chavez 7r1 20
 Emma 7r1 20
 Diablo 7r1 20
 Sandman 7r1 20
-!Terrax 7r1 20
+Terrax 7r1 20
 Sasquatch 7r1 20
 !Wong 7r2 0
 //
@@ -201,11 +201,11 @@ Mysterio 7r1 20
 Imiw 7r1 20
 //
 >Angel
-Doom 6R6 127
+!Doom 6R6 127
 *Hercule 6R6 200
 IDoom 6R6 200
 *Torch 6R6 200
-Pyramidx 6R6 60
+!Pyramidx 6R6 60
 *Aegon 6R5 128
 Emma 7R2 0
 !Fixit 7R2 0
@@ -213,7 +213,7 @@ Ebony 7R1 60
 *Falcon 7R1 20
 Zemo 6R4 135
 Viv 6R4 102
-Sasquatch 7R1 20
+!Sasquatch 7R1 20
 Wiccan 7R1 0
 Kindred 6R4 71
 *Venom 6R4 133
@@ -248,7 +248,7 @@ Korg 6r4 200
 Weaponx 6r6 200
 Kate 6r6 200
 Iceman 6r6 200
-Jessica 6r6 200
+!Jessica 6r6 200
 !Nimrod 6r6 200
 !Kingpin 6r6 200
 Storm 7r2 20
