@@ -11,7 +11,10 @@ COMMENTARY_IDENTIFIER = "*"
 
 
 class Groups:
-    def __init__(self):
+    def __init__(self, data_folder_path: str | None = None):
+        if data_folder_path is None:
+            data_folder_path = "data"
+        self.data_folder_path = data_folder_path
         list_meta_defs = self.get_meta_def()
         self.groups = {id_group: Group(id_group, list_meta_defs) for id_group in range(1, 4)}
 
@@ -41,13 +44,13 @@ class Groups:
         raise ValueError(f"Le joueur {player_name} ne fais partie d'aucun groupe!!!")
 
     def get_meta_def(self):
-        with open("data/metadefs.txt", encoding="utf-8") as file:
+        with open(f"{self.data_folder_path}/metadefs.txt", encoding="utf-8") as file:
             to_return = [line.strip('\n') for line in file.readlines()]
         check_is_good_defs(to_return)
         return to_return
 
     def add_all_player_to_groups(self):
-        with open("data/groups.txt", encoding="utf-8") as file:
+        with open(f"{self.data_folder_path}/groups.txt", encoding="utf-8") as file:
             lines = file.readlines()
         id_group = None
         for line in lines:
@@ -57,8 +60,8 @@ class Groups:
                 self.add_player_to_a_group(id_group, line.strip('\n'))
 
     # todo replacer les start with par des match
-    def load_data(self, file_to_open: str = "./data/data.txt"):
-        with open(file_to_open, encoding="utf-8") as f:
+    def load_data(self):
+        with open(f"{self.data_folder_path}/data.txt", encoding="utf-8") as f:
             data = [line.replace("\n", "") for line in f.readlines()]
         self.add_all_player_to_groups()
         player_name = None
@@ -72,7 +75,8 @@ class Groups:
             elif line.startswith(PLAYER_IDENTIFIER):
                 temp_name = line.lstrip(PLAYER_IDENTIFIER)
                 if player_name is not None:
-                    raise IndexError(f"Ligne {index + 1}: le nom de joueur {player_name} et {temp_name} ne peux être saisi 2 fois")
+                    raise IndexError(
+                        f"Ligne {index + 1}: le nom de joueur {player_name} et {temp_name} ne peux être saisi 2 fois")
                 player_name = temp_name
                 group = self.get_player_group(player_name)
             elif line.startswith(FORCE_IDENTIFIER):
