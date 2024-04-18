@@ -1,5 +1,5 @@
 from random import choice
-
+from itertools import product
 from src.player import Player
 
 
@@ -11,7 +11,7 @@ class Group:
         self.all_defs = {}
         self.selected_defs = set()
         self.unselected_defs = set()
-        self.all_player: dict[Player] = {}
+        self.all_player: dict = {}
         self.all_ranks = \
             {
                 "7r3": 326,
@@ -48,8 +48,10 @@ class Group:
 
     def str_all_def_selected(self):
         sorted_selected_def = sorted(self.selected_defs, key=lambda x: (-x[1], x[0]))
-        sorted_selected_def_format = [f"{_def[0]} {self.convert_rank_int_to_str(_def[1])}" for _def in
-                                      sorted_selected_def]
+        sorted_selected_def_format = [
+            f"{_def[0]} {self.convert_rank_int_to_str(_def[1])}"
+            for _def in sorted_selected_def
+        ]
 
         return ", ".join(sorted_selected_def_format)
 
@@ -102,36 +104,40 @@ class Group:
         return all(not bool(s) for s in dictionary.values())
 
     def find_the_best_defs(self):
-        list_all_defs = self.list_meta_defs + list(self.all_defs)
-        for rank in self.all_ranks.values():
-            for def_name in list_all_defs:
-                if player_or_false := self.find_the_player_for_rank_for_def(def_name, rank):
-                    self.add_def_in_player(player_or_false, def_name, rank)
+        all_ranks = self.all_ranks.values()
+        list_all_defs = tuple(product(self.list_meta_defs, all_ranks)) + tuple(product(list(self.all_defs), all_ranks))
+        for def_name, rank in list_all_defs:
+            if player_or_false := self.find_the_player_for_rank_for_def(def_name, rank):
+                self.add_def_in_player(player_or_false, def_name, rank)
 
     # todo refactor cette bouse avec des bools
     def check_doublons(self):
+        number_of_doublons = 0
         for tuple_def in self.all_defs.items():
             count = 0
             print_name = True
             string_to_print = ""
-            for tuple_rank in tuple_def[1].items():
+            for tuple_rank in sorted(tuple_def[1].items(), key=lambda x: x[0], reverse=True):
                 count_for_rank = 0
-                set_player_for_rank = set()
+                list_player_for_a_rank = []
                 for tuple_sig in tuple_rank[1].items():
-                    set_player = tuple_sig[1]
-                    count_for_sig = len(set_player)
+                    set_players = tuple_sig[1]
+                    count_for_sig = len(set_players)
                     if count_for_sig:
                         count_for_rank += count_for_sig
-                        set_player_for_rank = set_player_for_rank | set_player
+                        list_player_for_a_rank += [f"{player} [{tuple_sig[0]}]" for player in set_players]
                 count += count_for_rank
                 if count_for_rank > 0:
-                    line_to_print = ", ".join(set_player_for_rank)
+                    line_to_print = ", ".join(list_player_for_a_rank)
                     string_to_print += f"  --> {self.convert_rank_int_to_str(tuple_rank[0])} --> {line_to_print}\n"
             if count > 1:
                 if print_name:
                     print(tuple_def[0])
                     print_name = False
+                number_of_doublons +=1
                 print(string_to_print)
+        if number_of_doublons:
+            print(f"Il y a {number_of_doublons} doublons non déterminés !!!")
 
     def add_def_in_player(self, player: str, def_name: str, rank: int):
         if not any(tuple_def[0] == def_name for tuple_def in self.selected_defs):
