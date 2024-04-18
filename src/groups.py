@@ -13,13 +13,13 @@ COMMENTARY_IDENTIFIER = "*"
 class Groups:
     def __init__(self):
         list_meta_defs = self.get_meta_def()
-        self.groups: dict[Group] = {id_group: Group(id_group, list_meta_defs) for id_group in range(1, 4)}
+        self.groups = {id_group: Group(id_group, list_meta_defs) for id_group in range(1, 4)}
 
     def add_player_to_a_group(self, id_group: int, player_name: str):
         if len(self.groups[id_group].all_player) != 10:
             self.groups[id_group].add_player(Player(player_name))
             return
-        raise Exception(f"Il ne peux pas y avoir plus de 10 joueurs dans le groupe {id_group}!!!")
+        raise IndexError(f"Il ne peux pas y avoir plus de 10 joueurs dans le groupe {id_group}!!!")
 
     def add_def_to_one_group(self,
                              id_group: int,
@@ -41,13 +41,13 @@ class Groups:
         raise ValueError(f"Le joueur {player_name} ne fais partie d'aucun groupe!!!")
 
     def get_meta_def(self):
-        with open("data/metadefs.txt") as file:
+        with open("data/metadefs.txt", encoding="utf-8") as file:
             to_return = [line.strip('\n') for line in file.readlines()]
         check_is_good_defs(to_return)
         return to_return
 
     def add_all_player_to_groups(self):
-        with open("data/groups.txt") as file:
+        with open("data/groups.txt", encoding="utf-8") as file:
             lines = file.readlines()
         id_group = None
         for line in lines:
@@ -62,16 +62,17 @@ class Groups:
         self.add_all_player_to_groups()
         player_name = None
         group = None
-        for line in data:
+        for index, line in enumerate(data):
             if line == RESET_IDENTIFIER:
                 player_name = None
                 group = None
             elif line.startswith(COMMENTARY_IDENTIFIER):
                 pass
             elif line.startswith(PLAYER_IDENTIFIER):
+                temp_name = line.lstrip(PLAYER_IDENTIFIER)
                 if player_name is not None:
-                    raise Exception("Le joueur ne peux être saisi 2 fois")
-                player_name = line.lstrip(PLAYER_IDENTIFIER)
+                    raise IndexError(f"Ligne {index + 1}: le nom de joueur {player_name} et {temp_name} ne peux être saisi 2 fois")
+                player_name = temp_name
                 group = self.get_player_group(player_name)
             elif line.startswith(FORCE_IDENTIFIER):
                 selected_group = self.groups[group]
@@ -83,7 +84,7 @@ class Groups:
             else:
                 raw_data = line.split(" ")
                 if len(raw_data) != 3:
-                    raise Exception(f"La ligne {raw_data} du joueur {player_name} est mal écrite")
+                    raise ValueError(f"La ligne {index + 1} est mal écrite: {raw_data}")
                 def_name, str_rank, str_sig = raw_data
                 check_def_name(player_name, def_name.capitalize())
                 self.add_def_to_one_group(group, player_name, def_name.capitalize(), str_rank, int(str_sig))
