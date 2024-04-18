@@ -20,6 +20,7 @@ Jabari 7r1 0
 >Toshiro
 Domino 7r2 0
 Ebony 7r1 0
+Spot 7r1 0
 Kindred 7r1 0
 Terrax 7r1 0
 Imiw 7r1 0

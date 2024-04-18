@@ -6,6 +6,7 @@ def check_def_name(playerName: str, defName: str):
         raise Exception(f"{defName} du joueur {playerName} n'est pas un défenseur valide !!!")
 
 
+# todo mettre une list avec join
 def check_is_good_defs(listMetaDef):
     errorMessage = ""
     for defName in listMetaDef:

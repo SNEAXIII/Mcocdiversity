@@ -56,6 +56,7 @@ class Groups:
             else:
                 self.add_player_to_a_group(id_group, line.strip('\n'))
 
+    # todo replacer les start with par des match
     def load_data(self, file_to_open: str = "./data/data.txt"):
         with open(file_to_open, encoding="utf-8") as f:
             data = [line.replace("\n", "") for line in f.readlines()]

@@ -61,13 +61,19 @@ class Group:
 
     def add_new_def(self, owner: str, def_name: str, rank: str, sig: int):
         if def_name not in self.all_Defs:
-            if any(tuple_def[0] == def_name for tuple_def in self.selected_defs) or len(
-                    self.all_player[owner].defs) == 5:
+            if (
+                    any(tuple_def[0] == def_name for tuple_def in self.selected_defs) or
+                    len(self.all_player[owner].defs) == 5
+            ):
                 return
             self.all_Defs[def_name] = {}
-            for id_rank in self.range_rank:
-                self.all_Defs[def_name][id_rank] = {}
-        def_name_def_rank = self.all_Defs[def_name][self.convert_rank_str_to_int(rank)]
+            # for id_rank in self.range_rank:
+            #     self.all_Defs[def_name][id_rank] = {}
+        id_rank = self.convert_rank_str_to_int(rank)
+        one_def = self.all_Defs[def_name]
+        if id_rank not in one_def:
+            one_def[id_rank] = {}
+        def_name_def_rank = one_def[id_rank]
         if sig not in def_name_def_rank:
             def_name_def_rank[sig] = set()
         def_name_def_rank[sig].add(owner)
@@ -87,8 +93,8 @@ class Group:
     def find_the_player_for_rank_for_def(self, def_name: str, rank: int):
         if def_name not in self.all_Defs:
             return False
-        dict_def_rank = self.all_Defs[def_name][rank]
-        if len(dict_def_rank):
+        dict_def_rank = self.all_Defs[def_name].get(rank,None)
+        if dict_def_rank:
             max_sig = max(dict_def_rank.keys())
             return choice(list(dict_def_rank[max_sig]))
         return False
@@ -104,10 +110,9 @@ class Group:
                 if player_or_false := self.find_the_player_for_rank_for_def(def_name, rank):
                     self.add_def_in_player(player_or_false, def_name, rank)
 
+    # todo refactor cette bouse avec des bools
     def check_doublons(self):
         for tuple_def in self.all_Defs.items():
-            if tuple_def[0] == "Absman":
-                pass
             count = 0
             print_name = True
             string_to_print = ""
@@ -129,6 +134,7 @@ class Group:
                     print(tuple_def[0])
                     print_name = False
                 print(string_to_print)
+
     def add_def_in_player(self, player: str, def_name: str, rank: int):
         if not any(tuple_def[0] == def_name for tuple_def in self.selected_defs):
             self.selected_defs.add((def_name, rank))
