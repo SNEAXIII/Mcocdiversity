@@ -1,12 +1,12 @@
 >Mrbal'
-Mysterio 7r3 20
+!Mysterio 7r3 20
 *Shuri 7r3 0
 *Titania 7r3 0
 Maestro 7r2 0
 *Kate 6r6 200
 Idoom 6r6 200
 Absman 6r6 200
-Antmanf 6r6 200
+!Antmanf 6r6 200
 Kingpin 6r6 200
 Scorpion 6r6 1
 Bishop 7r2 40
@@ -18,10 +18,10 @@ Mangog 7r1 0
 Jabari 7r1 0
 //
 >Toshiro
-Domino 7r2 0
-Ebony 7r1 0
+!Domino 7r2 0
+!Ebony 7r1 0
 Spot 7r1 0
-Kindred 7r1 0
+!Kindred 7r1 0
 Terrax 7r1 0
 Imiw 7r1 0
 Bishop 7r1 0
@@ -29,27 +29,27 @@ Overseer 7r1 0
 Shuri 6r5 200
 Photon 6r5 0
 Idoom 6r4 120
-Immohulk 6r5 20
-Wiccan 6r4 160
+!Immohulk 6r5 20
+!Wiccan 6r4 160
 ProfX 6r3 200
 Corvus 6r3 94
 //
 >Yoda
-Overseer 7r3 20
-Gorr 7r2 40
+!Overseer 7r3 20
+!Gorr 7r2 40
 *Domino 7r2 20
 Wong 7r2 20
-Chavez 7r2 20
+!Chavez 7r2 20
 Hulk 7r2 0
 *Falcon 7r1 20
-Mantis 7r1 20
-Rocket 7r1 0
+!Mantis 7r1 20
+*Rocket 7r1 0
 *Dguigui 7r1 20
 Mordo 7r1 0
 Profx 7r1 0
 Wiccan 7r1 0
 Adam 7r1 0
-Sorcersup 7r1 0
+*Sorcersup 7r1 0
 Dragonman 7r1 0
 *Gamora 7r1 0
 Morbius 7r1 0
@@ -64,11 +64,11 @@ Spider 7r1 0
 Gwen 7r1 0
 Vox 7r1 0
 Gladiateur 7r1 0
-Venom 7r1 0
-HB 7r1 0
+*Venom 7r1 0
+*HB 7r1 0
 Titania 7r1 0
 Sasquatch 7r1 0
-Fleau 7r1 0
+*Fleau 7r1 0
 *Scorpion 6r6 140
 *Aegon 6r6 200
 Shuri 6r5 200
@@ -82,47 +82,47 @@ Fury 6r4 200
 Bwdo 6r4 154
 Capmcu 6r4 200
 Tiger 6r4 170
-Sunspot 6r4 200
+*Sunspot 6r4 200
 Sandman 6r4 200
 Peni 6r4 167
 Absman 6r4 200
 CapIW 6r4 200
 Maestro 6r4 200
-Ultron 6r4 66
+*Ultron 6r4 66
 Apo 6r4 92
 Bp 6r4 40
-Agentvenom 6r4 75
+*Agentvenom 6r4 75
 Crossbones 6r4 66
 Guigui 6r4 20
 //
 >jeromeGHOST
 Idoom 6r6 200
-Zemo 6r6 180
-Absman 6r6 200
-Sandman 7r2 20
+!Zemo 6r6 180
+!Absman 6r6 200
+!Sandman 7r2 20
 Kitty 6r5 200
 Doom 6r4 200
 Mantis 7r1 60
-Deablo 7r1 40
+*Deablo 7r1 40
 *Angela 6r4 200
 Fury 6r4 170
 Gorr 6r4 180
 *VTD 7r1 20
-Aegon 6r5 200
+*Aegon 6r5 200
 Weaponx 6r4 200
-Immoabo 6r4 179
+*Immoabo 6r4 179
 Shocker 7r1 20
 Dani 7r1 0
 Kindred 7r1 0
-Warmachine 7r1 05
-Quicks 6r5 50
+*Warmachine 7r1 05
+!Quicks 6r5 50
 //
 >Tug88
 Doom 6r6 200
-Idoom 6r6 130
+!Idoom 6r6 130
 Overseer 7r1 20
 *Dani 7r2 0
-Imiw 7r2 40
+!Imiw 7r2 40
 Warlock 6r4 40
 Absman 6r4 80
 Gladiateur 7r1 0
@@ -141,14 +141,14 @@ Kgroot 6r3 100
 >Dilly Neither
 Doom 6r6 200
 Kitty 6r6 200
-Photon 6r6 200
+!Photon 6r6 200
 Onslaught 6r6 200
 Absman 6r6 200
-Kate 6r6 200
+!Kate 6r6 200
 Bullseye 6r6 200
 Galan 6r6 200
-Adam 6r5 200
-Tigra 6r5 200
+!Adam 6r5 200
+*Tigra 6r5 200
 Hulkling 6r5 112
 Kindred 6r4 200
 Antman 6r4 200
@@ -159,39 +159,38 @@ Chavez 7r1 20
 Emma 7r1 20
 Diablo 7r1 20
 Sandman 7r1 20
-Terrax 7r1 20
+!Terrax 7r1 20
 Sasquatch 7r1 20
-Wong 7r2 0
+!Wong 7r2 0
 //
 >Buzz
-Bishop 7r3 40
-Sunspot 7r2 20
-Warmachine 7r2 20
-Maestro 7r2 0
-Hercule 6r6 200
-Iceman 6r6 200
-Apo 6r6 200
+!Bishop 7r3 40
+*Sunspot 7r2 20
+*Warmachine 7r2 20
+!Maestro 7r2 0
+*Hercule 6r6 200
+!Iceman 6r6 200
+!Apo 6r6 200
 *Aegon 6r6 200
 Nimrod 6r5 200
 Havok 6r5 120
 Cgr 6r4 200
 Kitty 6r4 200
 Viv 6r4 200
-Spider99 6r4 200
+*Spider99 6r4 200
 Zemo 6r4 200
-*Gal 6r4 200
 Knull 6r4 200
-Chose 6r4 200
+!Chose 6r4 200
 *Angela 6r4 200
 Longshot 6r4 200
 Symsup 6r4 180
 Warlock 6r4 200
 Photon 6r4 120
-Deablo 6r4 180
+*Deablo 6r4 180
 Spot 6r4 180
-Ultron 6r4 200
+*Ultron 6r4 200
 Taupe 6r4 120
-Fleau 6r4 100
+*Fleau 6r4 100
 Rintrah 6r4 80
 Attuma 6r4 40
 Antmanf 6r4 40
@@ -203,13 +202,13 @@ Imiw 7r1 20
 //
 >Angel
 Doom 6R6 127
-Hercule 6R6 200
+*Hercule 6R6 200
 IDoom 6R6 200
 *Torch 6R6 200
 Pyramidx 6R6 60
 *Aegon 6R5 128
 Emma 7R2 0
-Fixit 7R2 0
+!Fixit 7R2 0
 Ebony 7R1 60
 *Falcon 7R1 20
 Zemo 6R4 135
@@ -217,17 +216,17 @@ Viv 6R4 102
 Sasquatch 7R1 20
 Wiccan 7R1 0
 Kindred 6R4 71
-Venom 6R4 133
+*Venom 6R4 133
 Apo 6R4 67
 Chavez 7R1 0
 //
 >Mickey
-Mangog 7r3 40
-Kitty 6r6 200
-Hulkling 6r6 200
-Spot 6r6 200
+!Mangog 7r3 40
+!Kitty 6r6 200
+!Hulkling 6r6 200
+!Spot 6r6 200
 Doom 6r5 200
-Weaponx 6r6 200
+!Weaponx 6r6 200
 Zemo 6r5 200
 Bishop 7r2 20
 Omega 6r5 200
@@ -244,17 +243,17 @@ Annihilus 6r4 200
 Korg 6r4 200
 //
 >Monkey
-Viv 6r6 200
-Shuri 7r3 0
+!Viv 6r6 200
+!Shuri 7r3 0
 Weaponx 6r6 200
 Kate 6r6 200
 Iceman 6r6 200
 Jessica 6r6 200
-Nimrod 6r6 200
-Kingpin 6r6 200
+!Nimrod 6r6 200
+!Kingpin 6r6 200
 Storm 7r2 20
 Shocker 7r2 20
-Spider99 6r5 200
+*Spider99 6r5 200
 Hulk 7r2 20
 Quicks 6r5 200
 Kushala 7r2 0
