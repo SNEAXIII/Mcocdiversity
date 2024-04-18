@@ -139,21 +139,25 @@ class Group:
         if number_of_doublons:
             print(f"Il y a {number_of_doublons} doublons non déterminés !!!")
 
-    def add_def_in_player(self, player: str, def_name: str, rank: int):
+    def add_def_in_player(self, player_name: str, def_name: str, rank: int):
         if not any(tuple_def[0] == def_name for tuple_def in self.selected_defs):
             self.selected_defs.add((def_name, rank))
         else:
             raise IndexError(f"Le défenseur {def_name} à été enregistré 2 fois")
-
-        if len(self.all_player[player].defs) == 4:
+        player = self.all_player[player_name]
+        number_of_def = len(player.defs)
+        # Le joueur a assez de défenseurs
+        if number_of_def == 5:
+            return
+        elif number_of_def == 4:
             selected_def = None
         else:
             selected_def = def_name
-        self.all_player[player].defs.append(f"{def_name} {self.convert_rank_int_to_str(rank)}")
+        player.defs.append(f"{def_name} {self.convert_rank_int_to_str(rank)}")
         self.g_score += rank
-        self.all_player[player].p_score += rank
+        player.p_score += rank
         self.delete_one_def_dict(def_name)
-        self.delete_one_player_in_defs_dict(player, selected_def)
+        self.delete_one_player_in_defs_dict(player_name, selected_def)
 
     def delete_one_def_dict(self, def_name: str):
         if def_name in self.all_defs:

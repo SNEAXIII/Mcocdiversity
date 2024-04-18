@@ -73,7 +73,7 @@ class Groups:
             elif line.startswith(COMMENTARY_IDENTIFIER):
                 pass
             elif line.startswith(PLAYER_IDENTIFIER):
-                temp_name = line.lstrip(PLAYER_IDENTIFIER)
+                temp_name = line[1:]
                 if player_name is not None:
                     raise IndexError(
                         f"Ligne {index + 1}: le nom de joueur {player_name} et {temp_name} ne peux être saisi 2 fois")
@@ -81,11 +81,15 @@ class Groups:
                 group = self.get_player_group(player_name)
             elif line.startswith(FORCE_IDENTIFIER):
                 selected_group = self.groups[group]
-                line_whithout_identifier = line.lstrip(FORCE_IDENTIFIER)
-                def_name, str_rank, str_sig = line_whithout_identifier.split(" ")
-                check_def_name(player_name, def_name.capitalize())
-                selected_group.add_def_in_player(player_name, def_name.capitalize(),
-                                                 selected_group.convert_rank_str_to_int(str_rank))
+                def_name, str_rank, str_sig = line[1:].split(" ")
+                check_def_name(
+                    player_name,
+                    def_name.capitalize()
+                )
+                selected_group.add_def_in_player(
+                    player_name, def_name.capitalize(),
+                    selected_group.convert_rank_str_to_int(str_rank)
+                )
             else:
                 raw_data = line.split(" ")
                 if len(raw_data) != 3:
