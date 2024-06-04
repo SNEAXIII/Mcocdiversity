@@ -191,7 +191,7 @@ allCara = [
     "Bwdo",  # Black Widow (Deadly Origin)
     "Blade",  # Blade
     "Bullseye",  # Bullseye
-    "Chee'ilth",  # Chee'ilth
+    "Cheeilth",  # Chee'ilth
     "Crossbones",  # Crossbones
     "Elsa",  # Elsa Bloodstone
     "Falcon",  # Falcon

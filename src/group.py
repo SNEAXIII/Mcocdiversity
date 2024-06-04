@@ -1,5 +1,5 @@
-from random import choice
 from itertools import product
+from random import choice
 from src.player import Player
 
 
@@ -8,9 +8,9 @@ class Group:
         self.id = current_id
         self.list_meta_defs = list_meta_defs
         self.g_score = 0
+        self.all_listed_defs = set()
         self.all_defs = {}
         self.selected_defs = set()
-        self.unselected_defs = set()
         self.all_player: dict = {}
         self.all_ranks = \
             {
@@ -56,7 +56,8 @@ class Group:
         return ", ".join(sorted_selected_def_format)
 
     def str_all_def_un_selected(self):
-        return ", ".join(sorted(list(self.unselected_defs)))
+        unselected_defs = self.all_listed_defs - set(def_name[0] for def_name in self.selected_defs)
+        return ", ".join(sorted(list(unselected_defs)))
 
     def add_player(self, player: Player):
         self.all_player[player.name] = player
@@ -105,8 +106,8 @@ class Group:
 
     def find_the_best_defs(self):
         all_ranks = self.all_ranks.values()
-        list_all_defs = tuple(product(self.list_meta_defs, all_ranks)) + tuple(product(list(self.all_defs), all_ranks))
-        for def_name, rank in list_all_defs:
+        list_all_defs = tuple(product(all_ranks, self.list_meta_defs)) + tuple(product(all_ranks, list(self.all_defs)))
+        for rank, def_name in list_all_defs:
             if player_or_false := self.find_the_player_for_rank_for_def(def_name, rank):
                 self.add_def_in_player(player_or_false, def_name, rank)
 
@@ -115,7 +116,6 @@ class Group:
         number_of_doublons = 0
         for tuple_def in self.all_defs.items():
             count = 0
-            print_name = True
             string_to_print = ""
             for tuple_rank in sorted(tuple_def[1].items(), key=lambda x: x[0], reverse=True):
                 count_for_rank = 0
@@ -131,10 +131,8 @@ class Group:
                     line_to_print = ", ".join(list_player_for_a_rank)
                     string_to_print += f"  --> {self.convert_rank_int_to_str(tuple_rank[0])} --> {line_to_print}\n"
             if count > 1:
-                if print_name:
-                    print(tuple_def[0])
-                    print_name = False
-                number_of_doublons +=1
+                number_of_doublons += 1
+                print(tuple_def[0])
                 print(string_to_print)
         if number_of_doublons:
             print(f"Il y a {number_of_doublons} doublons non déterminés !!!")
@@ -166,7 +164,8 @@ class Group:
     def delete_one_player_in_defs_dict(self, player: str, def_to_update: str = None):
         for def_name, ranks in list(self.all_defs.items()):
 
-            if def_to_update and def_to_update != def_name: continue
+            if def_to_update and def_to_update != def_name:
+                continue
 
             for rank, all_sig in list(ranks.items()):
 
@@ -180,7 +179,6 @@ class Group:
                             del ranks[rank]
 
             if not ranks:
-                self.unselected_defs.add(def_name)
                 self.delete_one_def_dict(def_name)
 
     def is_empty_def(self):

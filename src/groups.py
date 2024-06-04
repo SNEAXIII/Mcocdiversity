@@ -24,13 +24,15 @@ class Groups:
             return
         raise IndexError(f"Il ne peux pas y avoir plus de 10 joueurs dans le groupe {id_group}!!!")
 
-    def add_def_to_one_group(self,
-                             id_group: int,
-                             player_name: str,
-                             def_name: str,
-                             rank: str,
-                             sig: int = 0
-                             ):
+    def add_def_to_one_group(
+            self,
+            id_group: int,
+            player_name: str,
+            def_name: str,
+            rank: str,
+            sig: int = 0
+    ):
+        self.groups[id_group].all_listed_defs.add(def_name)
         self.groups[id_group].add_new_def(player_name, def_name, rank, int(sig))
 
     def dump(self):
@@ -67,6 +69,8 @@ class Groups:
         player_name = None
         group = None
         for index, line in enumerate(data):
+            if line.startswith("Dani"):
+                a = 0
             if line == RESET_IDENTIFIER:
                 player_name = None
                 group = None
@@ -80,8 +84,9 @@ class Groups:
                 player_name = temp_name
                 group = self.get_player_group(player_name)
             elif line.startswith(FORCE_IDENTIFIER):
-                selected_group = self.groups[group]
+                selected_group: Group = self.groups[group]
                 def_name, str_rank, str_sig = line[1:].split(" ")
+                selected_group.all_listed_defs.add(def_name)
                 check_def_name(
                     player_name,
                     def_name.capitalize()
