@@ -93,25 +93,32 @@ Guigui 6r4 20
 //
 >jeromeGHOST
 Idoom 6r6 200
-Zemo 6r6 180
+Zemo 6r6 200
 Absman 6r6 200
 Sandman 7r2 20
 Kitty 6r5 200
 Doom 6r4 200
 Mantis 7r1 60
-*Deablo 7r1 40
-*Angela 6r4 200
-Fury 6r4 170
-Gorr 6r4 180
-*VTD 7r1 20
-*Aegon 6r5 200
-Weaponx 6r4 200
-*Immoabo 6r4 179
+Deablo 7r1 40
+Fury 6r6 200
+VTD 7r1 20
+Aegon 6r5 200
+Immoabo 6r5 200
 Shocker 7r1 20
-Dani 7r1 0
-Kindred 7r1 0
-*Warmachine 7r1 05
-Quicks 6r5 50
+Dani 7r1 40
+Kindred 7r3 0
+Warmachine 7r1 0
+Emma 7r2 0
+Redgob 7r1 20
+Jessica 6r4 62
+Wilson 7r1 0
+Negative 7r1 0
+Odin 7r1 0
+Blackcat 7r1 0
+Bullseye 6r5 40
+Valkyrie 6r4 52
+Kingpin 6r6 120
+Sinister 6r5 46
 //
 >Dilly Neither
 Doom 6r6 200
@@ -199,6 +206,11 @@ Kushala 7r2 0
 Bishop 7r2 0
 Vox 7r2 0
 Titania 7r2 0
+Silk 7r3 0
+Photon 7r2 0
+Mantis 7r2 20
+Ironheart 7r2 0
+Namor 6r6 200
 //
 >Desmo
 Dragonman 7r3 0
