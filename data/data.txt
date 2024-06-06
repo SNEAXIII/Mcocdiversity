@@ -146,25 +146,28 @@ Sasquatch 7r1 20
 Wong 7r2 0
 //
 >Angel
-Doom 6R6 127
+Doom 6R6 200
 Hercule 6R6 200
 IDoom 6R6 200
-*Torch 6R6 200
-Pyramidx 6R6 60
-*Aegon 6R5 128
+Ironheart 7R3 0
+Pyramidx 6R6 94
+Kushala 6R6 60
 Emma 7R2 0
 Fixit 7R2 0
-Ebony 7R1 60
-*Falcon 7R1 20
-Zemo 6R4 135
+Ebony 7R2 60
+Titania 7R2 40
+Killmonger 7r1 20
+Zemo 6R6 200
 Viv 6R4 102
 Sasquatch 7R1 20
 Wiccan 7R1 0
+Quicks 6R4 79
 Kindred 6R4 71
-*Venom 6R4 133
 Apo 6R4 67
 Chavez 7R1 0
-Killmonger 7r1 0
+Scorpion 6R4 49
+Attuma 7R1 0
+Shuri 6R4 45
 //
 >Mickey
 Mangog 7r3 40
