@@ -267,4 +267,5 @@ allCara = [
     "Warmachine",  # War Machine
     "Warlock",  # Warlock
     "Yondu",  # Yondu
+    "Prowler",  # Prowler
 ]
