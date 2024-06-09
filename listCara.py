@@ -172,6 +172,7 @@ allCara = [
     "Spider",  # Spider-Man (Classic)
     "Morales",  # Spider-Man (Miles Morales)
     "Spider99",  # Spider-Man 2099
+    "Punk",  # Spider-Punk
     "Spot",  # Spot
     "Overseer",  # The Overseer
     "Chose",  # Thing
@@ -222,7 +223,9 @@ allCara = [
     "Ragnathor",  # Thor (Ragnarok)
     "Valkyrie",  # Valkyrie
     # Tech
+    "Arcade",  # Arcade
     "Antmanf",  # Ant-Man (Future)
+    "Dvision",  # Vision (Deathless)
     "Wilson",  # Captain America (Sam Wilson)
     "Cw",  # Civil Warrior
     "Darkhawk",  # Darkhawk
