@@ -28,21 +28,23 @@ Mangog 7r1 0
 Jabari 7r1 0
 //
 >Toshiro
-Domino 7r2 0
-Ebony 7r1 0
+Domino 7r3 0
+Bishop 7r1 20
+Emma 7R1 20
+shuri 6r5 200
+ImmoHulK 6r6 60
+Killmonger 7r2 0
+Ebony 7r1 20
+ImIW 7r1 0
+Spider 7r1 0
 Spot 7r1 0
-Kindred 7r1 0
-Terrax 7r1 0
-Imiw 7r1 0
-Bishop 7r1 0
+Venom 7r1 0
 Overseer 7r1 0
-Shuri 6r5 200
 Photon 6r5 0
-Idoom 6r4 120
-Immohulk 6r5 20
-Wiccan 6r4 160
-ProfX 6r3 200
-Corvus 6r3 94
+Profx 6r4 200
+Pyramidx 6r6 200
+Fury 6r4 1
+Sauron 7r1 0
 //
 >Yoda
 Overseer 7r3 20
